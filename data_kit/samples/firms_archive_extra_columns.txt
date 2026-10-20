@@ -1,0 +1,1 @@
+Archive (SP) files add a column `type`: 0 = presumed vegetation fire, 1 = active volcano, 2 = other static land source, 3 = offshore. Version strings change from 2.0NRT / 6.1NRT to 2 / 6.1 (standard processing).

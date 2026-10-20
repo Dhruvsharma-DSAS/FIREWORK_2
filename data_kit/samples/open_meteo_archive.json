@@ -1,0 +1,32 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://archive-api.open-meteo.com/v1/archive?latitude=30.9&longitude=75.85&start_date=2024-11-01&end_date=2024-11-02&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max&timezone=Asia/Kolkata",
+  "latitude": 30.9,
+  "longitude": 75.85,
+  "timezone": "Asia/Kolkata",
+  "elevation": 247.0,
+  "daily_units": {
+    "time": "iso8601",
+    "temperature_2m_max": "°C",
+    "precipitation_sum": "mm",
+    "wind_speed_10m_max": "km/h"
+  },
+  "daily": {
+    "time": [
+      "2024-11-01",
+      "2024-11-02"
+    ],
+    "temperature_2m_max": [
+      29.8,
+      29.1
+    ],
+    "precipitation_sum": [
+      0.0,
+      0.0
+    ],
+    "wind_speed_10m_max": [
+      7.2,
+      6.5
+    ]
+  }
+}

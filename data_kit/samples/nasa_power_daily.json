@@ -1,0 +1,64 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,RH2M,WS2M,PRECTOTCORR&community=AG&longitude=75.85&latitude=30.9&start=20241101&end=20241103&format=JSON",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      75.85,
+      30.9,
+      248.3
+    ]
+  },
+  "properties": {
+    "parameter": {
+      "T2M": {
+        "20241101": 22.1,
+        "20241102": 21.6,
+        "20241103": 21.2
+      },
+      "RH2M": {
+        "20241101": 58.3,
+        "20241102": 61.0,
+        "20241103": 63.4
+      },
+      "WS2M": {
+        "20241101": 1.4,
+        "20241102": 1.2,
+        "20241103": 1.1
+      },
+      "PRECTOTCORR": {
+        "20241101": 0.0,
+        "20241102": 0.0,
+        "20241103": 0.01
+      }
+    }
+  },
+  "header": {
+    "title": "NASA/POWER ... Daily Point",
+    "api": {
+      "version": "v2.x"
+    },
+    "fill_value": -999.0,
+    "start": "20241101",
+    "end": "20241103"
+  },
+  "parameters": {
+    "T2M": {
+      "units": "C",
+      "longname": "Temperature at 2 Meters"
+    },
+    "RH2M": {
+      "units": "%",
+      "longname": "Relative Humidity at 2 Meters"
+    },
+    "WS2M": {
+      "units": "m/s",
+      "longname": "Wind Speed at 2 Meters"
+    },
+    "PRECTOTCORR": {
+      "units": "mm/day",
+      "longname": "Precipitation Corrected"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://api.openaq.org/v3/sensors/67890/measurements?datetime_from=2024-11-12&datetime_to=2024-11-13",
+  "meta": {
+    "name": "openaq-api",
+    "page": 1,
+    "limit": 100,
+    "found": 24
+  },
+  "results": [
+    {
+      "value": 182.0,
+      "parameter": {
+        "id": 2,
+        "name": "pm25",
+        "units": "µg/m³"
+      },
+      "period": {
+        "label": "raw",
+        "interval": "01:00:00",
+        "datetimeFrom": {
+          "utc": "2024-11-12T10:00:00Z",
+          "local": "2024-11-12T15:30:00+05:30"
+        },
+        "datetimeTo": {
+          "utc": "2024-11-12T11:00:00Z",
+          "local": "2024-11-12T16:30:00+05:30"
+        }
+      },
+      "coordinates": {
+        "latitude": 30.9,
+        "longitude": 75.81
+      }
+    }
+  ]
+}

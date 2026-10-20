@@ -1,0 +1,19 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_scale": "NDVI band x 0.0001",
+  "cell": "1209_2558",
+  "series": [
+    {
+      "date": "2024-10-15",
+      "NDVI": 0.71
+    },
+    {
+      "date": "2024-10-31",
+      "NDVI": 0.38
+    },
+    {
+      "date": "2024-11-16",
+      "NDVI": 0.22
+    }
+  ]
+}

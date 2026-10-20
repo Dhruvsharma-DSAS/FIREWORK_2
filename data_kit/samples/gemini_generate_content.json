@@ -1,0 +1,24 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent  (header x-goog-api-key)",
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Ludhiana recorded 14 fire cell-days ..."
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 58,
+    "candidatesTokenCount": 35,
+    "totalTokenCount": 93
+  },
+  "modelVersion": "<flash model name shown in AI Studio>"
+}

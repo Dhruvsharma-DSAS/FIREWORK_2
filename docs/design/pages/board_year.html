@@ -1,0 +1,5 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="app" id="app" style="width:1900px; height:440px; padding:20px; display:flex; gap:16px"></div>
+<script>(async function(){ await KIT.loadWorld(); const app=document.getElementById("app"); const F=[["Nov 2015","t = 0",1.0,1],["cross-fade","t = 250 ms",1.3,0.5],["Nov 2016","t = 500 ms",1.7,1]];
+for(let i=0;i<3;i++){ app.insertAdjacentHTML("beforeend",'<div class="panel" style="width:610px; height:400px; position:relative; overflow:hidden"><svg id="y'+i+'"></svg><div class="chip" style="position:absolute; left:12px; top:10px; background:rgba(6,10,19,.7)">'+F[i][1]+'</div><div class="display" style="position:absolute; right:16px; top:8px; font-size:30px">'+F[i][0]+'</div></div>'); const o=await KIT.region("#y"+i,{w:610,h:400,hex:true,hexRes:5,density:F[i][2],seed:5+i}); o.svg.style("opacity",F[i][3]); }
+window.READY=true; })();</script></body></html>

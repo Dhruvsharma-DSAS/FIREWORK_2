@@ -1,0 +1,85 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+<link rel="stylesheet" href="/wire.css"></head><body>
+<style>
+.step{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--dim)} .step b{width:24px;height:24px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:JB;font-size:11px}
+.step.done b{background:var(--mint);border-color:var(--mint);color:#04120B} .step.cur{color:var(--text)} .step.cur b{background:var(--ember);border-color:var(--ember);color:#1A0A04}
+.sheet-t{border-collapse:collapse;width:100%;font-family:JB;font-size:11.5px} .sheet-t td,.sheet-t th{border:1px solid var(--line);padding:6px 8px;white-space:nowrap} .sheet-t th{background:rgba(255,255,255,.04);text-align:left}
+.map{display:block;margin-top:4px;font-family:Inter;font-size:11px;font-weight:600;padding:3px 6px;border-radius:6px;background:rgba(73,199,245,.12);color:var(--sky);border:1px solid rgba(73,199,245,.35)}
+.map.bad{background:rgba(255,77,109,.12);color:var(--rose);border-color:rgba(255,77,109,.4)}
+.cellbad{background:rgba(255,77,109,.14);color:#FFB3C1} .cellfix{background:rgba(255,181,71,.12);color:#FFD9A0}
+.lbl{font-size:12px;color:var(--dim);display:flex;justify-content:space-between;margin-top:12px}
+.sel{border:1px solid var(--line-strong);border-radius:8px;padding:7px 10px;font-size:12.5px;margin-top:5px;display:flex;justify-content:space-between}
+</style>
+<div class="app" id="app">
+  <div class="panel" style="position:absolute; left:24px; right:24px; top:80px; height:58px; display:flex; align-items:center; justify-content:space-between; padding:0 22px" data-mark="1">
+    <div class="step done"><b>✓</b>Upload</div><div class="step done"><b>✓</b>Inspect</div><div class="step done"><b>✓</b>Validate</div><div class="step cur"><b>4</b>Map columns</div><div class="step"><b>5</b>Parameters</div><div class="step"><b>6</b>Preview</div><div class="step"><b>7</b>Run</div><div class="step"><b>8</b>Formulas</div><div class="step"><b>9</b>Compare</div><div class="step"><b>10</b>Export</div>
+  </div>
+  <div class="panel" style="position:absolute; left:24px; top:154px; width:300px; height:390px" data-mark="2">
+    <div class="panel-h"><span class="caps">Your dataset</span><span class="chip user"><span class="dot"></span>USER-UPLOADED</span></div>
+    <div class="panel-b" style="font-size:12.5px">
+      <div class="tile" style="margin-bottom:10px"><div style="font-weight:700">punjab_field_survey.xlsx</div><div class="dim mono" style="font-size:11px">1,284 rows · 9 columns · sheet "Nov"</div></div>
+      <div class="kv"><span>Detected type</span><b>point table</b></div>
+      <div class="kv"><span>Coordinates</span><b>lat/lon (deg)</b></div>
+      <div class="kv"><span>Time zone guess</span><b style="color:var(--flame)">IST → UTC?</b></div>
+      <div class="kv"><span>Duplicates</span><b>12 rows</b></div>
+      <div class="kv"><span>Missing values</span><b>3.1%</b></div>
+      <div class="caps dim" style="margin:14px 0 8px">Mode</div>
+      <div class="seg"><span class="on">Beginner</span><span>Researcher</span><span>Custom</span></div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; left:24px; top:560px; width:300px; height:410px" data-mark="3">
+    <div class="panel-h"><span class="caps">Ask in plain words</span><span class="chip" style="color:var(--violet); border-color:rgba(155,140,255,.5)">AI ASSIST</span></div>
+    <div class="panel-b" style="font-size:12.5px; line-height:1.5">
+      <div style="background:rgba(255,255,255,.05); border-radius:12px; padding:10px; margin-bottom:8px">Compare my survey fires with VIIRS for Nov 2024 and tell me how many the satellite missed.</div>
+      <div style="background:rgba(155,140,255,.12); border:1px solid rgba(155,140,255,.3); border-radius:12px; padding:10px">I will: (1) match your points to VIIRS within 1 km and ±1 day, (2) count matched vs unmatched by hour. Your <span class="mono">time</span> column looks like IST — convert to UTC first?<div class="row" style="margin-top:8px"><span class="btn" style="padding:5px 10px">Yes, convert</span><span class="btn ghost" style="padding:5px 10px">Show plan</span></div></div>
+      <div class="dim" style="font-size:11px; margin-top:8px">The assistant only builds the analysis plan. Every number comes from the pipeline, never from the language model.</div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; left:340px; top:154px; width:840px; height:530px" data-mark="4">
+    <div class="panel-h"><span class="caps">Map columns · preview of first rows</span><span class="mono faint" style="font-size:11px">auto-detected 7 / 9</span></div>
+    <div class="panel-b">
+      <table class="sheet-t">
+        <tr><th>Lat<span class="map">→ latitude ✓</span></th><th>Long<span class="map">→ longitude ✓</span></th><th>Date<span class="map">→ date ✓</span></th><th>time<span class="map bad">→ time (tz?)</span></th><th>Fire_size_acre<span class="map">→ area · acre→km²</span></th><th>Crop<span class="map">→ label: crop</span></th><th>Village<span class="map">→ keep as text</span></th><th>Obs<span class="map bad">→ unmapped</span></th></tr>
+        <tr><td>30.712</td><td>75.811</td><td>2024-11-05</td><td>16:40</td><td>2.5</td><td>paddy</td><td>Raikot</td><td>—</td></tr>
+        <tr><td>30.698</td><td>75.902</td><td>2024-11-05</td><td>17:05</td><td>1.0</td><td>paddy</td><td>Jagraon</td><td>smoke</td></tr>
+        <tr><td class="cellbad">307.2</td><td>75.77</td><td>2024-11-06</td><td>15:55</td><td>4.0</td><td>paddy</td><td>Sudhar</td><td>—</td></tr>
+        <tr><td>30.661</td><td>75.640</td><td class="cellfix">06/11/24</td><td>13:20</td><td>0.8</td><td>wheat?</td><td>Mullanpur</td><td>—</td></tr>
+        <tr><td>30.744</td><td>75.993</td><td>2024-11-07</td><td>18:10</td><td>—</td><td>paddy</td><td>Dehlon</td><td>—</td></tr>
+        <tr><td>30.802</td><td>75.705</td><td>2024-11-07</td><td>12:45</td><td>3.2</td><td>paddy</td><td>Sidhwan</td><td>—</td></tr>
+      </table>
+      <div class="err" style="margin-top:14px">Row 3: latitude 307.2 is outside −90…90 (probably 30.72 with a typo). <u>Fix</u> · <u>Drop row</u> · <u>Keep, exclude from maps</u></div>
+      <div class="warn" style="margin-top:10px">Row 4: date written as 06/11/24 — is this 6 Nov or 11 Jun? Choose a date format for the whole column.</div>
+      <div class="ok" style="margin-top:10px">Unit conversion ready: Fire_size_acre × 0.004047 = km². Original values are kept in the export.</div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; right:24px; top:154px; width:390px; height:816px" data-mark="5">
+    <div class="panel-h"><span class="caps">Parameters</span><span class="mono faint" style="font-size:11px">config v3 · saved</span></div>
+    <div class="panel-b">
+      <div class="lbl"><span>Region</span><span class="mono">bbox · polygon · upload</span></div><div class="sel"><span>Ludhiana district (geoBoundaries ADM2)</span><span>▾</span></div>
+      <div class="lbl"><span>Time window (UTC)</span></div><div class="sel"><span class="mono">2024-10-01 → 2024-11-30</span><span>▾</span></div>
+      <div class="lbl"><span>Compare with sensors</span></div><div class="row" style="margin-top:6px; gap:6px"><span class="chip"><span class="dot" style="background:#FF8A3D"></span>VIIRS N20</span><span class="chip"><span class="dot" style="background:#FF8A3D"></span>VIIRS N21</span><span class="chip" style="opacity:.5">MODIS Aqua</span></div>
+      <div class="lbl"><span>Grid resolution</span><span class="mono">0.1°</span></div><div class="slider"><i style="width:30%"></i><b style="left:28%"></b></div>
+      <div class="lbl"><span>Match distance</span><span class="mono">1.0 km</span></div><div class="slider"><i style="width:40%"></i><b style="left:38%"></b></div>
+      <div class="lbl"><span>Match time window</span><span class="mono">± 1 day</span></div><div class="slider"><i style="width:25%"></i><b style="left:23%"></b></div>
+      <div class="lbl"><span>Confidence ≥</span><span class="mono">nominal</span></div><div class="seg" style="margin-top:6px"><span>low</span><span class="on">nominal</span><span>high</span></div>
+      <div class="lbl"><span>Day / night</span></div><div class="seg" style="margin-top:6px"><span>day</span><span>night</span><span class="on">separate</span></div>
+      <div class="lbl"><span>Uncertainty</span><span class="mono">bootstrap · 2000</span></div><div class="sel"><span>90% band, resample whole years</span><span>▾</span></div>
+      <div class="tile" style="margin-top:16px; font-size:12px; line-height:1.5"><b>What this changes:</b> a larger match distance finds more matches but can pair two different fires. 1 km ≈ 3 VIIRS pixels.</div>
+      <div class="row" style="margin-top:16px"><span class="btn primary">Preview →</span><span class="btn">Download config.json</span></div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; left:340px; top:700px; width:840px; height:270px" data-mark="6">
+    <div class="panel-h"><span class="caps">Live preview · before / after cleaning</span><span class="chip user"><span class="dot"></span>USER + ARCHIVE</span></div>
+    <div class="panel-b" style="display:flex; gap:20px"><svg id="pv"></svg><div style="font-size:12.5px; width:250px">
+      <div class="kv"><span>Rows kept</span><b>1,268 / 1,284</b></div><div class="kv"><span>Matched to VIIRS</span><b>214 (17%)</b></div><div class="kv"><span>Unmatched after 15:00</span><b style="color:var(--flame)">83% of unmatched</b></div><div class="mono faint" style="font-size:10.5px; margin-top:8px">Example data for the mockup — not a real survey.</div></div></div>
+  </div>
+</div>
+<script>
+(async function(){ KIT.topbar("Data Studio",'<span class="chip user"><span class="dot"></span>YOUR DATA</span><span class="chip archive"><span class="dot"></span>ARCHIVE</span>');
+const hrs=["10","11","12","13","14","15","16","17","18","19"]; KIT.bars("#pv",{w:540,h:190,values:[4,9,18,30,22,61,140,170,96,40],labels:hrs,colors:hrs.map(function(h){return +h>=15?"#FFB547":"#49C7F5";}),fmt:function(v){return v;}});
+window.READY=true; })();
+</script></body></html>

@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+</head><body>
+<div class="app" id="app" style="width:1900px; height:470px; padding:20px; display:flex; gap:16px">
+</div>
+<script>(async function(){ await KIT.loadWorld();
+const app=document.getElementById("app");
+const frames=[{t:"0 ms",c:"Full Earth · auto-rotate",s:150,r:[-40,-10,0]},{t:"300 ms",c:"Ease toward Asia",s:230,r:[-70,-18,0]},{t:"700 ms",c:"India fills view · hex density fades in",s:520,r:[-79,-22,0],hex:true},{t:"1200 ms",c:"Region: Punjab · points replace hexes",region:true},{t:"1600 ms",c:"Cell selected · inspector slides in",region:true,cell:true}];
+frames.forEach(function(f,i){ app.insertAdjacentHTML("beforeend",'<div class="panel" style="width:360px; height:430px; overflow:hidden; position:relative"><svg id="f'+i+'"></svg><div style="position:absolute; left:12px; top:10px" class="chip">Frame '+(i+1)+' · '+f.t+'</div><div style="position:absolute; left:12px; right:12px; bottom:12px; font-size:13px" class="dim">'+f.c+'</div></div>'); });
+for(let i=0;i<frames.length;i++){ const f=frames[i];
+ if(f.region){ const o=await KIT.region("#f"+i,{w:360,h:430,bbox:f.cell?[75.45,30.55,75.95,30.95]:[73.8,29.4,77.4,32.2],density:f.cell?1.5:1.2,grid:f.cell?0.1:0,pointSize:f.cell?3:1.8}); if(f.cell){ const p1=o.proj([75.8,30.7]); const p2=o.proj([75.9,30.8]); o.svg.append("rect").attr("x",p1[0]).attr("y",p2[1]).attr("width",p2[0]-p1[0]).attr("height",p1[1]-p2[1]).attr("fill","none").attr("stroke","#49C7F5").attr("stroke-width",3); o.svg.append("rect").attr("x",230).attr("y",60).attr("width",120).attr("height",150).attr("rx",12).attr("fill","rgba(16,24,44,.92)").attr("stroke","rgba(150,180,255,.3)"); o.svg.append("text").attr("x",244).attr("y",88).attr("fill","#EEF2FA").attr("font-size",13).attr("font-weight",700).text("Inspector"); }}
+ else { KIT.globe("#f"+i,{w:360,h:430,scale:f.s,rotate:f.r,hex:!!f.hex,hexRes:3,points:!f.hex,density:1,pointSize:1.2,glow:f.s<300}); }
+}
+window.READY=true; })();</script></body></html>

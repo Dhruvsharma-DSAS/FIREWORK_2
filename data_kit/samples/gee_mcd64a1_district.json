@@ -1,0 +1,22 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_bands": {
+    "BurnDate": "day of year burned (0 = unburned, -1 = unmapped, -2 = water)",
+    "Uncertainty": "days",
+    "QA": "bit flags",
+    "FirstDay": "doy",
+    "LastDay": "doy"
+  },
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "district": "Ludhiana",
+        "month": "2024-11",
+        "burned_pixels_500m": 9132,
+        "burned_km2": 2283.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://api.openaq.org/v3/locations?coordinates=30.9,75.85&radius=25000&limit=5  (header X-API-Key)",
+  "meta": {
+    "name": "openaq-api",
+    "website": "/",
+    "page": 1,
+    "limit": 5,
+    "found": 2
+  },
+  "results": [
+    {
+      "id": 12345,
+      "name": "Punjab Agricultural University, Ludhiana - PPCB",
+      "locality": "Ludhiana",
+      "timezone": "Asia/Kolkata",
+      "country": {
+        "id": 9,
+        "code": "IN",
+        "name": "India"
+      },
+      "isMobile": false,
+      "isMonitor": true,
+      "sensors": [
+        {
+          "id": 67890,
+          "name": "pm25 µg/m³",
+          "parameter": {
+            "id": 2,
+            "name": "pm25",
+            "units": "µg/m³",
+            "displayName": "PM2.5"
+          }
+        }
+      ],
+      "coordinates": {
+        "latitude": 30.9,
+        "longitude": 75.81
+      },
+      "distance": 4021.5,
+      "datetimeFirst": {
+        "utc": "2019-01-01T00:00:00Z",
+        "local": "2019-01-01T05:30:00+05:30"
+      },
+      "datetimeLast": {
+        "utc": "2026-10-20T05:00:00Z",
+        "local": "2026-10-20T10:30:00+05:30"
+      }
+    }
+  ]
+}

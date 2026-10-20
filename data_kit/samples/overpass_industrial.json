@@ -1,0 +1,34 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_query": "[out:json][timeout:60];(way[\"landuse\"=\"industrial\"](30.7,75.6,31.1,76.1);node[\"man_made\"=\"kiln\"](30.7,75.6,31.1,76.1););out center tags;",
+  "version": 0.6,
+  "generator": "Overpass API",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-20T05:59:00Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 123456789,
+      "center": {
+        "lat": 30.884,
+        "lon": 75.921
+      },
+      "tags": {
+        "landuse": "industrial",
+        "name": "Focal Point Phase 8"
+      }
+    },
+    {
+      "type": "node",
+      "id": 987654321,
+      "lat": 30.951,
+      "lon": 75.702,
+      "tags": {
+        "man_made": "kiln",
+        "product": "brick"
+      }
+    }
+  ]
+}
