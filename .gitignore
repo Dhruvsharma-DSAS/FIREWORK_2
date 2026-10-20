@@ -14,3 +14,5 @@ data/cell_day/
 graphify-out/cache/
 data_kit/real_samples/
 .DS_Store
+graphify-out/.graphify_*
+graphify-out/memory/
