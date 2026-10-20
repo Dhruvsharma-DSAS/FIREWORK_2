@@ -1,0 +1,7 @@
+.hero-h { font-family: "Inter"; font-weight: 400; font-size: 84px; line-height: 0.98; letter-spacing: -0.035em; }
+.hero-h em { font-family: "Fraunces"; font-style: italic; font-weight: 400; color: var(--flame); }
+.glass { background: rgba(10, 16, 32, 0.42); border: 1px solid rgba(180, 200, 255, 0.16); border-radius: 16px; backdrop-filter: blur(16px); }
+.pill { display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 20px; border-radius: 999px; border: 1px solid rgba(220, 230, 255, 0.28); font-family: "SG"; font-weight: 700; font-size: 12px; letter-spacing: .12em; }
+.pill i { width: 30px; height: 30px; border-radius: 50%; background: #fff; color: #0A1020; display: grid; place-items: center; font-style: normal; font-size: 15px; }
+.tel .kv { border-bottom: 1px dashed rgba(150, 180, 255, .12); font-size: 12px; padding: 6px 0; }
+.vline { position: absolute; top: 0; bottom: 0; width: 1px; background: linear-gradient(transparent, rgba(150, 180, 255, .10), transparent); }

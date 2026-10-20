@@ -1,0 +1,32 @@
+{
+ "data": {
+  "chips": [
+   {
+    "kind": "archive",
+    "label": "ARCHIVE"
+   },
+   {
+    "kind": "live",
+    "label": "LIVE NRT"
+   }
+  ],
+  "home_chips": [
+   {
+    "kind": "live",
+    "label": "LIVE NRT · 3h"
+   },
+   {
+    "kind": "archive",
+    "label": "ARCHIVE 2000–2025"
+   }
+  ]
+ },
+ "meta": {
+  "data_source": "fixture: docs/design mock-up chips",
+  "version": "fixture-m1",
+  "generated_at": "2026-10-21T00:00:00Z",
+  "units": null,
+  "demo": true,
+  "fallback_used": false
+ }
+}
