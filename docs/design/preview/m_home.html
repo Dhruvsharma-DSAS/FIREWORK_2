@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+<link rel="stylesheet" href="/wire.css"></head><body>
+<div class="mobile" id="app">
+  <div class="m-top" data-mark="1"><svg id="logo"></svg><b style="font-size:14px">FIREWORK CHRONOS</b><span class="spacer"></span><span class="chip archive" style="font-size:9px"><span class="dot"></span>ARCHIVE</span></div>
+  <svg id="globe" style="position:absolute; left:-40px; top:56px"></svg>
+  <div style="position:absolute; left:20px; top:430px; right:20px" data-mark="2">
+    <div class="caps" style="color:var(--flame); font-size:9.5px">NASA Space Apps 2026</div>
+    <h1 class="display" style="font-size:38px; line-height:1.02; margin-top:10px">25 years of fire.<br><i style="color:var(--ember); font-weight:400">One honest record.</i></h1>
+    <p class="dim" style="font-size:14px; line-height:1.55; margin-top:12px">MODIS and VIIRS on one ruler — with the source and uncertainty of every number.</p>
+    <div class="btn primary" style="margin-top:18px; width:100%; justify-content:center" data-mark="3">Explore the Earth →</div>
+    <div class="btn" style="margin-top:10px; width:100%; justify-content:center">Open the burning calendar</div>
+  </div>
+  <div class="m-tabs" data-mark="4"><div class="on">◉<span>Home</span></div><div>◎<span>Explore</span></div><div>▦<span>Calendar</span></div><div>⇪<span>Studio</span></div><div>∑<span>Learn</span></div></div>
+</div>
+<script>(async function(){ await KIT.loadWorld(); KIT.logo("#logo",28); KIT.globe("#globe",{w:470,h:470,scale:200,rotate:[-80,-16,0],density:0.9,pointSize:1.1,orbit:[{inc:98.7,node:-60,color:"#49C7F5",satA:118}]}); window.READY=true; })();</script></body></html>

@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+</head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">Data sources &amp; system health</div><h1 class="display" style="font-size:40px; margin-top:6px">Where every number comes from</h1></div>
+  <div class="panel" style="position:absolute; left:32px; top:180px; width:1000px; height:520px" data-mark="1"><div class="panel-h"><span class="caps">Sources</span><span class="mono faint" style="font-size:11px">checked every 10 min</span></div><div class="panel-b">
+  <table class="grid"><tr><th>Source</th><th>Plan</th><th>Status</th><th>Last update</th><th>Version</th><th>Latency</th></tr>
+  <tr><td>FIRMS area API (VIIRS N20/N21)</td><td>A</td><td style="color:var(--mint)">● OK</td><td class="mono">06:41 UTC</td><td class="mono">2.0NRT</td><td class="mono">~3 h</td></tr>
+  <tr><td>FIRMS archive (MODIS C6.1 · VIIRS SP)</td><td>A</td><td style="color:var(--mint)">● OK</td><td class="mono">01 Oct</td><td class="mono">6.1 · 2.0</td><td class="mono">months</td></tr>
+  <tr><td>Daily fire masks (GEE)</td><td>A</td><td style="color:var(--mint)">● OK</td><td class="mono">29 Sep</td><td class="mono">061 · 002</td><td class="mono">days</td></tr>
+  <tr><td>Overpass API</td><td>A → B</td><td style="color:var(--flame)">● 429 → switched</td><td class="mono">06:30 UTC</td><td class="mono">private.coffee</td><td class="mono">—</td></tr>
+  <tr><td>Open-Meteo archive</td><td>A</td><td style="color:var(--mint)">● OK</td><td class="mono">06:40 UTC</td><td class="mono">ERA5-based</td><td class="mono">~5 d</td></tr>
+  <tr><td>OpenAQ v3</td><td>A</td><td style="color:var(--rose)">● key missing</td><td class="mono">—</td><td class="mono">v3</td><td class="mono">—</td></tr>
+  <tr><td>Groq → Gemini (brief text)</td><td>A</td><td style="color:var(--mint)">● OK</td><td class="mono">06:12 UTC</td><td class="mono">—</td><td class="mono">s</td></tr></table>
+  <div class="mono faint" style="font-size:11px; margin-top:12px">Status values on this mock-up are examples.</div></div></div>
+  <div class="panel" style="position:absolute; right:32px; top:180px; width:500px; height:520px" data-mark="2"><div class="panel-h"><span class="caps">Data-source labels</span></div><div class="panel-b" style="font-size:13px; line-height:1.6">
+  <div class="kv"><span><span class="chip live"><span class="dot"></span>LIVE</span></span><span>fetched now from Plan A/B</span></div>
+  <div class="kv"><span><span class="chip archive"><span class="dot"></span>ARCHIVE</span></span><span>science-quality history</span></div>
+  <div class="kv"><span><span class="chip cached"><span class="dot"></span>CACHED</span></span><span>saved copy ≤ 24 h old</span></div>
+  <div class="kv"><span><span class="chip demo"><span class="dot"></span>DEMO</span></span><span>synthetic, never a result</span></div>
+  <div class="kv"><span><span class="chip user"><span class="dot"></span>USER</span></span><span>uploaded by you</span></div>
+  <div class="err" style="margin-top:14px">Rule: synthetic data is never silently substituted for missing real data. If every source fails, the screen shows UNAVAILABLE.</div></div></div>
+  <div class="panel" style="position:absolute; left:32px; top:720px; width:1536px; height:250px" data-mark="3"><div class="panel-h"><span class="caps">Lineage of one value · Nov 2016 · Punjab = 412</span></div><div class="panel-b"><svg id="lin"></svg></div></div>
+</div>
+<script>
+(async function(){ KIT.topbar("Sources");
+const svg=d3.select("#lin").attr("width",1500).attr("height",170); const steps=[["FIRMS archive","MODIS C6.1 CSV","#8FB8FF"],["Clean","conf ≥ n · mask","#9AA6BD"],["Grid","0.1° cell-days","#49C7F5"],["Clear-sky","÷ MOD14A1 clear","#49C7F5"],["Calibrate","× k̃ = 2.5","#FF8A3D"],["Band","bootstrap 90%","#9B8CFF"],["Value","412 [380–441]","#3DDC97"]];
+steps.forEach(function(s,i){const x=10+i*212; svg.append("rect").attr("x",x).attr("y",40).attr("width",180).attr("height",84).attr("rx",12).attr("fill","rgba(255,255,255,0.04)").attr("stroke",s[2]); svg.append("text").attr("x",x+90).attr("y",74).attr("text-anchor","middle").attr("fill","#EEF2FA").attr("font-size",15).attr("font-weight",700).text(s[0]); svg.append("text").attr("x",x+90).attr("y",98).attr("text-anchor","middle").attr("fill","#9AA6BD").attr("font-size",12).attr("font-family","JB").text(s[1]); if(i<6){svg.append("path").attr("d","M"+(x+184)+",82 L"+(x+206)+",82").attr("stroke","#67728A").attr("stroke-width",2).attr("marker-end","url(#ar)");}});
+svg.append("defs").append("marker").attr("id","ar").attr("viewBox","0 0 10 10").attr("refX",9).attr("refY",5).attr("markerWidth",7).attr("markerHeight",7).attr("orient","auto").append("path").attr("d","M0,0L10,5L0,10z").attr("fill","#67728A");
+window.READY=true; })();
+</script></body></html>

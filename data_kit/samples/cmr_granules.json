@@ -1,0 +1,27 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://cmr.earthdata.nasa.gov/search/granules.json?short_name=VNP14IMG&temporal=2024-11-12T00:00:00Z,2024-11-12T23:59:59Z&bounding_box=73,29,77,32",
+  "feed": {
+    "updated": "2026-10-20T06:00:00.000Z",
+    "id": "https://cmr.earthdata.nasa.gov/search/granules.json?...",
+    "title": "ECHO granule metadata",
+    "entry": [
+      {
+        "id": "G0000000000-LANCEMODIS",
+        "title": "VNP14IMG.A2024317.0806.002.2024317120000.nc",
+        "time_start": "2024-11-12T08:06:00.000Z",
+        "time_end": "2024-11-12T08:12:00.000Z",
+        "day_night_flag": "DAY",
+        "granule_size": "1.2",
+        "collection_concept_id": "C0000000000-LANCEMODIS",
+        "online_access_flag": true,
+        "links": [
+          {
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "href": "https://.../VNP14IMG.A2024317.0806.002.nc"
+          }
+        ]
+      }
+    ]
+  }
+}

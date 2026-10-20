@@ -1,0 +1,36 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses. Same shape from Groq, OpenRouter, GitHub Models, Mistral, Cerebras, NVIDIA NIM, Cloudflare (OpenAI-compatible endpoint).",
+  "_request": {
+    "model": "llama-3.3-70b-versatile",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Write a 3-line brief. Use only numbers from the JSON."
+      },
+      {
+        "role": "user",
+        "content": "{\"district\":\"Ludhiana\",\"h\":14,\"lo\":12,\"hi\":16}"
+      }
+    ],
+    "temperature": 0.2
+  },
+  "id": "chatcmpl-abc123",
+  "object": "chat.completion",
+  "created": 1760940000,
+  "model": "llama-3.3-70b-versatile",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Ludhiana recorded 14 fire cell-days (range 12-16) ..."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 61,
+    "completion_tokens": 38,
+    "total_tokens": 99
+  }
+}

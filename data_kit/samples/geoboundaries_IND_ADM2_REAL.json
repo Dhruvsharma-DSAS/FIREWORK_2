@@ -1,0 +1,17 @@
+{
+  "_note": "REAL response fetched 20 Oct 2026 from https://www.geoboundaries.org/api/current/gbOpen/IND/ADM2/ (only this file is real).",
+  "boundaryID": "IND-ADM2-76128533",
+  "boundaryName": "India",
+  "boundaryISO": "IND",
+  "boundaryYearRepresented": "2021",
+  "boundaryType": "ADM2",
+  "boundaryCanonical": "District",
+  "boundarySource": "Pathways Data Pvt. Ltd., lgdirectory.gov.in",
+  "boundaryLicense": "Open Data Commons Open Database License 1.0",
+  "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+  "buildDate": "Dec 12, 2023",
+  "admUnitCount": "736",
+  "meanAreaSqKM": "4449.7088250729",
+  "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM2/geoBoundaries-IND-ADM2.geojson",
+  "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM2/geoBoundaries-IND-ADM2_simplified.geojson"
+}

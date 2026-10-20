@@ -1,0 +1,18 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_code": "ee.ImageCollection('MODIS/061/MYD14A1').filterDate('2024-11-01','2024-12-01').select('FireMask').map(clear_or_fire).sum().reduceRegions(cells, ee.Reducer.sum(), 1000)",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1209_2558",
+      "properties": {
+        "cell": "1209_2558",
+        "clear_days": 22,
+        "fire_days": 14,
+        "sensor": "MYD14A1",
+        "month": "2024-11"
+      }
+    }
+  ]
+}

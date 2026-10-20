@@ -1,0 +1,39 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://api.open-meteo.com/v1/forecast?latitude=30.9&longitude=75.85&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&forecast_days=1",
+  "latitude": 30.875,
+  "longitude": 75.875,
+  "generationtime_ms": 0.05,
+  "utc_offset_seconds": 0,
+  "timezone": "GMT",
+  "timezone_abbreviation": "GMT",
+  "elevation": 247.0,
+  "hourly_units": {
+    "time": "iso8601",
+    "temperature_2m": "°C",
+    "relative_humidity_2m": "%",
+    "wind_speed_10m": "km/h"
+  },
+  "hourly": {
+    "time": [
+      "2026-10-20T00:00",
+      "2026-10-20T01:00",
+      "2026-10-20T02:00"
+    ],
+    "temperature_2m": [
+      19.4,
+      18.9,
+      18.5
+    ],
+    "relative_humidity_2m": [
+      71,
+      74,
+      76
+    ],
+    "wind_speed_10m": [
+      4.3,
+      3.9,
+      3.6
+    ]
+  }
+}

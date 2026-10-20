@@ -1,0 +1,9 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="app" id="app" style="width:1600px; height:1131px; background:radial-gradient(1200px 900px at 75% 50%, #0F1A33 0%, #060A13 65%)"><svg id="g" style="position:absolute"></svg></div>
+<script>(async function(){ await KIT.loadWorld(); const q=new URLSearchParams(location.search);
+const rot=[+q.get("lon"),+q.get("lat"),0]; const sc=+q.get("s"); const cx=+q.get("cx"); const cy=+q.get("cy");
+const st=d3.select("#app"); const r=KIT.rng(3); const sv=d3.select("#g").attr("width",1600).attr("height",1131);
+for(let i=0;i<260;i++){ st.append("div"); }
+KIT.globe("#g",{w:1600,h:1131,scale:sc,cx:cx,cy:cy,rotate:rot,density:1.3,pointSize:1.6,hex:q.get("hex")==="1",points:q.get("hex")!=="1",hexRes:2,orbit:[{inc:98.7,node:+q.get("node"),color:"#49C7F5",satA:110}],terminator:{sunLon:+q.get("sun"),sunLat:-12}});
+const stars=d3.select("#g").insert("g",":first-child"); for(let i=0;i<220;i++){stars.append("circle").attr("cx",r()*1600).attr("cy",r()*1131).attr("r",r()*1.1+0.2).attr("fill","#fff").attr("opacity",0.15+r()*0.5);}
+window.READY=true; })();</script></body></html>

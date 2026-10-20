@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+</head><body>
+<div class="app" id="app">
+  <svg id="globe" style="position:absolute; left:300px; top:64px;"></svg>
+  <div class="panel" style="position:absolute; left:20px; top:84px; width:270px; bottom:118px;" data-mark="1">
+    <div class="panel-h"><span class="caps">Layers</span><span class="faint mono" style="font-size:11px">7 active</span></div>
+    <div class="panel-b" style="font-size:13px">
+      <div class="caps dim" style="margin:6px 0 8px">Fire observations</div>
+      <div class="kv"><span><span class="legend-swatch" style="background:#FF8A3D"></span> VIIRS 375 m hotspots</span><span class="toggle on"></span></div>
+      <div class="kv"><span><span class="legend-swatch" style="background:#8FB8FF"></span> MODIS 1 km hotspots</span><span class="toggle on"></span></div>
+      <div class="kv"><span>H3 density (res 2)</span><span class="toggle on"></span></div>
+      <div class="caps dim" style="margin:14px 0 8px">Context</div>
+      <div class="kv"><span>Burned area (MCD64A1)</span><span class="toggle"></span></div>
+      <div class="kv"><span>Land cover (WorldCover)</span><span class="toggle"></span></div>
+      <div class="kv"><span>Clear-sky coverage</span><span class="toggle on"></span></div>
+      <div class="kv"><span>Day / night terminator</span><span class="toggle on"></span></div>
+      <div class="kv"><span>Satellite ground tracks</span><span class="toggle on"></span></div>
+      <div class="caps dim" style="margin:14px 0 8px">Colour by</div>
+      <div class="seg"><span>Heat</span><span class="on">Sensor</span><span>Source</span></div>
+      <div class="caps dim" style="margin:16px 0 6px">Confidence ≥</div>
+      <div class="slider"><i style="width:55%"></i><b style="left:52%"></b></div>
+      <div class="mono faint" style="font-size:11px">nominal (0.6) · same rule both sensors</div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; left:320px; top:84px; width:420px; height:48px; display:flex; align-items:center; padding:0 14px; gap:10px" data-mark="2">
+    <span class="dim">⌕</span><span style="font-size:14px">Punjab, India</span><span class="spacer"></span><span class="chip"><span class="mono">73.8, 27.6, 77.6, 32.6</span></span>
+  </div>
+  <div class="panel" style="position:absolute; right:20px; top:84px; width:330px;" data-mark="3">
+    <div class="panel-h"><span class="caps">Cell inspector</span><span class="chip archive"><span class="dot"></span>ARCHIVE</span></div>
+    <div class="panel-b">
+      <div class="display" style="font-size:24px">Cell 1207_2558</div>
+      <div class="dim" style="font-size:12px; margin-bottom:10px">Ludhiana district · 0.1° × 0.1° ≈ 106 km²</div>
+      <div class="kv"><span>Nov 2024 fire cell-days</span><b>14</b></div>
+      <div class="kv"><span>Clear-sky cell-days</span><b>22 / 30</b></div>
+      <div class="kv"><span>Rate (fire / clear)</span><b>0.64</b></div>
+      <div class="kv"><span>Harmonised (VIIRS-eq)</span><b>14 <span class="faint">[12–16]</span></b></div>
+      <div class="kv"><span>Source mix</span><b style="color:var(--mint)">crop 81%</b></div>
+      <div class="warn" style="margin-top:12px">Blind-spot flag: burned area per counted cell-day is 2.4× its pre-2021 normal. Counts likely too low.</div>
+      <div class="row" style="margin-top:12px"><span class="btn">Open calendar</span><span class="btn">Export CSV</span></div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; right:20px; top:520px; width:330px;" data-mark="4">
+    <div class="panel-h"><span class="caps">Sensors over this cell</span></div>
+    <div class="panel-b" style="font-size:12.5px">
+      <div class="kv"><span><span class="legend-swatch" style="background:#8FB8FF"></span> Terra MODIS</span><b>~10:30</b></div>
+      <div class="kv"><span><span class="legend-swatch" style="background:#8FB8FF"></span> Aqua MODIS</span><b>~13:30</b></div>
+      <div class="kv"><span><span class="legend-swatch" style="background:#FF8A3D"></span> NOAA-20 / 21 VIIRS</span><b>~13:30</b></div>
+      <div class="kv" style="border:0"><span><span class="legend-swatch" style="background:#9AA6BD"></span> Burning peak (2024)</span><b style="color:var(--flame)">after 15:00</b></div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; left:20px; right:20px; bottom:16px; height:88px; padding:12px 18px;" data-mark="5">
+    <div class="row" style="justify-content:space-between"><div class="row"><span class="btn" style="padding:6px 12px">▶ Play</span><span class="seg"><span>Day</span><span class="on">Month</span><span>Year</span></span><span class="mono" style="font-size:13px; margin-left:10px">Nov 2024</span></div><div class="row"><span class="chip">MODIS era</span><span class="chip" style="border-color:var(--viirs); color:var(--viirs)">VIIRS era</span><span class="mono faint" style="font-size:11px">seam: 2012</span></div></div>
+    <svg id="tl" style="margin-top:6px"></svg>
+  </div>
+</div>
+<script>
+(async function(){ await KIT.loadWorld(); KIT.topbar("Explorer");
+const india = KIT.countries.features.find(function(f){return f.id==="356";});
+KIT.globe("#globe", {w:960, h:820, scale:640, cx:470, cy:470, rotate:[-80,-23,0], points:true, hex:true, hexRes:3, density:1.4, colorBy:"sensor", pointSize:1.6, orbit:[{inc:98.7,node:-40,color:"#49C7F5",satA:110},{inc:98.7,node:-25,color:"#8FB8FF",satA:96}], terminator:{sunLon:-10, sunLat:-15}, highlight:india});
+const tl=d3.select("#tl").attr("width",1520).attr("height",34);
+for(let i=0;i<300;i++){ const y=2000+i/12; const v=(0.4+0.6*Math.abs(Math.sin(i/12*Math.PI*2)))*(y>=2012?1:0.8)*(0.7+0.3*Math.random()); tl.append("rect").attr("x",i*5.05).attr("y",30-v*26).attr("width",3.8).attr("height",v*26).attr("rx",1).attr("fill", y>=2012?"#FF8A3D":"#8FB8FF").attr("opacity",0.75);}
+tl.append("rect").attr("x",287*5.05-2).attr("y",0).attr("width",8).attr("height",34).attr("fill","none").attr("stroke","#EEF2FA").attr("stroke-width",2).attr("rx",2);
+window.READY=true; })();
+</script></body></html>

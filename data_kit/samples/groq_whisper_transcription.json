@@ -1,0 +1,18 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "POST https://api.groq.com/openai/v1/audio/transcriptions (multipart: file, model=whisper-large-v3-turbo, response_format=verbose_json, language=hi)",
+  "task": "transcribe",
+  "language": "hindi",
+  "duration": 6.4,
+  "text": "Ludhiana mein kal kitni aag lagi?",
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 6.4,
+      "text": "Ludhiana mein kal kitni aag lagi?",
+      "avg_logprob": -0.21,
+      "no_speech_prob": 0.01
+    }
+  ]
+}

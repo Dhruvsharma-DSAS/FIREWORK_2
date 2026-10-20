@@ -1,0 +1,7 @@
+html, body, .app, .mobile { background: #F3F2EE !important; }
+* { color: transparent !important; text-shadow: none !important; box-shadow: none !important; backdrop-filter: none !important; }
+.topbar, .panel, .tile, .btn, .chip, .seg, .lc, .pp, .box, .sheet, .m-tabs, .m-top, .warn, .err, .ok, .kv, table td, table th, .toggle, .slider { background: #FFFFFF !important; border-color: #A9AEB6 !important; }
+.panel, .lc, .pp, .tile { border: 1.5px solid #8C929C !important; }
+svg { opacity: 0.35; filter: grayscale(1); }
+h1, .display, .big, .caps, b, .btn, .chip, .kv span, p, .dim, td, th, .mono { background-color: #D9DBDF !important; border-radius: 3px; }
+.btn.primary { background: #9EA4AD !important; }

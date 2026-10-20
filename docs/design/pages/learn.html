@@ -1,0 +1,41 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<style>.lc{background:var(--paper);color:var(--paper-ink);border-radius:18px;padding:22px;position:absolute} .lc h3{font-family:Fraunces;font-size:26px;font-weight:600;margin:6px 0 8px} .lc p{font-size:13.5px;line-height:1.6;color:#4A4E5A}
+.hand{font-family:Hand;font-size:22px;color:#C2410C}</style>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">Research &amp; education center</div><h1 class="display" style="font-size:40px; margin-top:6px">Learn the science in 6 steps</h1></div>
+  <div class="row" style="position:absolute; left:32px; top:180px; gap:12px" data-mark="1">
+    <span class="chip" style="background:var(--ember); color:#1A0A04; border-color:var(--ember)">1 · Coordinates</span><span class="chip">2 · Orbits &amp; overpass</span><span class="chip">3 · Infrared &amp; FRP</span><span class="chip">4 · MODIS vs VIIRS</span><span class="chip">5 · Harmonisation</span><span class="chip">6 · Reading the calendar</span><span class="seg" style="margin-left:20px"><span class="on">English</span><span>Hinglish</span></span>
+  </div>
+  <div class="lc" style="left:32px; top:236px; width:740px; height:420px" data-mark="2">
+    <div class="caps" style="color:#C2410C">Lesson 2 · 6 min</div><h3>Why a satellite misses an evening fire</h3>
+    <p>A polar satellite crosses a place at nearly the same local time every day. MODIS on Aqua and VIIRS pass around 13:30. A field fire lit at 16:30 has no satellite overhead, so it never enters the hotspot record — even though the field burned.</p>
+    <svg id="lesson"></svg>
+    <div class="hand" style="position:absolute; right:40px; bottom:22px; transform:rotate(-4deg)">chowkidar ka round — gaya toh gaya!</div>
+  </div>
+  <div class="lc" style="left:792px; top:236px; width:370px; height:420px" data-mark="3">
+    <div class="caps" style="color:#C2410C">Glossary</div>
+    <p style="margin-top:10px"><b>Cell-day</b> — one grid cell on one day with ≥ 1 detection.</p><p><b>FRP</b> — fire radiative power, MW.</p><p><b>Harmonisation</b> — putting two sensors on one scale.</p><p><b>MAD</b> — median absolute deviation, a robust spread.</p><p><b>Seam</b> — the 2012 jump when VIIRS starts.</p>
+  </div>
+  <div class="lc" style="left:1182px; top:236px; width:386px; height:420px" data-mark="4">
+    <div class="caps" style="color:#C2410C">Most misunderstood</div>
+    <p style="margin-top:10px"><b>“Fewer hotspots = less burning.”</b><br>Not always: timing, clouds and sensor changes can hide burning.</p>
+    <p><b>“A hotspot is a fire boundary.”</b><br>No — it is the centre of a pixel that was hot at overpass time.</p>
+    <p><b>“p &gt; 0.05 means no change.”</b><br>No — it means the test could not show one.</p>
+  </div>
+  <div class="panel" style="position:absolute; left:32px; top:676px; width:1536px; height:294px" data-mark="5"><div class="panel-h"><span class="caps">Research library</span><span class="mono faint" style="font-size:11px">every claim on this site links here</span></div>
+  <div class="panel-b"><table class="grid"><tr><th>Source</th><th>Used for</th><th>Type</th><th>Link</th></tr>
+  <tr><td>Giglio et al. 2016, RSE</td><td>MODIS C6 fire algorithm</td><td>peer-reviewed</td><td class="mono">doi:10.1016/j.rse.2016.02.054</td></tr>
+  <tr><td>Schroeder et al. 2014, RSE</td><td>VIIRS 375 m algorithm</td><td>peer-reviewed</td><td class="mono">doi:10.1016/j.rse.2013.12.008</td></tr>
+  <tr><td>NASA LAADS — MODIS to VIIRS transition</td><td>end-of-mission dates, continuity</td><td>official</td><td class="mono">ladsweb.modaps.eosdis.nasa.gov</td></tr>
+  <tr><td>iFOREST Stubble Burning Status Report 2025</td><td>late-afternoon shift, burnt area</td><td>report (via news)</td><td class="mono">tribuneindia.com</td></tr></table></div></div>
+</div>
+<script>
+(async function(){ KIT.topbar("Learn");
+const svg=d3.select("#lesson").attr("width",690).attr("height",200); const x=d3.scaleLinear().domain([6,20]).range([20,670]);
+svg.append("line").attr("x1",20).attr("x2",670).attr("y1",150).attr("y2",150).attr("stroke","#8A8270");
+for(let h=6;h<=20;h+=2){svg.append("text").attr("x",x(h)).attr("y",172).attr("text-anchor","middle").attr("font-size",11).attr("fill","#5A5547").attr("font-family","JB").text(h+":00");}
+[[10.5,"Terra"],[13.5,"Aqua · VIIRS"]].forEach(function(p){svg.append("rect").attr("x",x(p[0])-14).attr("y",30).attr("width",28).attr("height",120).attr("fill","#49C7F5").attr("opacity",0.25); svg.append("text").attr("x",x(p[0])).attr("y",22).attr("text-anchor","middle").attr("font-size",12).attr("fill","#1B6E91").text(p[1]);});
+svg.append("path").attr("d",d3.area().x(function(d){return x(d[0]);}).y0(150).y1(function(d){return 150-d[1];}).curve(d3.curveBasis)([[14,0],[15,20],[16,80],[16.5,100],[17,85],[18,30],[19,0]])).attr("fill","#FF6A3D").attr("opacity",0.75);
+svg.append("text").attr("x",x(16.5)).attr("y",42).attr("text-anchor","middle").attr("font-size",12).attr("fill","#C2410C").text("burning (not observed)");
+window.READY=true; })();
+</script></body></html>

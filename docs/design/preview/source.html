@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+<link rel="stylesheet" href="/wire.css"></head><body>
+<div class="app" id="app">
+  <div class="panel" style="position:absolute; left:24px; top:84px; width:1000px; height:892px; overflow:hidden" data-mark="1"><svg id="map"></svg>
+    <div class="row" style="position:absolute; left:16px; bottom:16px; gap:14px; font-size:12px; background:rgba(6,10,19,.75); padding:8px 12px; border-radius:10px">
+      <span><span class="legend-swatch" style="background:#3DDC97"></span> crop residue</span><span><span class="legend-swatch" style="background:#FF4D6D"></span> forest / wildland</span><span><span class="legend-swatch" style="background:#FFB547"></span> industrial / persistent</span><span><span class="legend-swatch" style="background:#9AA6BD"></span> unknown (abstain)</span></div>
+    <span class="chip demo" style="position:absolute; right:16px; top:16px; background:rgba(6,10,19,.7)"><span class="dot"></span>DEMO POINTS</span>
+  </div>
+  <div class="panel" style="position:absolute; right:24px; top:84px; width:530px; height:520px" data-mark="2">
+    <div class="panel-h"><span class="caps">Site S-0417 · near Ropar</span><span class="chip" style="color:var(--flame); border-color:rgba(255,181,71,.5)">INDUSTRIAL · 0.89</span></div>
+    <div class="panel-b" style="font-size:13px">
+      <div class="caps dim" style="margin:4px 0 8px">Evidence for</div>
+      <div class="kv"><span>Persistence π (hot days / observed)</span><b>0.82</b></div>
+      <div class="kv"><span>Night detections ν</span><b>70%</b></div>
+      <div class="kv"><span>Median brightness gap ΔT</span><b>38 K</b></div>
+      <div class="kv"><span>Thermal power plant (OSM) at 300 m</span><b>IE +5.0</b></div>
+      <div class="caps dim" style="margin:14px 0 8px">Evidence against</div>
+      <div class="kv"><span>Cropland within 1.2 km</span><b>AE +1.0</b></div>
+      <div class="tile" style="margin-top:12px"><div class="mono" style="font-size:13px">L = ln((IE+1)/(AE+1)) = ln(7.5/3.5) = 0.76 → industrial context</div></div>
+      <div class="dim" style="font-size:12px; margin-top:10px">Below 0.55 probability the site is shown as UNKNOWN, not guessed.</div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; right:24px; top:620px; width:530px; height:356px" data-mark="3">
+    <div class="panel-h"><span class="caps">Calendar split by source · Punjab Nov</span></div>
+    <div class="panel-b"><svg id="stack"></svg><div class="dim" style="font-size:12px">Removing persistent industrial heat sharpens the crop season. Demo values.</div></div>
+  </div>
+</div>
+<script>
+(async function(){ await KIT.loadWorld(); KIT.topbar("Explorer");
+await KIT.region("#map",{w:1000,h:892,bbox:[74.6,29.9,77.2,31.6],colorBy:"class",density:2.2,pointSize:3});
+const svg=d3.select("#stack").attr("width",490).attr("height",250); const yrs=[2017,2018,2019,2020,2021,2022,2023,2024]; const crop=[300,310,295,320,280,180,150,140]; const ind=[22,24,23,25,24,26,25,27]; const unk=[18,20,15,17,16,14,13,12];
+const x=d3.scaleBand().domain(yrs).range([40,480]).padding(0.25); const y=d3.scaleLinear().domain([0,380]).range([220,10]);
+yrs.forEach(function(yy,i){let base=0; [[crop[i],"#3DDC97"],[ind[i],"#FFB547"],[unk[i],"#9AA6BD"]].forEach(function(p){svg.append("rect").attr("x",x(yy)).attr("y",y(base+p[0])).attr("width",x.bandwidth()).attr("height",y(base)-y(base+p[0])).attr("fill",p[1]); base+=p[0];}); svg.append("text").attr("x",x(yy)+x.bandwidth()/2).attr("y",240).attr("text-anchor","middle").attr("font-size",10).attr("fill","#67728A").attr("font-family","JB").text(yy);});
+window.READY=true; })();
+</script></body></html>

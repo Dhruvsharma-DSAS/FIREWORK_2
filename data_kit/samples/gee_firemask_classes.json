@@ -1,0 +1,16 @@
+{
+  "FireMask": {
+    "0": "not processed (missing input)",
+    "1": "not processed (obsolete)",
+    "2": "not processed (other)",
+    "3": "non-fire water",
+    "4": "cloud",
+    "5": "non-fire land",
+    "6": "unknown",
+    "7": "fire (low confidence)",
+    "8": "fire (nominal confidence)",
+    "9": "fire (high confidence)"
+  },
+  "MaxFRP": "MW x 10 (scale 0.1)",
+  "_rule": "clear = class 5,7,8,9 ; fire = class 7,8,9 (or 8,9 for stricter)"
+}

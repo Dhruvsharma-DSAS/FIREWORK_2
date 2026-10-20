@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+</head><body>
+<div class="app" id="app">
+  <div class="topbar">
+    <div class="brand" data-mark="1"><svg id="logo"></svg><div>FIREWORK CHRONOS<small>EARTH INTELLIGENCE ATLAS</small></div></div>
+    <div class="nav" data-mark="2"><span class="on">Home</span><span>Explorer</span><span>Calendar</span><span>Sensor Lab</span><span>Data Studio</span><span>Formulas</span><span>Validation</span><span>Learn</span></div>
+    <div class="spacer"></div>
+    <div class="row" data-mark="3"><span class="chip live"><span class="dot"></span>LIVE NRT · 3h</span><span class="chip archive"><span class="dot"></span>ARCHIVE 2000–2025</span></div>
+  </div>
+  <svg id="globe" style="position:absolute; left:640px; top:40px;"></svg>
+  <div style="position:absolute; left:72px; top:170px; width:600px;">
+    <div class="caps" style="color:var(--flame)" data-mark="4">NASA Space Apps 2026 · Harmonization of MODIS &amp; VIIRS Hot Spots</div>
+    <h1 class="display" style="font-size:76px; line-height:1.0; margin-top:22px;">25 years of fire.<br><span style="color:var(--ember); font-style:italic; font-weight:400;">One honest record.</span></h1>
+    <p style="font-size:18px; line-height:1.6; color:var(--dim); margin-top:26px; width:520px;">MODIS (2000–2027) and VIIRS (2012→) put on one ruler — with the source of every number, its uncertainty, and a warning when the satellites could not see.</p>
+    <div class="row" style="margin-top:34px; gap:14px;" data-mark="5"><span class="btn primary">Explore the Earth →</span><span class="btn">Open the burning calendar</span><span class="btn ghost">Upload your data</span></div>
+  </div>
+  <div style="position:absolute; left:72px; bottom:56px; display:flex; gap:16px;" data-mark="6">
+    <div class="tile" style="width:220px"><div class="caps dim">Record length</div><div class="big">25 yrs</div><div class="dim" style="font-size:12px">Nov 2000 → today</div></div>
+    <div class="tile" style="width:220px"><div class="caps dim">Sensors joined</div><div class="big">5</div><div class="dim" style="font-size:12px">Terra · Aqua · S-NPP · NOAA-20 · NOAA-21</div></div>
+    <div class="tile" style="width:220px"><div class="caps dim">Every value shows</div><div class="big" style="font-size:26px; padding-top:6px">3 tags</div><div class="dim" style="font-size:12px">unit · uncertainty · source</div></div>
+  </div>
+  <div class="panel" style="position:absolute; right:48px; bottom:56px; width:330px;" data-mark="7">
+    <div class="panel-h"><span class="caps">Why now</span><span class="chip demo"><span class="dot"></span>FACT</span></div>
+    <div class="panel-b" style="font-size:13px; line-height:1.55">
+      <div class="kv"><span>Suomi NPP observations stop</span><b style="color:var(--rose)">2 Nov 2026</b></div>
+      <div class="kv"><span>Terra MODIS collection ends</span><b style="color:var(--ember)">Jan 2027</b></div>
+      <div class="kv" style="border:0"><span>Aqua MODIS collection ends</span><b style="color:var(--flame)">~Sep 2027</b></div>
+    </div>
+  </div>
+  <div style="position:absolute; right:60px; top:96px; text-align:right" class="faint mono" data-mark="8">fire points: demo pattern · globe: Natural Earth</div>
+</div>
+<script>
+(async function(){ await KIT.loadWorld(); KIT.logo("#logo", 36);
+KIT.globe("#globe", {w:980, h:980, scale:420, rotate:[-80,-16,0], points:true, density:1.2, orbit:[{inc:98.7,node:-60,color:"#49C7F5",satA:118}], terminator:{sunLon:20, sunLat:-10}});
+window.READY=true; })();
+</script></body></html>

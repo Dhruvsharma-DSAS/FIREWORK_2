@@ -1,0 +1,24 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_classes": {
+    "10": "tree cover",
+    "20": "shrubland",
+    "30": "grassland",
+    "40": "cropland",
+    "50": "built-up",
+    "60": "bare / sparse",
+    "70": "snow and ice",
+    "80": "permanent water",
+    "90": "herbaceous wetland",
+    "95": "mangroves",
+    "100": "moss and lichen"
+  },
+  "cell": "1209_2558",
+  "histogram": {
+    "40": 0.81,
+    "50": 0.09,
+    "10": 0.04,
+    "80": 0.02,
+    "30": 0.04
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+<link rel="stylesheet" href="/wire.css"></head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">Satellite comparison lab</div><h1 class="display" style="font-size:40px; margin-top:6px">Same place, two rulers</h1></div>
+  <div class="panel" style="position:absolute; left:32px; top:180px; width:900px; height:520px; overflow:hidden" data-mark="1">
+    <svg id="ga" style="position:absolute; left:0; top:0"></svg>
+    <div style="position:absolute; left:450px; top:0; bottom:0; width:450px; overflow:hidden"><svg id="gb" style="position:absolute; left:-450px; top:0"></svg></div>
+    <div style="position:absolute; left:448px; top:0; bottom:0; width:4px; background:var(--text)"></div>
+    <div style="position:absolute; left:428px; top:240px; width:44px; height:44px; border-radius:50%; background:var(--text); color:var(--ink); display:flex; align-items:center; justify-content:center; font-weight:800" data-mark="2">⟷</div>
+    <span class="chip" style="position:absolute; left:16px; top:14px; background:rgba(6,10,19,.7)"><span class="dot" style="background:#8FB8FF"></span>MODIS · 1 km · 2015-11-05</span>
+    <span class="chip" style="position:absolute; right:16px; top:14px; background:rgba(6,10,19,.7)"><span class="dot" style="background:#FF8A3D"></span>VIIRS · 375 m · 2015-11-05</span>
+  </div>
+  <div class="panel" style="position:absolute; right:32px; top:180px; width:600px; height:250px" data-mark="3">
+    <div class="panel-h"><span class="caps">Calibration ratio k by month · overlap 2012–2025</span><span class="chip demo"><span class="dot"></span>DEMO</span></div>
+    <div class="panel-b"><svg id="kb"></svg></div>
+  </div>
+  <div class="panel" style="position:absolute; right:32px; top:450px; width:600px; height:250px" data-mark="4">
+    <div class="panel-h"><span class="caps">Detection probability · Aqua vs VIIRS matched pairs</span><span class="mono faint" style="font-size:11px">FRP50 ≈ 9 MW (synthetic test)</span></div>
+    <div class="panel-b"><svg id="dc"></svg></div>
+  </div>
+  <div class="panel" style="position:absolute; left:32px; top:720px; width:900px; height:250px" data-mark="5">
+    <div class="panel-h"><span class="caps">Raw vs harmonised · Punjab Nov totals</span><div class="seg"><span class="on">Day</span><span>Night</span><span>Both</span></div></div>
+    <div class="panel-b"><svg id="rh"></svg></div>
+  </div>
+  <div class="panel" style="position:absolute; right:32px; top:720px; width:600px; height:250px" data-mark="6">
+    <div class="panel-h"><span class="caps">Model fit</span><span class="chip archive"><span class="dot"></span>GLM · NegBin</span></div>
+    <div class="panel-b" style="font-size:13px">
+      <div class="kv"><span>k day = e^β₁</span><b>2.64 [2.50–2.80]</b></div>
+      <div class="kv"><span>k night = e^(β₁+β₃)</span><b>— needs archive run</b></div>
+      <div class="kv"><span>Overdispersion (Pearson χ²/df)</span><b>1.9 → use NegBin</b></div>
+      <div class="kv"><span>AIC ratio vs power law</span><b>−165.3 vs −198.0</b></div>
+      <div class="mono faint" style="font-size:11px; margin-top:8px">All numbers on this panel come from synthetic tests in accuracy_tools.py</div>
+    </div>
+  </div>
+</div>
+<script>
+(async function(){ await KIT.loadWorld(); KIT.topbar("Sensor Lab");
+await KIT.region("#ga",{w:900,h:520,sensorFilter:"MODIS",grid:0.1});
+await KIT.region("#gb",{w:900,h:520,sensorFilter:"VIIRS",grid:0.1});
+KIT.bars("#kb",{w:568,h:190,values:[2.1,2.2,2.3,2.4,2.6,2.3,2.0,2.0,2.2,2.5,2.5,2.3],labels:["J","F","M","A","M","J","J","A","S","O","N","D"],color:"#FF8A3D",fmt:function(v){return v.toFixed(1);}});
+const xs=[]; const ys=[]; for(let i=0;i<40;i++){const f=Math.exp(Math.log(0.5)+i/39*(Math.log(200)-Math.log(0.5))); xs.push(i%8===0?f.toFixed(1):""); ys.push(1/(1+Math.exp(-2.2*(Math.log(f)-Math.log(9)))));}
+KIT.lineChart("#dc",{w:568,h:190,series:[{values:ys,color:"#8FB8FF"}],xLabels:xs,yMin:0,yMax:1,vline:{at:Math.round(39*(Math.log(9)-Math.log(0.5))/(Math.log(200)-Math.log(0.5))),color:"#FF4D6D",label:"FRP50"}});
+const base=[100,104,108,103,97,95,99,104,107,103,98,96,101,106,108,104,99,97,100,105,107,103,99]; const raw=base.map(function(v,i){return i>=9?v*2.6:v;}); const lab=[]; for(let y=2003;y<=2025;y++){lab.push(y%4===3?String(y):"");}
+KIT.lineChart("#rh",{w:868,h:190,series:[{values:raw,color:"#FF4D6D",dots:true},{values:base,color:"#3DDC97",dots:true}],xLabels:lab,vline:{at:9,color:"#49C7F5",label:"2012 seam"}});
+window.READY=true; })();
+</script></body></html>

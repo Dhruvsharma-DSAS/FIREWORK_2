@@ -1,0 +1,27 @@
+{
+  "_note": "OUR OWN API response (the contract every page reads).",
+  "data": {
+    "cell": "1209_2558",
+    "month": "2024-11",
+    "fire_days_viirs_eq": 14,
+    "lo": 12,
+    "hi": 16,
+    "clear_days": 22,
+    "rate": 0.64,
+    "unit": "VIIRS-equivalent fire cell-days",
+    "flags": [
+      "blind_spot"
+    ]
+  },
+  "meta": {
+    "data_source": {
+      "fire_points": "FIRMS archive VNP14IMG + MCD14ML",
+      "clear_days": "GEE MYD14A1",
+      "burned_area": "GEE MCD64A1"
+    },
+    "fallback_used": false,
+    "version": "calib-0.3",
+    "generated_at": "2026-10-20T06:00:00Z",
+    "demo": true
+  }
+}

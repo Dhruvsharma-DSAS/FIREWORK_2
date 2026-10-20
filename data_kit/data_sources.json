@@ -1,0 +1,416 @@
+{
+  "_about": "Source registry for the FIREWORK f(x) engine. For every formula input x, sources are tried in rank order until one passes the health and quality checks.",
+  "updated": "2026-10-20",
+  "inputs": [
+    {
+      "id": "x_fire_points",
+      "meaning": "Active-fire detections (MODIS + VIIRS)",
+      "formulas": [
+        "F01",
+        "F02",
+        "F03",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F13",
+        "F20",
+        "F21",
+        "F44"
+      ],
+      "unit": "rows (one per hot pixel)",
+      "changes_over_time": "NRT rows appear within ~3 h; Standard Processing (SP) replaces NRT after ~2-3 months; archive versions (MODIS C6.1, VIIRS 002) can be reprocessed",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "FIRMS Area API",
+          "key": "FIRMS_MAP_KEY",
+          "url": "https://firms.modaps.eosdis.nasa.gov/api/area/",
+          "limit": "5000 transactions / 10 min, 1-5 days per call",
+          "best_for": "recent days, small areas"
+        },
+        {
+          "rank": 2,
+          "name": "FIRMS archive download (Download Request)",
+          "key": "Earthdata login",
+          "url": "https://firms.modaps.eosdis.nasa.gov/download/",
+          "limit": "emailed CSV/SHP, years at once",
+          "best_for": "2000->today history"
+        },
+        {
+          "rank": 3,
+          "name": "LAADS DAAC / earthaccess (MCD14ML, VNP14IMG, VJ114IMG)",
+          "key": "Earthdata login",
+          "url": "https://ladsweb.modaps.eosdis.nasa.gov/",
+          "limit": "bulk files",
+          "best_for": "raw product files when FIRMS is down"
+        },
+        {
+          "rank": 4,
+          "name": "GEE community catalog FIRMS vectors",
+          "key": "Earth Engine project",
+          "url": "https://gee-community-catalog.org/projects/firms_vector/",
+          "limit": "EE quota",
+          "best_for": "server-side aggregation"
+        }
+      ]
+    },
+    {
+      "id": "x_clear_days",
+      "meaning": "Days each cell was visible (not cloud) - daily FireMask",
+      "formulas": [
+        "F09",
+        "F25"
+      ],
+      "unit": "clear cell-days",
+      "changes_over_time": "daily product; fixed after processing; new collection versions rare",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "Google Earth Engine MOD14A1 / MYD14A1 / VNP14A1",
+          "key": "Earth Engine project",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD14A1",
+          "limit": "Community tier 150 EECU-h/month",
+          "best_for": "monthly clear-day counts per cell"
+        },
+        {
+          "rank": 2,
+          "name": "Microsoft Planetary Computer modis-14A1-061",
+          "key": "none for read",
+          "url": "https://planetarycomputer.microsoft.com/dataset/modis-14A1-061",
+          "limit": "fair use",
+          "best_for": "backup, STAC + COG"
+        },
+        {
+          "rank": 3,
+          "name": "NASA AppEEARS area request",
+          "key": "Earthdata login",
+          "url": "https://appeears.earthdatacloud.nasa.gov/",
+          "limit": "queued jobs",
+          "best_for": "small-area subsets"
+        }
+      ]
+    },
+    {
+      "id": "x_burned_area",
+      "meaning": "Burned area per month (blind-spot check)",
+      "formulas": [
+        "F46"
+      ],
+      "unit": "km2 or burned pixels",
+      "changes_over_time": "monthly; available ~2-3 months after the month ends",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "GEE MODIS/061/MCD64A1",
+          "key": "Earth Engine project",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD64A1",
+          "limit": "EE quota",
+          "best_for": "monthly burned km2 per district"
+        },
+        {
+          "rank": 2,
+          "name": "ORNL DAAC MODIS subsets (MCD64A1)",
+          "key": "none",
+          "url": "https://modis.ornl.gov/",
+          "limit": "point/small box",
+          "best_for": "backup for single sites"
+        },
+        {
+          "rank": 3,
+          "name": "ESA FireCCI",
+          "key": "none",
+          "url": "https://climate.esa.int/en/projects/fire/",
+          "limit": "file download",
+          "best_for": "independent cross-check"
+        }
+      ]
+    },
+    {
+      "id": "x_land_cover",
+      "meaning": "Cropland / tree / built-up class around a fire",
+      "formulas": [
+        "F08",
+        "F42",
+        "F43"
+      ],
+      "unit": "class code",
+      "changes_over_time": "static snapshot (WorldCover 2020, 2021); MCD12Q1 yearly",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "ESA WorldCover 10 m (GEE)",
+          "key": "Earth Engine project",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/ESA_WorldCover_v200",
+          "limit": "EE quota",
+          "best_for": "cropland share per cell"
+        },
+        {
+          "rank": 2,
+          "name": "ESA WorldCover on AWS S3",
+          "key": "none",
+          "url": "https://registry.opendata.aws/esa-worldcover-vito/",
+          "limit": "free download",
+          "best_for": "offline backup"
+        },
+        {
+          "rank": 3,
+          "name": "MODIS MCD12Q1 yearly land cover",
+          "key": "Earth Engine or Earthdata",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MCD12Q1",
+          "limit": "EE quota",
+          "best_for": "years before 2020"
+        }
+      ]
+    },
+    {
+      "id": "x_industry",
+      "meaning": "Industrial sites, kilns, flares near a fire",
+      "formulas": [
+        "F08",
+        "F42",
+        "F43"
+      ],
+      "unit": "points/polygons",
+      "changes_over_time": "OSM edited daily by volunteers; flare lists yearly",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "OSM Overpass API",
+          "key": "none",
+          "url": "https://overpass-api.de/api/interpreter",
+          "limit": "fair use, ~2 slots per IP",
+          "best_for": "industrial landuse, kilns"
+        },
+        {
+          "rank": 2,
+          "name": "Overpass mirror (private.coffee / maps.mail.ru)",
+          "key": "none",
+          "url": "https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances",
+          "limit": "fair use",
+          "best_for": "when main server is busy"
+        },
+        {
+          "rank": 3,
+          "name": "Geofabrik India extract (.osm.pbf)",
+          "key": "none",
+          "url": "https://download.geofabrik.de/asia/india.html",
+          "limit": "daily file",
+          "best_for": "offline, no rate limit"
+        },
+        {
+          "rank": 4,
+          "name": "VIIRS Nightfire / EOG gas flares",
+          "key": "free EOG account",
+          "url": "https://eogdata.mines.edu/products/vnf/",
+          "limit": "file download",
+          "best_for": "flare masks"
+        }
+      ]
+    },
+    {
+      "id": "x_weather",
+      "meaning": "Wind, humidity, rain, temperature for context",
+      "formulas": [
+        "context panels"
+      ],
+      "unit": "hourly/daily values",
+      "changes_over_time": "forecast changes every hour; archive (ERA5) final after ~5 days",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "Open-Meteo Forecast + Archive",
+          "key": "none (non-commercial)",
+          "url": "https://open-meteo.com/en/docs",
+          "limit": "about 10,000 calls/day non-commercial",
+          "best_for": "fast JSON, no key"
+        },
+        {
+          "rank": 2,
+          "name": "NASA POWER daily point",
+          "key": "none",
+          "url": "https://power.larc.nasa.gov/docs/services/api/",
+          "limit": "fair use",
+          "best_for": "long daily history"
+        },
+        {
+          "rank": 3,
+          "name": "Copernicus CDS ERA5",
+          "key": "CDS API key",
+          "url": "https://cds.climate.copernicus.eu",
+          "limit": "queued jobs",
+          "best_for": "research-grade grids"
+        }
+      ]
+    },
+    {
+      "id": "x_air_quality",
+      "meaning": "PM2.5 near the burning (impact panel)",
+      "formulas": [
+        "impact panel"
+      ],
+      "unit": "ug/m3",
+      "changes_over_time": "hourly; stations go offline; values can be corrected later",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "OpenAQ API v3",
+          "key": "X-API-Key (free)",
+          "url": "https://docs.openaq.org",
+          "limit": "60/min, 2000/hour",
+          "best_for": "ground stations"
+        },
+        {
+          "rank": 2,
+          "name": "Open-Meteo Air Quality (CAMS model)",
+          "key": "none",
+          "url": "https://open-meteo.com/en/docs/air-quality-api",
+          "limit": "non-commercial fair use",
+          "best_for": "model values everywhere"
+        },
+        {
+          "rank": 3,
+          "name": "CPCB / WAQI",
+          "key": "WAQI token",
+          "url": "https://aqicn.org/data-platform/token/",
+          "limit": "token quota",
+          "best_for": "India backup"
+        }
+      ]
+    },
+    {
+      "id": "x_orbits",
+      "meaning": "Satellite orbit elements -> overpass times",
+      "formulas": [
+        "F01",
+        "F45"
+      ],
+      "unit": "OMM/TLE",
+      "changes_over_time": "updated several times a day; old elements drift - refresh daily",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "CelesTrak GP API",
+          "key": "none",
+          "url": "https://celestrak.org/NORAD/documentation/gp-data-formats.php",
+          "limit": "fair use; cache 2 h+",
+          "best_for": "JSON elements"
+        },
+        {
+          "rank": 2,
+          "name": "Space-Track",
+          "key": "free account",
+          "url": "https://www.space-track.org",
+          "limit": "account limits",
+          "best_for": "official backup"
+        },
+        {
+          "rank": 3,
+          "name": "Derive from FIRMS acq_time",
+          "key": "none",
+          "url": "-",
+          "limit": "-",
+          "best_for": "offline estimate"
+        }
+      ]
+    },
+    {
+      "id": "x_boundaries",
+      "meaning": "District / state boundaries for regions and briefs",
+      "formulas": [
+        "F04 (areas)",
+        "region totals"
+      ],
+      "unit": "GeoJSON polygons",
+      "changes_over_time": "static; new districts appear a few times a year",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "geoBoundaries API",
+          "key": "none",
+          "url": "https://www.geoboundaries.org/api.html",
+          "limit": "fair use",
+          "best_for": "ADM1/ADM2 GeoJSON"
+        },
+        {
+          "rank": 2,
+          "name": "Natural Earth",
+          "key": "none",
+          "url": "https://www.naturalearthdata.com",
+          "limit": "download",
+          "best_for": "light world maps"
+        },
+        {
+          "rank": 3,
+          "name": "GADM",
+          "key": "none (non-commercial)",
+          "url": "https://gadm.org",
+          "limit": "download",
+          "best_for": "detailed backup"
+        }
+      ]
+    },
+    {
+      "id": "x_ndvi",
+      "meaning": "Vegetation greenness / harvest timing",
+      "formulas": [
+        "season context (F29)"
+      ],
+      "unit": "NDVI -1..1",
+      "changes_over_time": "16-day composites",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "GEE MODIS/061/MOD13Q1",
+          "key": "Earth Engine project",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD13Q1",
+          "limit": "EE quota",
+          "best_for": "250 m NDVI"
+        },
+        {
+          "rank": 2,
+          "name": "ORNL MODIS subsets",
+          "key": "none",
+          "url": "https://modis.ornl.gov/",
+          "limit": "small areas",
+          "best_for": "backup"
+        },
+        {
+          "rank": 3,
+          "name": "Sentinel-2 via Earth Search STAC",
+          "key": "none",
+          "url": "https://earth-search.aws.element84.com/v1",
+          "limit": "fair use",
+          "best_for": "10 m detail"
+        }
+      ]
+    },
+    {
+      "id": "x_granule_index",
+      "meaning": "Which product files exist for a date (health + archive)",
+      "formulas": [
+        "pipeline / health page"
+      ],
+      "unit": "file metadata",
+      "changes_over_time": "new granules every orbit",
+      "sources": [
+        {
+          "rank": 1,
+          "name": "NASA CMR Search API",
+          "key": "none for search",
+          "url": "https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html",
+          "limit": "fair use",
+          "best_for": "list files"
+        },
+        {
+          "rank": 2,
+          "name": "earthaccess Python library",
+          "key": "Earthdata login",
+          "url": "https://earthaccess.readthedocs.io",
+          "limit": "-",
+          "best_for": "search + download in Python"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+frontend/dist/
+data/raw/*
+!data/raw/.gitkeep
+data/cell_day/
+*.parquet
+graphify-out/cache/
+data_kit/real_samples/
+.DS_Store

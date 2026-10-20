@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+<link rel="stylesheet" href="/wire.css"></head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;">
+    <div class="caps" style="color:var(--flame)">Historical fire calendar</div>
+    <h1 class="display" style="font-size:40px; margin-top:6px">Punjab · 2003 → 2025</h1>
+    <div class="dim" style="font-size:14px; margin-top:4px">Unit: VIIRS-equivalent fire cell-days per 1,000 clear-sky cell-days · grid 0.1°</div>
+  </div>
+  <div class="row" style="position:absolute; right:32px; top:112px; gap:12px" data-mark="1">
+    <div class="seg"><span>Raw counts</span><span class="on">Harmonised</span></div>
+    <div class="seg"><span class="on">All sources</span><span>Crop</span><span>Forest</span><span>Industrial</span></div>
+    <span class="chip demo"><span class="dot"></span>DEMO VALUES</span>
+  </div>
+  <div class="panel" style="position:absolute; left:32px; top:200px; width:1010px; height:740px; padding:18px" data-mark="2">
+    <svg id="heat"></svg>
+    <div class="row" style="margin-top:6px; font-size:12px" data-mark="3"><span class="dim">Low</span><svg id="leg"></svg><span class="dim">High</span><span style="margin-left:24px; border:2px solid var(--sky); border-radius:4px; width:14px; height:14px; display:inline-block"></span><span class="dim">unusual month (robust z &gt; 2)</span><span style="margin-left:18px; border:2px dashed var(--flame); border-radius:4px; width:14px; height:14px; display:inline-block"></span><span class="dim">blind-spot flag</span></div>
+  </div>
+  <div class="panel" style="position:absolute; right:32px; top:200px; width:500px;" data-mark="4">
+    <div class="panel-h"><span class="caps">Selected · November 2016</span><span class="chip archive"><span class="dot"></span>ARCHIVE</span></div>
+    <div class="panel-b">
+      <div class="row" style="gap:12px">
+        <div class="tile" style="flex:1"><div class="caps dim">Value</div><div class="big">412</div><div class="mono faint" style="font-size:11px">90% band 380–441</div></div>
+        <div class="tile" style="flex:1"><div class="caps dim">Robust z</div><div class="big" style="color:var(--sky)">+2.4</div><div class="mono faint" style="font-size:11px">median 318 · MAD 26</div></div>
+      </div>
+      <div class="kv" style="margin-top:10px"><span>Converted from</span><b>Aqua MODIS × k̃(Nov)</b></div>
+      <div class="kv"><span>k̃ (shrunk)</span><b>2.5 [2.45–2.55]</b></div>
+      <div class="kv"><span>Era</span><b>VIIRS reference</b></div>
+      <div class="kv"><span>Validation (LOYO, Nov)</span><b>median error 4%</b></div>
+    </div>
+  </div>
+  <div class="panel" style="position:absolute; right:32px; top:520px; width:500px; height:420px" data-mark="5">
+    <div class="panel-h"><span class="caps">Season shape · November totals</span><span class="mono faint" style="font-size:11px">Sen slope −6.1 / yr · p = 0.21 (HR-MK)</span></div>
+    <div class="panel-b"><svg id="line"></svg>
+      <div class="warn" style="margin-top:8px">2022–2025 decline overlaps the late-afternoon shift. Treat the trend as unconfirmed until burned area agrees.</div>
+    </div>
+  </div>
+</div>
+<script>
+(async function(){ KIT.topbar("Calendar");
+const rows=KIT.calendarData(11,true); const labels=[]; for(let y=2003;y<=2025;y++){labels.push(String(y));}
+KIT.heat("#heat",{w:970,h:670,rows:rows,rowLabels:labels,max:6.5,mark:[[13,10,"#49C7F5"],[21,10,"#FFB547"],[22,10,"#FFB547"]]});
+d3.select("#heat").selectAll("rect").filter(function(){return d3.select(this).attr("stroke")==="#FFB547";}).attr("stroke-dasharray","5 3");
+const leg=d3.select("#leg").attr("width",160).attr("height",12); const cs=d3.interpolateRgbBasis(["#101A2E","#3B1D0F","#9A3412","#FF6A3D","#FFD08A"]); for(let i=0;i<40;i++){leg.append("rect").attr("x",i*4).attr("y",0).attr("width",4).attr("height",12).attr("fill",cs(i/39));}
+const nov=rows.map(function(r){return r[10]*80;}); const xl=labels.map(function(l,i){return i%4===0?l:"";});
+KIT.lineChart("#line",{w:468,h:250,series:[{values:nov,color:"#FF6A3D",dots:true}],xLabels:xl,band:{lo:nov.map(function(v){return v*0.92;}),hi:nov.map(function(v){return v*1.08;}),color:"#FF6A3D"},vline:{at:9,color:"#49C7F5",label:"VIIRS starts"}});
+window.READY=true; })();
+</script></body></html>

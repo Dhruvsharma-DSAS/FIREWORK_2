@@ -1,0 +1,30 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<style>.lg{width:300px;height:340px;border-radius:18px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:var(--panel-solid)}</style>
+<div class="app" id="app" style="width:1640px; height:1060px; padding:30px">
+  <div class="row" style="gap:20px" id="row1"></div>
+  <div class="row" style="gap:20px; margin-top:24px">
+    <div class="lg" style="width:520px; height:620px; position:relative"><svg id="cons" width="480" height="480"></svg><div class="caps dim">Construction · chrono-orbit mark</div></div>
+    <div class="lg" style="width:520px; height:620px; background:var(--paper); color:var(--paper-ink); border-color:#DCD3C2"><svg id="lw"></svg><div class="display" style="font-size:40px">FIREWORK</div><div class="caps" style="color:#8A6A3A; font-size:14px; letter-spacing:.5em">CHRONOS</div><div class="row" style="gap:18px; margin-top:20px"><svg id="fav1"></svg><svg id="fav2"></svg><svg id="fav3"></svg></div><div class="dim" style="font-size:12px; color:#5A5547">favicon 64 · 32 · 16 px</div></div>
+    <div class="lg" style="width:520px; height:620px"><svg id="ld"></svg><div style="font-weight:800; font-size:36px; letter-spacing:.04em">FIREWORK</div><div class="caps dim" style="font-size:14px; letter-spacing:.5em">CHRONOS</div><div class="row" style="gap:16px; margin-top:16px"><svg id="m1"></svg><svg id="m2"></svg></div><div class="dim" style="font-size:12px">monochrome · on ember</div></div>
+  </div>
+</div>
+<script>(async function(){
+const row=document.getElementById("row1");
+const C=[["1 · Chrono-Orbit","clock ring + orbit + dot at 13:30 (the afternoon overpass)"],["2 · Twin Pixels","1 km and 375 m squares locking into one"],["3 · Signal Seam","a step-change line that becomes smooth"],["4 · Graticule Flame","meridians bending into a flame (rejected: generic)"],["5 · Swath Cone","sensor cone scanning a curved Earth"]];
+C.forEach(function(c,i){row.insertAdjacentHTML("beforeend",'<div class="lg"><svg id="c'+i+'" width="160" height="160" viewBox="0 0 100 100"></svg><div style="font-weight:700">'+c[0]+'</div><div class="dim" style="font-size:12px; text-align:center; padding:0 18px">'+c[1]+'</div></div>');});
+KIT.logo("#c0",160);
+let s=d3.select("#c1"); s.append("rect").attr("x",14).attr("y",14).attr("width",52).attr("height",52).attr("fill","none").attr("stroke","#8FB8FF").attr("stroke-width",5); s.append("rect").attr("x",42).attr("y",42).attr("width",44).attr("height",44).attr("fill","#FF6A3D"); s.append("rect").attr("x",42).attr("y",42).attr("width",24).attr("height",24).attr("fill","#EEF2FA");
+s=d3.select("#c2"); s.append("path").attr("d","M8,70 L40,70 L40,30 L92,30").attr("fill","none").attr("stroke","#FF4D6D").attr("stroke-width",5).attr("opacity",0.5); s.append("path").attr("d","M8,62 C30,58 50,52 92,46").attr("fill","none").attr("stroke","#3DDC97").attr("stroke-width",6).attr("stroke-linecap","round"); s.append("circle").attr("cx",40).attr("cy",50).attr("r",44).attr("fill","none").attr("stroke","#EEF2FA").attr("stroke-width",3);
+s=d3.select("#c3"); s.append("circle").attr("cx",50).attr("cy",55).attr("r",36).attr("fill","none").attr("stroke","#EEF2FA").attr("stroke-width",3); [-20,0,20].forEach(function(d){s.append("path").attr("d","M"+(50+d)+",92 C"+(50+d*0.3)+",60 "+(50+d*1.4)+",40 50,8").attr("fill","none").attr("stroke","#FF6A3D").attr("stroke-width",3);});
+s=d3.select("#c4"); s.append("path").attr("d","M10,80 A60,60 0 0 1 90,80").attr("fill","none").attr("stroke","#EEF2FA").attr("stroke-width",4); s.append("path").attr("d","M50,12 L30,72 L70,72 Z").attr("fill","#49C7F5").attr("opacity",0.35); s.append("circle").attr("cx",50).attr("cy",12).attr("r",7).attr("fill","#FF6A3D");
+const cons=d3.select("#cons"); const g=cons.append("g").attr("transform","translate(40,40) scale(4)");
+g.append("rect").attr("x",0).attr("y",0).attr("width",100).attr("height",100).attr("fill","none").attr("stroke","#49C7F5").attr("stroke-opacity",0.3).attr("stroke-width",0.3);
+[10,20,30,40,50,60,70,80,90].forEach(function(v){g.append("line").attr("x1",v).attr("x2",v).attr("y1",0).attr("y2",100).attr("stroke","#49C7F5").attr("stroke-opacity",0.12).attr("stroke-width",0.2); g.append("line").attr("y1",v).attr("y2",v).attr("x1",0).attr("x2",100).attr("stroke","#49C7F5").attr("stroke-opacity",0.12).attr("stroke-width",0.2);});
+[40,36,30].forEach(function(r){g.append("circle").attr("cx",50).attr("cy",50).attr("r",r).attr("fill","none").attr("stroke","#FFB547").attr("stroke-opacity",0.5).attr("stroke-width",0.25).attr("stroke-dasharray","1 1");});
+g.append("line").attr("x1",50).attr("y1",50).attr("x2",50+Math.sin(Math.PI/4)*40).attr("y2",50-Math.cos(Math.PI/4)*40).attr("stroke","#FFB547").attr("stroke-width",0.3);
+g.append("text").attr("x",72).attr("y",30).attr("fill","#FFB547").attr("font-size",3.4).attr("font-family","JB").text("dot at 1:30 → 13:30 pass");
+const gl=g.append("g"); KIT.logo(gl.node().appendChild(document.createElementNS("http://www.w3.org/2000/svg","svg")),100);
+g.append("text").attr("x",2).attr("y",98).attr("fill","#9AA6BD").attr("font-size",3).attr("font-family","JB").text("ring r=40 · ticks r=30–36 · orbit 46×13 @ −28° · dot r=7.5");
+KIT.logo("#lw",200,{ring:"#1B2233"}); KIT.logo("#fav1",64,{ring:"#1B2233"}); KIT.logo("#fav2",32,{ring:"#1B2233"}); KIT.logo("#fav3",16,{ring:"#1B2233"});
+KIT.logo("#ld",200); KIT.logo("#m1",90,{mono:true,ring:"#EEF2FA"}); const m2=d3.select("#m2"); KIT.logo("#m2",90,{mono:true,ring:"#1A0A04"}); m2.insert("rect",":first-child").attr("width",100).attr("height",100).attr("rx",18).attr("fill","#FF6A3D");
+window.READY=true; })();</script></body></html>

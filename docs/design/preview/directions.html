@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/atlas.css">
+<script src="/node_modules/d3/dist/d3.min.js"></script>
+<script src="/node_modules/topojson-client/dist/topojson-client.min.js"></script>
+<script src="/h3.bundle.js"></script>
+<script src="/kit.js"></script>
+</head><body>
+<style>.dir{width:1600px;height:900px;position:relative;overflow:hidden;padding:56px}.sw{width:92px;height:92px;border-radius:14px;display:flex;align-items:flex-end;padding:8px;font-family:JB;font-size:11px}
+.spec{font-size:15px;line-height:1.6;width:560px}</style>
+<div id="app" style="width:1600px">
+<!-- A -->
+<div class="dir" style="background:#05070A; color:#E6EDF3; font-family:JB" id="A">
+  <div class="caps" style="color:#39FF88">Direction A</div><div style="font-family:JB; font-size:54px; font-weight:700; margin-top:10px">EMBER NIGHT_</div>
+  <p class="spec" style="color:#8B98A9; font-family:Inter">Terminal mission control. Monospace labels, neon status colours, grid lines, boot sequence. Strong drama; risk of looking like a hacker cliché and tiring to read for long.</p>
+  <div class="row" style="margin-top:26px; gap:12px"><div class="sw" style="background:#05070A; border:1px solid #333">#05070A</div><div class="sw" style="background:#0B1118">#0B1118</div><div class="sw" style="background:#39FF88; color:#05070A">#39FF88</div><div class="sw" style="background:#FFB547; color:#05070A">#FFB547</div><div class="sw" style="background:#FF4D5E">#FF4D5E</div><div class="sw" style="background:#3DD6F5; color:#05070A">#3DD6F5</div></div>
+  <div style="margin-top:30px; font-size:14px; color:#8B98A9; font-family:Inter">Type: JetBrains Mono (UI, data) · Inter (body)</div>
+  <div style="position:absolute; right:56px; top:56px; width:760px; height:780px; border:1px solid rgba(57,255,136,.35); border-radius:6px; padding:22px; background:repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px)">
+    <div style="color:#39FF88; font-size:14px; line-height:1.9">&gt; linking FIRMS archive ........ OK<br>&gt; MODIS 2000-26 / VIIRS 2012-26 OK<br>&gt; harmonising ................. OK<br><span style="color:#FFB547">&gt; blind-spot (Punjab) ...... WARNING</span><br>_</div>
+    <svg id="ga" style="margin-top:10px"></svg>
+  </div>
+</div>
+<!-- B -->
+<div class="dir" style="background:#F5F1E8; color:#1B2233" id="B">
+  <div class="caps" style="color:#C2410C">Direction B</div><div class="display" style="font-size:60px; margin-top:6px">Paper Atlas</div>
+  <p class="spec" style="color:#4A4E5A">Editorial cartography. Serif headlines, ink maps on paper, hatching and hand annotations. Very readable and trustworthy; weaker "wow" for a live globe at night.</p>
+  <div class="row" style="margin-top:26px; gap:12px"><div class="sw" style="background:#F5F1E8; border:1px solid #DCD3C2">#F5F1E8</div><div class="sw" style="background:#1B2233; color:#F5F1E8">#1B2233</div><div class="sw" style="background:#C2410C; color:#FFF">#C2410C</div><div class="sw" style="background:#1B6E91; color:#FFF">#1B6E91</div><div class="sw" style="background:#DCD3C2">#DCD3C2</div><div class="sw" style="background:#5B7F3A; color:#FFF">#5B7F3A</div></div>
+  <div style="margin-top:30px; font-size:14px; color:#4A4E5A">Type: Fraunces (display) · Source Serif (reading) · Inter (UI)</div>
+  <div style="position:absolute; right:56px; top:56px; width:760px; height:780px; background:#FBF8F1; border:1px solid #DCD3C2; padding:32px; box-shadow:0 20px 50px rgba(0,0,0,.12)">
+    <div class="caps" style="color:#8A6A3A">Plate 4 · The burning belt</div><div class="display" style="font-size:34px; margin-top:6px">Where Punjab burns, and when</div>
+    <svg id="gb" style="margin-top:14px"></svg>
+    <div style="font-family:Hand; font-size:24px; color:#C2410C; position:absolute; right:40px; bottom:60px; transform:rotate(-4deg)">Nov peak, every year →</div>
+  </div>
+</div>
+<!-- C -->
+<div class="dir" style="background:linear-gradient(135deg,#0B0F2E 0%,#1A1145 50%,#0A2A3A 100%); color:#F1F0FF" id="C">
+  <div class="caps" style="color:#7CF5D9">Direction C</div><div style="font-family:SG; font-size:58px; font-weight:700; margin-top:6px">Aurora Glass</div>
+  <p class="spec" style="color:#B9B6E0">Soft aurora gradients, frosted glass panels, rounded geometry. Modern and friendly; can look like a generic SaaS template and lowers data contrast.</p>
+  <div class="row" style="margin-top:26px; gap:12px"><div class="sw" style="background:#0B0F2E; border:1px solid #333">#0B0F2E</div><div class="sw" style="background:#1A1145">#1A1145</div><div class="sw" style="background:#7CF5D9; color:#0B0F2E">#7CF5D9</div><div class="sw" style="background:#F27EF0; color:#0B0F2E">#F27EF0</div><div class="sw" style="background:#FF9A62; color:#0B0F2E">#FF9A62</div><div class="sw" style="background:rgba(255,255,255,.18)">glass</div></div>
+  <div style="margin-top:30px; font-size:14px; color:#B9B6E0">Type: Space Grotesk (display) · Inter (UI)</div>
+  <div style="position:absolute; right:56px; top:56px; width:760px; height:780px; border-radius:32px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); padding:28px">
+    <svg id="gc"></svg>
+    <div style="position:absolute; left:28px; right:28px; bottom:28px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+      <div style="border-radius:20px; background:rgba(255,255,255,.1); padding:16px"><div style="font-size:12px; color:#B9B6E0">Fires today</div><div style="font-family:SG; font-size:30px">12.4k</div></div>
+      <div style="border-radius:20px; background:rgba(255,255,255,.1); padding:16px"><div style="font-size:12px; color:#B9B6E0">Anomaly</div><div style="font-family:SG; font-size:30px; color:#F27EF0">+2.4σ</div></div>
+      <div style="border-radius:20px; background:rgba(255,255,255,.1); padding:16px"><div style="font-size:12px; color:#B9B6E0">Coverage</div><div style="font-family:SG; font-size:30px; color:#7CF5D9">73%</div></div>
+    </div>
+  </div>
+</div>
+</div>
+<script>(async function(){ await KIT.loadWorld();
+KIT.globe("#ga",{w:700,h:560,scale:250,rotate:[-78,-20,0],landFill:"#0E1A12",ocean0:"#050A07",ocean1:"#020403",grat:true,pointSize:1.4});
+d3.select("#ga").selectAll("circle").filter(function(){return d3.select(this).attr("fill")==="#FF8A3D";}).attr("fill","#39FF88");
+const o=await KIT.region("#gb",{w:690,h:560,bbox:[73.6,29.4,77.4,32.4],land:"#EFE7D6",hex:true,hexRes:5,density:1.3});
+o.svg.select("rect").attr("fill","#E4EEF2"); o.svg.selectAll("path").filter(function(){return d3.select(this).attr("stroke")==="#3A5486";}).attr("fill","#F3ECDD").attr("stroke","#8A8270");
+KIT.globe("#gc",{w:700,h:560,scale:240,rotate:[-60,-15,0],landFill:"#3A2E7A",ocean0:"#2A1F66",ocean1:"#120C36",pointSize:1.6});
+d3.select("#gc").selectAll("circle").filter(function(){return d3.select(this).attr("fill")==="#FF8A3D";}).attr("fill","#F27EF0");
+window.READY=true; })();</script></body></html>

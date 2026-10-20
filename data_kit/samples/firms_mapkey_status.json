@@ -1,0 +1,7 @@
+{
+  "_note": "Shape copied from the provider's official documentation. Values are illustrative, not real measurements. Run fetch_samples.py on your laptop to save real responses.",
+  "_endpoint": "GET https://firms.modaps.eosdis.nasa.gov/mapserver/mapkey_status/?MAP_KEY=YOUR_KEY",
+  "transaction_limit": 5000,
+  "current_transactions": 12,
+  "transaction_interval": "10 minutes"
+}

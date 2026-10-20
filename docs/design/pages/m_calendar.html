@@ -1,0 +1,11 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="mobile" id="app">
+  <div class="m-top"><b style="font-size:14px">Calendar · Punjab</b><span class="spacer"></span><span class="chip demo" style="font-size:9px"><span class="dot"></span>DEMO</span></div>
+  <div style="padding:12px 14px">
+    <div class="seg" data-mark="1"><span>Raw</span><span class="on">Harmonised</span></div>
+    <div class="panel" style="margin-top:12px; padding:8px" data-mark="2"><svg id="heat"></svg></div>
+    <div class="panel" style="margin-top:12px; padding:12px" data-mark="3"><div class="caps dim">Nov 2016</div><div class="row" style="justify-content:space-between; margin-top:6px"><div class="display" style="font-size:30px">412</div><div class="mono" style="color:var(--sky)">z +2.4</div></div><div class="mono faint" style="font-size:11px">band 380–441 · from Aqua MODIS × 2.5</div></div>
+  </div>
+  <div class="m-tabs"><div>◉<span>Home</span></div><div>◎<span>Explore</span></div><div class="on">▦<span>Calendar</span></div><div>⇪<span>Studio</span></div><div>∑<span>Learn</span></div></div>
+</div>
+<script>(async function(){ const rows=KIT.calendarData(11,true); const lab=[]; for(let y=2003;y<=2025;y++){lab.push(y%2===1?String(y):"");} KIT.heat("#heat",{w:344,h:500,rows:rows,rowLabels:lab,max:6.5,mark:[[13,10,"#49C7F5"]],pad:[20,4,4,36],gap:2}); window.READY=true; })();</script></body></html>

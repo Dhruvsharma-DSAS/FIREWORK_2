@@ -1,0 +1,133 @@
+:root {
+  --bg: #05070a;
+  --panel: #0b1118;
+  --panel-2: #111a24;
+  --line: rgba(61, 214, 245, 0.14);
+  --text: #e6edf3;
+  --text-dim: #8b98a9;
+  --live: #39ff88;
+  --warn: #ffb547;
+  --fire: #ff4d5e;
+  --data: #3dd6f5;
+  --ai: #a78bfa;
+  --heat-0: #0f1720;
+  --heat-1: #3b1d0f;
+  --heat-2: #7a2e0e;
+  --heat-3: #c2410c;
+  --heat-4: #ff6b35;
+  --class-crop: #39ff88;
+  --class-forest: #ff4d5e;
+  --class-industrial: #ffb547;
+  --class-unknown: #8b98a9;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --font-ui: "Inter", system-ui, sans-serif;
+  --r: 6px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  position: relative;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: -1px auto auto -1px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--data);
+  border-left: 2px solid var(--data);
+}
+
+.panel-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--data);
+}
+
+.badge-live {
+  font-family: var(--font-mono);
+  color: var(--bg);
+  background: var(--live);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.badge-demo {
+  font-family: var(--font-mono);
+  color: var(--bg);
+  background: var(--warn);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.boot .line {
+  font-family: var(--font-mono);
+  color: var(--live);
+  margin: 0;
+}
+
+.boot .warn {
+  color: var(--warn);
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+  color: var(--live);
+}
+
+.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px);
+}
+
+.cal-row {
+  display: grid;
+  grid-template-columns: 48px repeat(12, 1fr);
+  gap: 3px;
+}
+
+.cal-cell {
+  height: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform 120ms ease-out;
+}
+
+.cal-cell:hover {
+  transform: scale(1.25);
+  outline: 1px solid var(--data);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor,
+  .cal-cell {
+    animation: none;
+    transition: none;
+  }
+  .scanlines::after {
+    display: none;
+  }
+}

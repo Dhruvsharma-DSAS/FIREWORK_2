@@ -1,0 +1,30 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">Blind spot observatory</div><h1 class="display" style="font-size:40px; margin-top:6px">When the satellites can't see</h1></div>
+  <div class="panel" style="position:absolute; left:32px; top:180px; width:560px; height:560px" data-mark="1"><div class="panel-h"><span class="caps">24-hour clock · Punjab</span><span class="chip">iFOREST 2025</span></div><div class="panel-b"><svg id="clock"></svg></div></div>
+  <div class="panel" style="position:absolute; left:612px; top:180px; width:956px; height:360px" data-mark="2"><div class="panel-h"><span class="caps">Counts vs burned area</span><span class="chip archive"><span class="dot"></span>REPORTED VALUES</span></div><div class="panel-b" style="display:flex; gap:24px"><svg id="ba"></svg><div style="width:330px; font-size:13px; line-height:1.6">
+    <div class="tile"><div class="caps dim">Official fire counts since 2021</div><div class="big" style="color:var(--rose)">−90%+</div></div>
+    <div class="tile" style="margin-top:12px"><div class="caps dim">Punjab burnt area 2022 → 2025</div><div class="big" style="color:var(--flame)">−36%</div><div class="mono faint" style="font-size:11px">31,447 → ~20,000 km²</div></div></div></div></div>
+  <div class="panel" style="position:absolute; left:612px; top:556px; width:956px; height:184px" data-mark="3"><div class="panel-h"><span class="caps">Blind-spot ratio B = burned area / harmonised cell-days</span><span class="mono faint" style="font-size:11px">flag when B &gt; 2 × pre-2021 median</span></div><div class="panel-b"><svg id="bratio"></svg></div></div>
+  <div class="panel" style="position:absolute; left:32px; top:760px; width:1536px; height:210px" data-mark="4"><div class="panel-h"><span class="caps">What can hide a fire</span></div><div class="panel-b" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; font-size:13px; line-height:1.5">
+    <div class="tile"><b style="color:var(--sky)">Overpass time</b><div class="dim">Polar satellites pass ~10:30 and ~13:30 local. Burning after 15:00 is not seen.</div></div>
+    <div class="tile"><b style="color:var(--sky)">Clouds &amp; fog</b><div class="dim">FireMask class 4 = cloud. Rate = fire / clear removes this bias.</div></div>
+    <div class="tile"><b style="color:var(--sky)">Small / cool fires</b><div class="dim">Below the detection curve (FRP50). VIIRS sees more than MODIS.</div></div>
+    <div class="tile"><b style="color:var(--sky)">Night &amp; geometry</b><div class="dim">Different night sensitivity; large pixels at swath edge.</div></div></div></div>
+</div>
+<script>
+(async function(){ KIT.topbar("Blind Spot");
+const svg=d3.select("#clock").attr("width",520).attr("height",480); const cx=260, cy=235, R=180;
+svg.append("circle").attr("cx",cx).attr("cy",cy).attr("r",R).attr("fill","none").attr("stroke","#2A3556").attr("stroke-width",30);
+function arc(h0,h1,col,w,op){const a=d3.arc().innerRadius(R-w/2).outerRadius(R+w/2).startAngle(h0/24*2*Math.PI).endAngle(h1/24*2*Math.PI); svg.append("path").attr("d",a()).attr("transform","translate("+cx+","+cy+")").attr("fill",col).attr("opacity",op);}
+arc(15,19.5,"#FFB547",30,0.9); arc(11,15,"#3DDC97",30,0.35);
+[10.5,13.5].forEach(function(h){const a=h/24*2*Math.PI; svg.append("line").attr("x1",cx+Math.sin(a)*(R-20)).attr("y1",cy-Math.cos(a)*(R-20)).attr("x2",cx+Math.sin(a)*(R+24)).attr("y2",cy-Math.cos(a)*(R+24)).attr("stroke","#49C7F5").attr("stroke-width",3); svg.append("circle").attr("cx",cx+Math.sin(a)*(R+24)).attr("cy",cy-Math.cos(a)*(R+24)).attr("r",7).attr("fill","#49C7F5");});
+for(let h=0;h<24;h+=3){const a=h/24*2*Math.PI; svg.append("text").attr("x",cx+Math.sin(a)*(R-38)).attr("y",cy-Math.cos(a)*(R-38)+4).attr("text-anchor","middle").attr("fill","#9AA6BD").attr("font-size",12).attr("font-family","JB").text(String(h).padStart(2,"0")+":00");}
+svg.append("text").attr("x",cx).attr("y",cy-6).attr("text-anchor","middle").attr("fill","#EEF2FA").attr("font-size",30).attr("font-family","Fraunces").text(">90%");
+svg.append("text").attr("x",cx).attr("y",cy+18).attr("text-anchor","middle").attr("fill","#9AA6BD").attr("font-size",12).text("of large fires after 15:00 (2024–25)");
+svg.append("text").attr("x",cx).attr("y",cy+38).attr("text-anchor","middle").attr("fill","#9AA6BD").attr("font-size",12).text("was 3% in 2021");
+svg.append("text").attr("x",20).attr("y",470).attr("fill","#49C7F5").attr("font-size",12).text("● satellite passes 10:30 · 13:30");svg.append("text").attr("x",260).attr("y",470).attr("fill","#FFB547").attr("font-size",12).text("■ burning window now (schematic)");
+KIT.bars("#ba",{w:560,h:270,values:[31447,20000,11633,8812],labels:["Punjab 2022","Punjab 2025","Haryana 2019","Haryana 2025"],colors:["#FF6A3D","#FF6A3D","#49C7F5","#49C7F5"],fmt:function(v){return v.toLocaleString("en-US");}});
+const bvals=[1.0,1.1,0.9,1.0,1.05,1.3,1.8,2.4,2.6]; KIT.lineChart("#bratio",{w:920,h:120,series:[{values:bvals,color:"#FFB547",dots:true}],xLabels:["2017","2018","2019","2020","2021","2022","2023","2024","2025"],yMin:0,yMax:3,vline:{at:4,color:"#9AA6BD",label:"baseline ends"}});
+window.READY=true; })();
+</script></body></html>

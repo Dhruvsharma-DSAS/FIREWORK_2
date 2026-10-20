@@ -1,0 +1,26 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">My workspace</div><h1 class="display" style="font-size:40px; margin-top:6px">Saved regions &amp; analyses</h1></div>
+  <div style="position:absolute; left:32px; top:180px; width:1000px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px" data-mark="1">
+    <div class="panel" style="padding:0; overflow:hidden"><svg id="r1"></svg><div style="padding:12px 14px"><b>Ludhiana district</b><div class="dim" style="font-size:12px">saved 12 Oct · 3 analyses</div></div></div>
+    <div class="panel" style="padding:0; overflow:hidden"><svg id="r2"></svg><div style="padding:12px 14px"><b>Sangrur district</b><div class="dim" style="font-size:12px">saved 9 Oct · alert on</div></div></div>
+    <div class="panel" style="padding:0; overflow:hidden; display:flex; align-items:center; justify-content:center; height:252px"><div style="text-align:center"><div style="font-size:36px; color:var(--ember)">＋</div><div class="dim">Draw a new region</div></div></div>
+  </div>
+  <div class="panel" style="position:absolute; left:32px; top:470px; width:1000px; height:500px" data-mark="2"><div class="panel-h"><span class="caps">Analyses</span><span class="btn" style="padding:6px 12px">Compare selected (2)</span></div><div class="panel-b">
+  <table class="grid"><tr><th></th><th>Name</th><th>Data</th><th>Algorithm</th><th>Run</th><th>Status</th></tr>
+  <tr><td>☑</td><td>Nov 2024 survey vs VIIRS</td><td><span class="chip user"><span class="dot"></span>USER</span></td><td class="mono">chronos 0.4.1 · config v3</td><td class="mono">14 Oct 10:22 UTC</td><td style="color:var(--mint)">done</td></tr>
+  <tr><td>☑</td><td>Ludhiana 2003–2025 calendar</td><td><span class="chip archive"><span class="dot"></span>ARCHIVE</span></td><td class="mono">chronos 0.4.1</td><td class="mono">12 Oct 18:05 UTC</td><td style="color:var(--mint)">done</td></tr>
+  <tr><td>☐</td><td>Day vs night k sensitivity</td><td><span class="chip archive"><span class="dot"></span>ARCHIVE</span></td><td class="mono">chronos 0.4.0</td><td class="mono">10 Oct 09:41 UTC</td><td style="color:var(--flame)">outdated algorithm</td></tr>
+  <tr><td>☐</td><td>Kiln mask test</td><td><span class="chip demo"><span class="dot"></span>DEMO</span></td><td class="mono">chronos 0.3.9</td><td class="mono">2 Oct 16:12 UTC</td><td style="color:var(--dim)">demo only</td></tr></table>
+  <div class="dim" style="font-size:12px; margin-top:14px">Every saved analysis stores its data versions and config, so it can be re-run and reproduced.</div></div></div>
+  <div class="panel" style="position:absolute; right:32px; top:180px; width:500px; height:790px" data-mark="3"><div class="panel-h"><span class="caps">Side-by-side</span><span class="mono faint" style="font-size:11px">Survey vs VIIRS · Nov 2024</span></div><div class="panel-b"><svg id="cmp"></svg>
+  <div class="kv" style="margin-top:12px"><span>Survey fires</span><b>1,268</b></div><div class="kv"><span>Matched by VIIRS</span><b>214</b></div><div class="kv"><span>Missed, 15:00–19:00</span><b style="color:var(--flame)">83% of misses</b></div>
+  <div class="row" style="margin-top:16px"><span class="btn">Export PDF brief</span><span class="btn">Share link</span><span class="btn ghost">Download data + config</span></div>
+  <div class="mono faint" style="font-size:10.5px; margin-top:10px">Example values for the mockup.</div></div></div>
+</div>
+<script>
+(async function(){ await KIT.loadWorld(); KIT.topbar("Home");
+await KIT.region("#r1",{w:322,h:200,bbox:[75.2,30.5,76.3,31.2],density:0.8,pointSize:1.6}); await KIT.region("#r2",{w:322,h:200,bbox:[75.3,29.8,76.4,30.5],density:0.8,pointSize:1.6,seed:9});
+const hrs=["10","11","12","13","14","15","16","17","18","19"]; KIT.bars("#cmp",{w:460,h:300,values:[4,9,18,30,22,61,140,170,96,40],labels:hrs,colors:hrs.map(function(h){return +h>=15?"#FFB547":"#49C7F5";}),fmt:function(v){return v;}});
+window.READY=true; })();
+</script></body></html>

@@ -1,0 +1,37 @@
+<!doctype html><html><head><!--HEAD--></head><body>
+<div class="app" id="app">
+  <div style="position:absolute; left:32px; top:92px;"><div class="caps" style="color:var(--flame)">Accuracy &amp; validation</div><h1 class="display" style="font-size:40px; margin-top:6px">How much should you trust it?</h1></div>
+  <div class="row" style="position:absolute; right:32px; top:112px"><span class="chip demo"><span class="dot"></span>VALUES SHOWN = SYNTHETIC TESTS · REAL RUN PENDING</span></div>
+  <div style="position:absolute; left:32px; top:186px; right:32px; display:grid; grid-template-columns:repeat(5,1fr); gap:16px" data-mark="1">
+    <div class="tile"><div class="caps dim">Seam left</div><div class="big" style="color:var(--mint)">ρ ≈ 0.03</div><div class="dim" style="font-size:12px">target &lt; 0.10</div></div>
+    <div class="tile"><div class="caps dim">LOYO error</div><div class="big">1.0%</div><div class="dim" style="font-size:12px">median · target &lt; 10–15%</div></div>
+    <div class="tile"><div class="caps dim">Pettitt p</div><div class="big">0.41</div><div class="dim" style="font-size:12px">no step left (not proof)</div></div>
+    <div class="tile"><div class="caps dim">Band coverage</div><div class="big" style="color:var(--flame)">—</div><div class="dim" style="font-size:12px">needs real archive</div></div>
+    <div class="tile"><div class="caps dim">FDR control</div><div class="big">94 → 53</div><div class="dim" style="font-size:12px">cells flagged, naive → BH</div></div>
+  </div>
+  <div class="panel" style="position:absolute; left:32px; top:330px; width:760px; height:310px" data-mark="2"><div class="panel-h"><span class="caps">Leave-one-year-out · predicted vs actual VIIRS</span></div><div class="panel-b"><svg id="loyo"></svg></div></div>
+  <div class="panel" style="position:absolute; right:32px; top:330px; width:740px; height:310px" data-mark="3"><div class="panel-h"><span class="caps">Bland–Altman · harmonised MODIS vs VIIRS</span><span class="mono faint" style="font-size:11px">bias should include 0</span></div><div class="panel-b"><svg id="ba"></svg></div></div>
+  <div class="panel" style="position:absolute; left:32px; top:660px; width:760px; height:310px" data-mark="4"><div class="panel-h"><span class="caps">Region reliability</span></div><div class="panel-b"><table class="grid"><tr><th>Region</th><th>Overlap years</th><th>k̃ (Nov)</th><th>LOYO error</th><th>Status</th></tr>
+  <tr><td>Punjab</td><td class="mono">14</td><td class="mono">2.5 [2.45–2.55]</td><td class="mono">4%</td><td style="color:var(--mint)">reliable</td></tr>
+  <tr><td>Haryana</td><td class="mono">14</td><td class="mono">2.4 [2.3–2.6]</td><td class="mono">7%</td><td style="color:var(--mint)">reliable</td></tr>
+  <tr><td>Kerala</td><td class="mono">5</td><td class="mono">2.0 [1.4–2.9]</td><td class="mono">22%</td><td style="color:var(--flame)">indicative only</td></tr>
+  <tr><td>Ladakh</td><td class="mono">1</td><td class="mono">global prior</td><td class="mono">—</td><td style="color:var(--rose)">too few fires</td></tr></table>
+  <div class="mono faint" style="font-size:11px; margin-top:10px">Table values illustrate the layout. Real values come from the archive run.</div></div></div>
+  <div class="panel" style="position:absolute; right:32px; top:660px; width:740px; height:310px" data-mark="5"><div class="panel-h"><span class="caps">Known limitations</span></div><div class="panel-b" style="font-size:13px; line-height:1.6">
+  <div class="warn" style="margin-bottom:8px">No significant change point ≠ no bias. It only means the test could not find one.</div>
+  <div class="kv"><span>Late-afternoon burning (after 15:00)</span><b>undercount</b></div>
+  <div class="kv"><span>Terra / Aqua orbit drift after 2020</span><b>Terra excluded from fit</b></div>
+  <div class="kv"><span>Fog flagged as cloud in November</span><b>min clear-obs rule</b></div>
+  <div class="kv"><span>Counts ≠ burned area ≠ emissions</span><b>labelled everywhere</b></div></div></div>
+</div>
+<script>
+(async function(){ KIT.topbar("Validation");
+const yrs=["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"]; const act=[100,150,52,196,140,120,160,130,110,90,70,60]; const pred=act.map(function(v,i){return v*(1+((i*37)%9-4)/100);});
+KIT.lineChart("#loyo",{w:720,h:250,series:[{values:act,color:"#FF8A3D",dots:true},{values:pred,color:"#EEF2FA",dash:"5 4",width:1.6}],xLabels:yrs});
+const svg=d3.select("#ba").attr("width",700).attr("height",250); const x=d3.scaleLinear().domain([0,300]).range([40,690]); const y=d3.scaleLinear().domain([-30,30]).range([230,20]);
+[0,10,-10].forEach(function(v,i){svg.append("line").attr("x1",40).attr("x2",690).attr("y1",y(v)).attr("y2",y(v)).attr("stroke",i===0?"#3DDC97":"#FFB547").attr("stroke-dasharray",i===0?null:"5 4");});
+svg.append("text").attr("x",694).attr("y",y(10)-4).attr("text-anchor","end").attr("fill","#FFB547").attr("font-size",11).text("+1.96 SD");svg.append("text").attr("x",694).attr("y",y(-10)+14).attr("text-anchor","end").attr("fill","#FFB547").attr("font-size",11).text("−1.96 SD");
+const r=KIT.rng(4); for(let i=0;i<60;i++){svg.append("circle").attr("cx",x(20+r()*260)).attr("cy",y((r()+r()+r()-1.5)*9)).attr("r",3.2).attr("fill","#49C7F5").attr("opacity",0.8);}
+svg.append("text").attr("x",365).attr("y",246).attr("text-anchor","middle").attr("fill","#67728A").attr("font-size",11).text("mean of the two (cell-days)");
+window.READY=true; })();
+</script></body></html>
