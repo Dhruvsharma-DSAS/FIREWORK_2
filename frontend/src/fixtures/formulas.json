@@ -1,0 +1,260 @@
+{
+ "data": {
+  "count_label": "46 methods · 8 families",
+  "families": [
+   {
+    "name": "Harmonisation",
+    "items": [
+     {
+      "id": "F05",
+      "label": "Grid index & cell-days"
+     },
+     {
+      "id": "F06",
+      "label": "Clear-sky rate"
+     },
+     {
+      "id": "F08",
+      "label": "Calibration ratio k"
+     },
+     {
+      "id": "F11",
+      "label": "Poisson / NegBin GLM"
+     },
+     {
+      "id": "F12",
+      "label": "Empirical Bayes shrinkage"
+     }
+    ]
+   },
+   {
+    "name": "Validation",
+    "items": [
+     {
+      "id": "F20",
+      "label": "Seam ratio · LOYO"
+     },
+     {
+      "id": "F21",
+      "label": "Pettitt / PELT"
+     },
+     {
+      "id": "F22",
+      "label": "Bland–Altman"
+     }
+    ]
+   },
+   {
+    "name": "Calendar & trends",
+    "items": [
+     {
+      "id": "F25",
+      "label": "Robust z (MAD)"
+     },
+     {
+      "id": "F26",
+      "label": "Mann–Kendall · Sen"
+     },
+     {
+      "id": "F27",
+      "label": "Benjamini–Hochberg"
+     }
+    ]
+   },
+   {
+    "name": "Source & blind spot",
+    "items": [
+     {
+      "id": "F42",
+      "label": "L-context · distance decay"
+     },
+     {
+      "id": "F43",
+      "label": "Blind-spot ratio B"
+     }
+    ]
+   }
+  ],
+  "formula": {
+   "id": "F08",
+   "number": 8,
+   "title": "MODIS → VIIRS overlap calibration",
+   "method": "standard method · median of ratios",
+   "legend": [
+    {
+     "sym": "k",
+     "sup": "",
+     "color": "var(--ember)",
+     "text": "calibration ratio"
+    },
+    {
+     "sym": "r",
+     "sup": "",
+     "color": "var(--sky)",
+     "text": "region"
+    },
+    {
+     "sym": "m",
+     "sup": "",
+     "color": "var(--sky)",
+     "text": "month"
+    },
+    {
+     "sym": "N",
+     "sup": "V",
+     "color": "var(--viirs)",
+     "text": "VIIRS cell-days"
+    },
+    {
+     "sym": "N",
+     "sup": "M",
+     "color": "var(--modis)",
+     "text": "MODIS cell-days"
+    }
+   ]
+  },
+  "tryit": {
+   "rows": [
+    {
+     "year": 2013,
+     "modis": 40,
+     "viirs": 100,
+     "edited": false
+    },
+    {
+     "year": 2014,
+     "modis": 60,
+     "viirs": 150,
+     "edited": false
+    },
+    {
+     "year": 2015,
+     "modis": 20,
+     "viirs": 52,
+     "edited": true
+    },
+    {
+     "year": 2016,
+     "modis": 80,
+     "viirs": 196,
+     "edited": false
+    }
+   ],
+   "apply_label": "Apply to Nov 2008 MODIS",
+   "apply_modis": 120,
+   "hint": "Change one year to 9 (an outlier): the mean jumps, the median does not move."
+  },
+  "steps": {
+   "English": [
+    {
+     "head": "1 · Pair the years.",
+     "text": "Use only overlap years where both sensors watched the same region and month."
+    },
+    {
+     "head": "2 · Ratio per year.",
+     "text": "Divide VIIRS cell-days by MODIS cell-days (skip MODIS = 0)."
+    },
+    {
+     "head": "3 · Take the median.",
+     "text": "Robust to one strange year (breakdown point 50%)."
+    },
+    {
+     "head": "4 · Shrink if data is thin.",
+     "text": "Pull toward the global k when few years exist."
+    },
+    {
+     "head": "5 · Convert.",
+     "text": "Pre-2012 MODIS × k = VIIRS-equivalent, with a bootstrap band."
+    }
+   ],
+   "Hinglish": [
+    {
+     "head": "1 · Saal jodo.",
+     "text": "Sirf overlap ke saal lo jab dono sensors ne same region aur month dekha."
+    },
+    {
+     "head": "2 · Har saal ka ratio.",
+     "text": "VIIRS cell-days ko MODIS cell-days se divide karo (MODIS = 0 ho to skip)."
+    },
+    {
+     "head": "3 · Median lo.",
+     "text": "Ek ajeeb saal se farak nahi padta (breakdown point 50%)."
+    },
+    {
+     "head": "4 · Data kam ho to shrink karo.",
+     "text": "Kam saal hon to global k ki taraf kheencho."
+    },
+    {
+     "head": "5 · Convert karo.",
+     "text": "2012 se pehle ka MODIS × k = VIIRS-equivalent, bootstrap band ke saath."
+    }
+   ]
+  },
+  "compare": {
+   "title": "k estimates when one year is an outlier (example)",
+   "values": [
+    3.6,
+    2.6,
+    2.5,
+    2.52
+   ],
+   "labels": [
+    "mean",
+    "ratio of sums",
+    "median",
+    "GLM"
+   ],
+   "colors": [
+    "#FF4D6D",
+    "#9AA6BD",
+    "#3DDC97",
+    "#9B8CFF"
+   ],
+   "rows": [
+    {
+     "label": "Mean of ratios",
+     "value": "pulled by outliers",
+     "color": "var(--rose)"
+    },
+    {
+     "label": "Ratio of totals",
+     "value": "dominated by big years",
+     "color": ""
+    },
+    {
+     "label": "Median of ratios",
+     "value": "robust, simple",
+     "color": "var(--mint)"
+    },
+    {
+     "label": "GLM with offset",
+     "value": "adds CI + covariates",
+     "color": "var(--mint)"
+    }
+   ]
+  },
+  "doubts": [
+   {
+    "q": "Why not just use VIIRS?",
+    "a": "VIIRS starts in 2012. Without conversion, 2000–2011 cannot be compared."
+   },
+   {
+    "q": "Is k the same everywhere?",
+    "a": "No — it depends on fire size, land type and season. That is why k has region and month."
+   },
+   {
+    "q": "Does k fix clouds?",
+    "a": "No. Clouds are handled by the clear-sky rate before calibration."
+   }
+  ],
+  "code_file": "harmonize.py"
+ },
+ "meta": {
+  "data_source": "fixture: docs/design/pages/formulas.html demo values",
+  "version": "fixture-m1",
+  "generated_at": "2026-10-21T00:00:00Z",
+  "units": null,
+  "demo": true,
+  "fallback_used": false
+ }
+}

@@ -1,0 +1,392 @@
+{
+ "data": {
+  "banner": "VALUES SHOWN = SYNTHETIC TESTS · REAL RUN PENDING",
+  "tiles": [
+   {
+    "label": "Seam left",
+    "value": "ρ ≈ 0.03",
+    "note": "target < 0.10",
+    "color": "var(--mint)"
+   },
+   {
+    "label": "LOYO error",
+    "value": "1.0%",
+    "note": "median · target < 10–15%",
+    "color": ""
+   },
+   {
+    "label": "Pettitt p",
+    "value": "0.41",
+    "note": "no step left (not proof)",
+    "color": ""
+   },
+   {
+    "label": "Band coverage",
+    "value": "—",
+    "note": "needs real archive",
+    "color": "var(--flame)"
+   },
+   {
+    "label": "FDR control",
+    "value": "94 → 53",
+    "note": "cells flagged, naive → BH",
+    "color": ""
+   }
+  ],
+  "loyo": {
+   "years": [
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+   ],
+   "actual": [
+    100,
+    150,
+    52,
+    196,
+    140,
+    120,
+    160,
+    130,
+    110,
+    90,
+    70,
+    60
+   ],
+   "predicted": [
+    96,
+    145.5,
+    50.96,
+    194.04,
+    140,
+    121.2,
+    163.2,
+    133.9,
+    114.4,
+    86.4,
+    67.9,
+    58.8
+   ]
+  },
+  "bland_altman": {
+   "points": [
+    [
+     81.78,
+     4.64
+    ],
+    [
+     32.99,
+     -4.63
+    ],
+    [
+     161.09,
+     3.6
+    ],
+    [
+     155.53,
+     4.42
+    ],
+    [
+     103.29,
+     -3.22
+    ],
+    [
+     95.19,
+     -0.83
+    ],
+    [
+     145.32,
+     -3.65
+    ],
+    [
+     200.05,
+     3.95
+    ],
+    [
+     78.26,
+     1.79
+    ],
+    [
+     29.32,
+     -2.86
+    ],
+    [
+     60.36,
+     0.18
+    ],
+    [
+     149.47,
+     -2.31
+    ],
+    [
+     146.29,
+     8.46
+    ],
+    [
+     46.62,
+     -4.1
+    ],
+    [
+     92.64,
+     -3.88
+    ],
+    [
+     215.17,
+     -10.74
+    ],
+    [
+     219.7,
+     2.86
+    ],
+    [
+     102.66,
+     6.59
+    ],
+    [
+     209.46,
+     1.59
+    ],
+    [
+     230.96,
+     3.32
+    ],
+    [
+     259.86,
+     10.54
+    ],
+    [
+     173.59,
+     -3.05
+    ],
+    [
+     175.28,
+     -4.44
+    ],
+    [
+     189.37,
+     1.75
+    ],
+    [
+     33.36,
+     3.69
+    ],
+    [
+     272.35,
+     -3.43
+    ],
+    [
+     87.92,
+     5.77
+    ],
+    [
+     257.85,
+     -2.11
+    ],
+    [
+     168.3,
+     -2.63
+    ],
+    [
+     204.96,
+     4.05
+    ],
+    [
+     134.82,
+     6.87
+    ],
+    [
+     275.05,
+     -0.34
+    ],
+    [
+     90.55,
+     -7.33
+    ],
+    [
+     106.76,
+     -6.8
+    ],
+    [
+     89.31,
+     -1.33
+    ],
+    [
+     27.05,
+     -2.19
+    ],
+    [
+     119.96,
+     0.89
+    ],
+    [
+     198.65,
+     -8.77
+    ],
+    [
+     106.86,
+     3.28
+    ],
+    [
+     43.63,
+     -9.96
+    ],
+    [
+     186.66,
+     4.74
+    ],
+    [
+     23.35,
+     3.93
+    ],
+    [
+     221.29,
+     8.31
+    ],
+    [
+     54.52,
+     -3.74
+    ],
+    [
+     107.26,
+     0.54
+    ],
+    [
+     21.65,
+     3.83
+    ],
+    [
+     101.08,
+     0.08
+    ],
+    [
+     45.63,
+     -7.27
+    ],
+    [
+     121.13,
+     4.39
+    ],
+    [
+     248.64,
+     -0.54
+    ],
+    [
+     105.57,
+     5.76
+    ],
+    [
+     275.3,
+     -0.76
+    ],
+    [
+     126.66,
+     4.35
+    ],
+    [
+     130,
+     -3.53
+    ],
+    [
+     261.24,
+     9.6
+    ],
+    [
+     250.59,
+     4.36
+    ],
+    [
+     217.48,
+     2.66
+    ],
+    [
+     38.21,
+     3.83
+    ],
+    [
+     277.93,
+     4.11
+    ],
+    [
+     43.48,
+     7.54
+    ]
+   ],
+   "sd": 10,
+   "x_max": 300,
+   "y_range": 30,
+   "note": "bias should include 0",
+   "x_label": "mean of the two (cell-days)"
+  },
+  "regions": [
+   {
+    "region": "Punjab",
+    "years": "14",
+    "k": "2.5 [2.45–2.55]",
+    "loyo": "4%",
+    "status": "reliable",
+    "color": "var(--mint)"
+   },
+   {
+    "region": "Haryana",
+    "years": "14",
+    "k": "2.4 [2.3–2.6]",
+    "loyo": "7%",
+    "status": "reliable",
+    "color": "var(--mint)"
+   },
+   {
+    "region": "Kerala",
+    "years": "5",
+    "k": "2.0 [1.4–2.9]",
+    "loyo": "22%",
+    "status": "indicative only",
+    "color": "var(--flame)"
+   },
+   {
+    "region": "Ladakh",
+    "years": "1",
+    "k": "global prior",
+    "loyo": "—",
+    "status": "too few fires",
+    "color": "var(--rose)"
+   }
+  ],
+  "regions_note": "Table values illustrate the layout. Real values come from the archive run.",
+  "limitations_warn": "No significant change point ≠ no bias. It only means the test could not find one.",
+  "limitations": [
+   {
+    "label": "Late-afternoon burning (after 15:00)",
+    "value": "undercount"
+   },
+   {
+    "label": "Terra / Aqua orbit drift after 2020",
+    "value": "Terra excluded from fit"
+   },
+   {
+    "label": "Fog flagged as cloud in November",
+    "value": "min clear-obs rule"
+   },
+   {
+    "label": "Counts ≠ burned area ≠ emissions",
+    "value": "labelled everywhere"
+   }
+  ]
+ },
+ "meta": {
+  "data_source": "fixture: docs/design/pages/validation.html synthetic test values",
+  "version": "fixture-m1",
+  "generated_at": "2026-10-21T00:00:00Z",
+  "units": null,
+  "demo": true,
+  "fallback_used": false
+ }
+}

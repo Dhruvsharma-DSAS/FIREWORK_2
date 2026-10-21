@@ -1,0 +1,9714 @@
+{
+ "data": {
+  "region": {
+   "name": "Punjab",
+   "bbox": [
+    73.5,
+    28.8,
+    77.3,
+    32.3
+   ],
+   "grid_deg": 0.1
+  },
+  "date": "2015-11-05",
+  "left": {
+   "sensor": "MODIS",
+   "label": "MODIS · 1 km · 2015-11-05",
+   "color": "#8FB8FF"
+  },
+  "right": {
+   "sensor": "VIIRS",
+   "label": "VIIRS · 375 m · 2015-11-05",
+   "color": "#FF8A3D"
+  },
+  "points": [
+   {
+    "lon": 75.3418,
+    "lat": 30.8934,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.14
+   },
+   {
+    "lon": 75.2364,
+    "lat": 30.6058,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.64
+   },
+   {
+    "lon": 75.9922,
+    "lat": 30.7959,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.59
+   },
+   {
+    "lon": 75.3031,
+    "lat": 30.5948,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 9.31
+   },
+   {
+    "lon": 75.1938,
+    "lat": 30.8415,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.49
+   },
+   {
+    "lon": 75.1549,
+    "lat": 30.406,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.01
+   },
+   {
+    "lon": 75.3479,
+    "lat": 30.7796,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.79
+   },
+   {
+    "lon": 75.6693,
+    "lat": 30.7119,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.22
+   },
+   {
+    "lon": 76.206,
+    "lat": 30.8248,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.35
+   },
+   {
+    "lon": 75.6817,
+    "lat": 30.7448,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.34
+   },
+   {
+    "lon": 75.9676,
+    "lat": 30.5124,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.38
+   },
+   {
+    "lon": 75.402,
+    "lat": 30.5905,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.16
+   },
+   {
+    "lon": 75.7352,
+    "lat": 30.3358,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.65
+   },
+   {
+    "lon": 75.0126,
+    "lat": 30.7691,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.56
+   },
+   {
+    "lon": 75.5611,
+    "lat": 30.5975,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.55
+   },
+   {
+    "lon": 75.4282,
+    "lat": 30.6794,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.03
+   },
+   {
+    "lon": 76.4971,
+    "lat": 30.3151,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.18
+   },
+   {
+    "lon": 75.5226,
+    "lat": 30.7927,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.01
+   },
+   {
+    "lon": 75.734,
+    "lat": 30.9439,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 75.625,
+    "lat": 30.7858,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.04
+   },
+   {
+    "lon": 75.3238,
+    "lat": 30.7766,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.57
+   },
+   {
+    "lon": 75.068,
+    "lat": 30.9119,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 74.9468,
+    "lat": 30.724,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.27
+   },
+   {
+    "lon": 75.0984,
+    "lat": 30.576,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.66
+   },
+   {
+    "lon": 75.7889,
+    "lat": 30.8736,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 2.39
+   },
+   {
+    "lon": 75.9428,
+    "lat": 30.827,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.83
+   },
+   {
+    "lon": 76.4229,
+    "lat": 30.4863,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.36
+   },
+   {
+    "lon": 75.6347,
+    "lat": 30.7374,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.77
+   },
+   {
+    "lon": 75.0726,
+    "lat": 30.6315,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.67
+   },
+   {
+    "lon": 75.3459,
+    "lat": 30.8849,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.9
+   },
+   {
+    "lon": 75.4075,
+    "lat": 30.605,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.12
+   },
+   {
+    "lon": 76.0685,
+    "lat": 30.4072,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.98
+   },
+   {
+    "lon": 75.4954,
+    "lat": 31.0476,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.17
+   },
+   {
+    "lon": 75.7598,
+    "lat": 30.67,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.08
+   },
+   {
+    "lon": 75.7485,
+    "lat": 30.7085,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.66
+   },
+   {
+    "lon": 76.2766,
+    "lat": 30.7599,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.26
+   },
+   {
+    "lon": 76.832,
+    "lat": 30.6297,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.06
+   },
+   {
+    "lon": 76.1981,
+    "lat": 30.7909,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.98
+   },
+   {
+    "lon": 76.0423,
+    "lat": 30.5143,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6
+   },
+   {
+    "lon": 75.4396,
+    "lat": 30.6023,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.51
+   },
+   {
+    "lon": 75.5436,
+    "lat": 30.6412,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.2
+   },
+   {
+    "lon": 75.5063,
+    "lat": 30.823,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 75.6976,
+    "lat": 30.6244,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.36
+   },
+   {
+    "lon": 75.4208,
+    "lat": 30.2341,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.36
+   },
+   {
+    "lon": 75.6619,
+    "lat": 31.0822,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.86
+   },
+   {
+    "lon": 75.6269,
+    "lat": 30.7568,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 76.0351,
+    "lat": 30.5927,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.69
+   },
+   {
+    "lon": 74.9174,
+    "lat": 30.539,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 76.0081,
+    "lat": 30.4746,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.26
+   },
+   {
+    "lon": 75.8017,
+    "lat": 30.5917,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.22
+   },
+   {
+    "lon": 75.0121,
+    "lat": 30.6502,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.01
+   },
+   {
+    "lon": 76.1116,
+    "lat": 30.7517,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.65
+   },
+   {
+    "lon": 75.9425,
+    "lat": 30.8509,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.26
+   },
+   {
+    "lon": 76.537,
+    "lat": 30.5659,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 5.98
+   },
+   {
+    "lon": 75.2511,
+    "lat": 30.6555,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.76
+   },
+   {
+    "lon": 75.4433,
+    "lat": 30.8851,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.51
+   },
+   {
+    "lon": 75.5439,
+    "lat": 30.6722,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.27
+   },
+   {
+    "lon": 75.2069,
+    "lat": 30.7937,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.82
+   },
+   {
+    "lon": 75.4916,
+    "lat": 30.76,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.8
+   },
+   {
+    "lon": 75.6678,
+    "lat": 31.0813,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.38
+   },
+   {
+    "lon": 75.6096,
+    "lat": 30.6159,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.55
+   },
+   {
+    "lon": 75.2993,
+    "lat": 30.846,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.33
+   },
+   {
+    "lon": 75.1932,
+    "lat": 30.4087,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.09
+   },
+   {
+    "lon": 74.9214,
+    "lat": 30.2851,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.25
+   },
+   {
+    "lon": 74.9366,
+    "lat": 31.0436,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.15
+   },
+   {
+    "lon": 76.1465,
+    "lat": 30.5451,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.52
+   },
+   {
+    "lon": 75.8207,
+    "lat": 30.7979,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 4.14
+   },
+   {
+    "lon": 74.7284,
+    "lat": 30.5078,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 75.061,
+    "lat": 30.7304,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.07
+   },
+   {
+    "lon": 75.7778,
+    "lat": 30.3956,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 75.3564,
+    "lat": 30.7994,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.05
+   },
+   {
+    "lon": 75.309,
+    "lat": 30.6797,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.43
+   },
+   {
+    "lon": 75.0608,
+    "lat": 30.6247,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.86
+   },
+   {
+    "lon": 75.3152,
+    "lat": 30.6701,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.2
+   },
+   {
+    "lon": 75.2596,
+    "lat": 30.3149,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.12
+   },
+   {
+    "lon": 75.6806,
+    "lat": 30.5868,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.64
+   },
+   {
+    "lon": 75.659,
+    "lat": 30.6987,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 75.9133,
+    "lat": 30.9594,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.16
+   },
+   {
+    "lon": 75.2282,
+    "lat": 30.4177,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.84
+   },
+   {
+    "lon": 75.8864,
+    "lat": 30.2504,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.43
+   },
+   {
+    "lon": 76.1145,
+    "lat": 30.7663,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.29
+   },
+   {
+    "lon": 75.5588,
+    "lat": 30.7482,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.13
+   },
+   {
+    "lon": 74.8607,
+    "lat": 30.6321,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.47
+   },
+   {
+    "lon": 75.0953,
+    "lat": 30.5923,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.64
+   },
+   {
+    "lon": 74.9204,
+    "lat": 30.6728,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.18
+   },
+   {
+    "lon": 75.7109,
+    "lat": 30.8008,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.83
+   },
+   {
+    "lon": 75.1947,
+    "lat": 31.0132,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.32
+   },
+   {
+    "lon": 75.4594,
+    "lat": 30.5328,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.69
+   },
+   {
+    "lon": 75.0308,
+    "lat": 30.8689,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.32
+   },
+   {
+    "lon": 76.0812,
+    "lat": 30.5421,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.2
+   },
+   {
+    "lon": 75.8285,
+    "lat": 30.4852,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 11.77
+   },
+   {
+    "lon": 76.2553,
+    "lat": 30.8218,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.71
+   },
+   {
+    "lon": 75.1867,
+    "lat": 30.9807,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.89
+   },
+   {
+    "lon": 75.4504,
+    "lat": 30.7169,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.2
+   },
+   {
+    "lon": 75.9008,
+    "lat": 30.8148,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 12
+   },
+   {
+    "lon": 75.6405,
+    "lat": 30.5773,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.48
+   },
+   {
+    "lon": 75.4677,
+    "lat": 30.5623,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.95
+   },
+   {
+    "lon": 76.1122,
+    "lat": 30.8358,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.92
+   },
+   {
+    "lon": 75.3781,
+    "lat": 30.7552,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.64
+   },
+   {
+    "lon": 75.3995,
+    "lat": 30.9384,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 76.209,
+    "lat": 30.8156,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.86
+   },
+   {
+    "lon": 75.2762,
+    "lat": 30.8236,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.32
+   },
+   {
+    "lon": 75.7425,
+    "lat": 30.6224,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.57
+   },
+   {
+    "lon": 75.5238,
+    "lat": 30.5487,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 9.8
+   },
+   {
+    "lon": 74.9297,
+    "lat": 30.8105,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.99
+   },
+   {
+    "lon": 75.4662,
+    "lat": 30.7582,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.05
+   },
+   {
+    "lon": 75.906,
+    "lat": 31.1856,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 76.1354,
+    "lat": 30.5138,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.09
+   },
+   {
+    "lon": 75.3815,
+    "lat": 30.8819,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.72
+   },
+   {
+    "lon": 75.6916,
+    "lat": 30.4546,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 75.0875,
+    "lat": 30.7237,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.97
+   },
+   {
+    "lon": 75.0859,
+    "lat": 30.4427,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.48
+   },
+   {
+    "lon": 76.1717,
+    "lat": 30.4795,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.6
+   },
+   {
+    "lon": 75.4138,
+    "lat": 31.2042,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 8.22
+   },
+   {
+    "lon": 75.3108,
+    "lat": 30.3738,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 75.9983,
+    "lat": 30.8797,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.87
+   },
+   {
+    "lon": 75.2254,
+    "lat": 31.0188,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.92
+   },
+   {
+    "lon": 75.1561,
+    "lat": 30.7634,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.52
+   },
+   {
+    "lon": 75.5731,
+    "lat": 30.685,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.44
+   },
+   {
+    "lon": 75.047,
+    "lat": 30.4866,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.26
+   },
+   {
+    "lon": 74.5864,
+    "lat": 30.7055,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.83
+   },
+   {
+    "lon": 75.9684,
+    "lat": 31.0858,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 9.71
+   },
+   {
+    "lon": 75.2725,
+    "lat": 30.6317,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.38
+   },
+   {
+    "lon": 76.127,
+    "lat": 30.6257,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.72
+   },
+   {
+    "lon": 75.6408,
+    "lat": 30.8903,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.19
+   },
+   {
+    "lon": 75.6952,
+    "lat": 30.8643,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.74
+   },
+   {
+    "lon": 75.0593,
+    "lat": 30.7229,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.9
+   },
+   {
+    "lon": 76.0676,
+    "lat": 31.2204,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.14
+   },
+   {
+    "lon": 75.0165,
+    "lat": 30.8547,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.66
+   },
+   {
+    "lon": 75.2244,
+    "lat": 31.0834,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 75.4513,
+    "lat": 30.421,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.61
+   },
+   {
+    "lon": 75.809,
+    "lat": 30.8,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 6.42
+   },
+   {
+    "lon": 75.6278,
+    "lat": 30.64,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.68
+   },
+   {
+    "lon": 75.8296,
+    "lat": 31.0337,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.62
+   },
+   {
+    "lon": 76.0775,
+    "lat": 30.5397,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.15
+   },
+   {
+    "lon": 75.0429,
+    "lat": 30.7915,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.17
+   },
+   {
+    "lon": 76.2389,
+    "lat": 30.8873,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 75.2808,
+    "lat": 30.2946,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.52
+   },
+   {
+    "lon": 75.8099,
+    "lat": 30.4791,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 6.23
+   },
+   {
+    "lon": 74.7846,
+    "lat": 30.855,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.74
+   },
+   {
+    "lon": 75.8162,
+    "lat": 30.7646,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.43
+   },
+   {
+    "lon": 76.1617,
+    "lat": 30.6449,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.68
+   },
+   {
+    "lon": 75.9048,
+    "lat": 30.9034,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.79
+   },
+   {
+    "lon": 75.7272,
+    "lat": 30.8136,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 4.21
+   },
+   {
+    "lon": 74.7798,
+    "lat": 30.2285,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.09
+   },
+   {
+    "lon": 75.8982,
+    "lat": 30.8453,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.5
+   },
+   {
+    "lon": 74.8323,
+    "lat": 30.9846,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.54
+   },
+   {
+    "lon": 75.8118,
+    "lat": 30.6401,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.21
+   },
+   {
+    "lon": 76.0639,
+    "lat": 30.6385,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.98
+   },
+   {
+    "lon": 75.7764,
+    "lat": 31.0428,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.48
+   },
+   {
+    "lon": 75.3157,
+    "lat": 30.4598,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.43
+   },
+   {
+    "lon": 75.2227,
+    "lat": 30.4885,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.66
+   },
+   {
+    "lon": 76.1412,
+    "lat": 30.4004,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.27
+   },
+   {
+    "lon": 75.9118,
+    "lat": 30.7868,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.51
+   },
+   {
+    "lon": 75.3797,
+    "lat": 30.5084,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.51
+   },
+   {
+    "lon": 75.8445,
+    "lat": 30.8132,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.54
+   },
+   {
+    "lon": 75.5194,
+    "lat": 30.8076,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.79
+   },
+   {
+    "lon": 75.1559,
+    "lat": 30.5889,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.1
+   },
+   {
+    "lon": 75.4816,
+    "lat": 31.1637,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.52
+   },
+   {
+    "lon": 76.2504,
+    "lat": 30.5361,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.9
+   },
+   {
+    "lon": 75.1167,
+    "lat": 31.1534,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.23
+   },
+   {
+    "lon": 75.486,
+    "lat": 30.7676,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 11.5
+   },
+   {
+    "lon": 75.4133,
+    "lat": 30.9001,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.43
+   },
+   {
+    "lon": 75.8523,
+    "lat": 30.4302,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.91
+   },
+   {
+    "lon": 74.8821,
+    "lat": 30.685,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 6.37
+   },
+   {
+    "lon": 75.4634,
+    "lat": 30.8158,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.9
+   },
+   {
+    "lon": 75.1071,
+    "lat": 31.2041,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.97
+   },
+   {
+    "lon": 75.3573,
+    "lat": 30.7861,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.5
+   },
+   {
+    "lon": 75.7264,
+    "lat": 30.521,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.16
+   },
+   {
+    "lon": 75.9182,
+    "lat": 30.2602,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.96
+   },
+   {
+    "lon": 75.5456,
+    "lat": 30.5149,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.88
+   },
+   {
+    "lon": 75.0526,
+    "lat": 30.9593,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.75
+   },
+   {
+    "lon": 75.6931,
+    "lat": 31.0817,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.18
+   },
+   {
+    "lon": 75.4617,
+    "lat": 30.2769,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.85
+   },
+   {
+    "lon": 75.1189,
+    "lat": 30.726,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.88
+   },
+   {
+    "lon": 75.7536,
+    "lat": 31.094,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.48
+   },
+   {
+    "lon": 76.4298,
+    "lat": 30.9691,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.65
+   },
+   {
+    "lon": 75.4629,
+    "lat": 30.4913,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.39
+   },
+   {
+    "lon": 76.0053,
+    "lat": 30.7328,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.1
+   },
+   {
+    "lon": 75.6195,
+    "lat": 30.841,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.61
+   },
+   {
+    "lon": 75.1048,
+    "lat": 31.0854,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.31
+   },
+   {
+    "lon": 75.0712,
+    "lat": 30.8258,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.17
+   },
+   {
+    "lon": 75.1629,
+    "lat": 30.7046,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.42
+   },
+   {
+    "lon": 75.3249,
+    "lat": 30.7515,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.21
+   },
+   {
+    "lon": 75.6103,
+    "lat": 30.4499,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 3.91
+   },
+   {
+    "lon": 75.474,
+    "lat": 30.472,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.87
+   },
+   {
+    "lon": 75.1292,
+    "lat": 30.8718,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.72
+   },
+   {
+    "lon": 75.3637,
+    "lat": 30.6122,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.24
+   },
+   {
+    "lon": 75.4497,
+    "lat": 30.3337,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 75.7987,
+    "lat": 30.5512,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.02
+   },
+   {
+    "lon": 75.4223,
+    "lat": 30.9426,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.41
+   },
+   {
+    "lon": 76.0247,
+    "lat": 30.7452,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.16
+   },
+   {
+    "lon": 75.8874,
+    "lat": 30.7692,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.78
+   },
+   {
+    "lon": 75.8595,
+    "lat": 30.5265,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.24
+   },
+   {
+    "lon": 76.0425,
+    "lat": 30.5428,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.23
+   },
+   {
+    "lon": 74.8571,
+    "lat": 30.6848,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.36
+   },
+   {
+    "lon": 75.6729,
+    "lat": 31.0384,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 75.5538,
+    "lat": 30.2885,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.07
+   },
+   {
+    "lon": 75.1925,
+    "lat": 30.7647,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.35
+   },
+   {
+    "lon": 75.4753,
+    "lat": 30.7174,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.33
+   },
+   {
+    "lon": 74.9574,
+    "lat": 30.9141,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 6.05
+   },
+   {
+    "lon": 75.5536,
+    "lat": 30.7037,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.12
+   },
+   {
+    "lon": 75.9415,
+    "lat": 30.5558,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.84
+   },
+   {
+    "lon": 75.4935,
+    "lat": 30.4114,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.69
+   },
+   {
+    "lon": 76.8508,
+    "lat": 30.9055,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.3
+   },
+   {
+    "lon": 76.5847,
+    "lat": 30.9395,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.95
+   },
+   {
+    "lon": 76.1667,
+    "lat": 30.5035,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.64
+   },
+   {
+    "lon": 75.2759,
+    "lat": 31.1368,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.88
+   },
+   {
+    "lon": 75.4024,
+    "lat": 30.8727,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.04
+   },
+   {
+    "lon": 76.0553,
+    "lat": 30.7389,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 6.04
+   },
+   {
+    "lon": 74.571,
+    "lat": 31.0061,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.7
+   },
+   {
+    "lon": 75.2796,
+    "lat": 30.8088,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.8
+   },
+   {
+    "lon": 75.1132,
+    "lat": 30.6706,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.19
+   },
+   {
+    "lon": 74.8851,
+    "lat": 30.6413,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 8.09
+   },
+   {
+    "lon": 75.0638,
+    "lat": 30.5301,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.37
+   },
+   {
+    "lon": 75.7864,
+    "lat": 30.684,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.83
+   },
+   {
+    "lon": 75.7352,
+    "lat": 30.3828,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.68
+   },
+   {
+    "lon": 75.4848,
+    "lat": 30.8269,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.74
+   },
+   {
+    "lon": 75.4342,
+    "lat": 30.4798,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.61
+   },
+   {
+    "lon": 74.6724,
+    "lat": 30.9682,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.94
+   },
+   {
+    "lon": 75.9923,
+    "lat": 30.5255,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.19
+   },
+   {
+    "lon": 75.5417,
+    "lat": 30.4907,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.35
+   },
+   {
+    "lon": 75.8022,
+    "lat": 30.7299,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.62
+   },
+   {
+    "lon": 75.0473,
+    "lat": 30.3969,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.07
+   },
+   {
+    "lon": 75.2036,
+    "lat": 30.9634,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.12
+   },
+   {
+    "lon": 76.6712,
+    "lat": 30.6805,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.1
+   },
+   {
+    "lon": 75.7501,
+    "lat": 30.4118,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.2
+   },
+   {
+    "lon": 75.4832,
+    "lat": 30.7757,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.04
+   },
+   {
+    "lon": 76.1727,
+    "lat": 30.6693,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.85
+   },
+   {
+    "lon": 75.8794,
+    "lat": 30.5821,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.58
+   },
+   {
+    "lon": 75.3208,
+    "lat": 30.8039,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.02
+   },
+   {
+    "lon": 76.0674,
+    "lat": 30.2058,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.72
+   },
+   {
+    "lon": 75.7394,
+    "lat": 30.4281,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.24
+   },
+   {
+    "lon": 75.4671,
+    "lat": 30.7415,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.86
+   },
+   {
+    "lon": 75.2123,
+    "lat": 30.7552,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.42
+   },
+   {
+    "lon": 74.7905,
+    "lat": 30.9337,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.09
+   },
+   {
+    "lon": 75.0699,
+    "lat": 30.6323,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.16
+   },
+   {
+    "lon": 74.9185,
+    "lat": 30.6186,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.66
+   },
+   {
+    "lon": 75.8967,
+    "lat": 30.4101,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.54
+   },
+   {
+    "lon": 76.0158,
+    "lat": 30.3987,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.49
+   },
+   {
+    "lon": 76.2529,
+    "lat": 30.5646,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.29
+   },
+   {
+    "lon": 75.7067,
+    "lat": 30.6151,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.59
+   },
+   {
+    "lon": 76.0012,
+    "lat": 31.0719,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.93
+   },
+   {
+    "lon": 76.1274,
+    "lat": 30.6787,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.97
+   },
+   {
+    "lon": 75.6983,
+    "lat": 30.6011,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.38
+   },
+   {
+    "lon": 75.5161,
+    "lat": 30.6604,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.23
+   },
+   {
+    "lon": 75.7716,
+    "lat": 30.7083,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.18
+   },
+   {
+    "lon": 75.2959,
+    "lat": 30.8152,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.78
+   },
+   {
+    "lon": 75.9392,
+    "lat": 30.2879,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 75.8969,
+    "lat": 30.8988,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.47
+   },
+   {
+    "lon": 75.9072,
+    "lat": 30.6364,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.17
+   },
+   {
+    "lon": 76.138,
+    "lat": 30.8871,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 3.48
+   },
+   {
+    "lon": 75.3244,
+    "lat": 30.8677,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 5.9
+   },
+   {
+    "lon": 76.0595,
+    "lat": 30.9082,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 7.72
+   },
+   {
+    "lon": 75.5006,
+    "lat": 30.7885,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.26
+   },
+   {
+    "lon": 75.4185,
+    "lat": 30.7311,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.87
+   },
+   {
+    "lon": 76.4394,
+    "lat": 30.7459,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.44
+   },
+   {
+    "lon": 75.101,
+    "lat": 30.6161,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.56
+   },
+   {
+    "lon": 75.3937,
+    "lat": 30.5229,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.16
+   },
+   {
+    "lon": 75.7797,
+    "lat": 30.6916,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.47
+   },
+   {
+    "lon": 75.579,
+    "lat": 30.5323,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.67
+   },
+   {
+    "lon": 75.4033,
+    "lat": 30.8506,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.73
+   },
+   {
+    "lon": 76.6646,
+    "lat": 30.5716,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.77
+   },
+   {
+    "lon": 76.2926,
+    "lat": 30.9747,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.72
+   },
+   {
+    "lon": 76.0209,
+    "lat": 30.3524,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.78
+   },
+   {
+    "lon": 75.086,
+    "lat": 30.4155,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.88
+   },
+   {
+    "lon": 76.0976,
+    "lat": 30.8681,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 4.73
+   },
+   {
+    "lon": 75.4234,
+    "lat": 30.4385,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.38
+   },
+   {
+    "lon": 75.5622,
+    "lat": 30.9975,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.43
+   },
+   {
+    "lon": 75.2847,
+    "lat": 30.5431,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 4.95
+   },
+   {
+    "lon": 76.4188,
+    "lat": 30.0896,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.4
+   },
+   {
+    "lon": 76.1424,
+    "lat": 30.1277,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.62
+   },
+   {
+    "lon": 76.054,
+    "lat": 30.2666,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 6.92
+   },
+   {
+    "lon": 76.1383,
+    "lat": 30.0776,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.43
+   },
+   {
+    "lon": 75.7571,
+    "lat": 30.1568,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 76.2232,
+    "lat": 30.2492,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.65
+   },
+   {
+    "lon": 75.5622,
+    "lat": 29.9615,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.93
+   },
+   {
+    "lon": 76.1208,
+    "lat": 30.1032,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.16
+   },
+   {
+    "lon": 76.5359,
+    "lat": 29.9136,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.4
+   },
+   {
+    "lon": 76.0519,
+    "lat": 30.1405,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.36
+   },
+   {
+    "lon": 76.1247,
+    "lat": 29.9869,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.75
+   },
+   {
+    "lon": 75.9043,
+    "lat": 30.507,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.72
+   },
+   {
+    "lon": 76.2766,
+    "lat": 30.2141,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.04
+   },
+   {
+    "lon": 76.0979,
+    "lat": 30.2914,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.16
+   },
+   {
+    "lon": 76.2103,
+    "lat": 30.0773,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.17
+   },
+   {
+    "lon": 75.6176,
+    "lat": 29.9338,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.24
+   },
+   {
+    "lon": 76.1923,
+    "lat": 30.1524,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.39
+   },
+   {
+    "lon": 75.9082,
+    "lat": 30.132,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 2.75
+   },
+   {
+    "lon": 76.0017,
+    "lat": 30.0646,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.07
+   },
+   {
+    "lon": 75.9965,
+    "lat": 30.1248,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.75
+   },
+   {
+    "lon": 76.4501,
+    "lat": 30.4276,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.05
+   },
+   {
+    "lon": 76.2726,
+    "lat": 30.2348,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.42
+   },
+   {
+    "lon": 76.303,
+    "lat": 30.0069,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.12
+   },
+   {
+    "lon": 76.853,
+    "lat": 30.0035,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 76.3572,
+    "lat": 30.2847,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.38
+   },
+   {
+    "lon": 76.0308,
+    "lat": 29.9083,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.28
+   },
+   {
+    "lon": 75.9314,
+    "lat": 30.0473,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.83
+   },
+   {
+    "lon": 75.918,
+    "lat": 30.1026,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.36
+   },
+   {
+    "lon": 76.689,
+    "lat": 29.9667,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.21
+   },
+   {
+    "lon": 75.7054,
+    "lat": 30.2552,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.79
+   },
+   {
+    "lon": 76.1933,
+    "lat": 30.0202,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.05
+   },
+   {
+    "lon": 76.2071,
+    "lat": 29.9044,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.2
+   },
+   {
+    "lon": 76.0973,
+    "lat": 29.8934,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.93
+   },
+   {
+    "lon": 75.7301,
+    "lat": 29.9019,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.1
+   },
+   {
+    "lon": 76.1024,
+    "lat": 30.2726,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.13
+   },
+   {
+    "lon": 75.893,
+    "lat": 30.4603,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.39
+   },
+   {
+    "lon": 76.0981,
+    "lat": 30.2062,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.86
+   },
+   {
+    "lon": 75.9237,
+    "lat": 30.3342,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 76.192,
+    "lat": 29.9965,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 76.1035,
+    "lat": 30.3438,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.75
+   },
+   {
+    "lon": 76.9091,
+    "lat": 30.0274,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.84
+   },
+   {
+    "lon": 76.206,
+    "lat": 30.1609,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.0503,
+    "lat": 30.231,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.72
+   },
+   {
+    "lon": 75.7243,
+    "lat": 29.9997,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.62
+   },
+   {
+    "lon": 76.8119,
+    "lat": 30.2106,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.87
+   },
+   {
+    "lon": 76.3575,
+    "lat": 29.9661,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.39
+   },
+   {
+    "lon": 76.2572,
+    "lat": 30.2428,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 76.0684,
+    "lat": 30.4539,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.1
+   },
+   {
+    "lon": 76.0303,
+    "lat": 30.3834,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.66
+   },
+   {
+    "lon": 75.9312,
+    "lat": 30.0318,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.95
+   },
+   {
+    "lon": 76.1089,
+    "lat": 30.0226,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.38
+   },
+   {
+    "lon": 76.3555,
+    "lat": 30.1139,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.94
+   },
+   {
+    "lon": 76.5582,
+    "lat": 30.3371,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7
+   },
+   {
+    "lon": 76.1368,
+    "lat": 30.3569,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.84
+   },
+   {
+    "lon": 76.5409,
+    "lat": 30.5783,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.836,
+    "lat": 30.3789,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.88
+   },
+   {
+    "lon": 76.1499,
+    "lat": 30.3045,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.29
+   },
+   {
+    "lon": 75.9841,
+    "lat": 30.3272,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.97
+   },
+   {
+    "lon": 76.177,
+    "lat": 30.5614,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.52
+   },
+   {
+    "lon": 76.2857,
+    "lat": 30.4887,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.74
+   },
+   {
+    "lon": 76.4465,
+    "lat": 29.9633,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.28
+   },
+   {
+    "lon": 75.6972,
+    "lat": 30.1853,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.65
+   },
+   {
+    "lon": 76.4462,
+    "lat": 30.1804,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.97
+   },
+   {
+    "lon": 75.9443,
+    "lat": 30.3213,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.5
+   },
+   {
+    "lon": 76.2312,
+    "lat": 30.3239,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.74
+   },
+   {
+    "lon": 76.2627,
+    "lat": 30.0186,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.23
+   },
+   {
+    "lon": 76.0826,
+    "lat": 30.3182,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.32
+   },
+   {
+    "lon": 76.3719,
+    "lat": 30.2675,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.26
+   },
+   {
+    "lon": 76.3717,
+    "lat": 30.53,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.06
+   },
+   {
+    "lon": 76.4799,
+    "lat": 30.3112,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.07
+   },
+   {
+    "lon": 76.2436,
+    "lat": 30.2636,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.26
+   },
+   {
+    "lon": 76.133,
+    "lat": 30.4398,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.21
+   },
+   {
+    "lon": 75.8779,
+    "lat": 30.2077,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.88
+   },
+   {
+    "lon": 75.5261,
+    "lat": 30.2789,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.6
+   },
+   {
+    "lon": 75.9512,
+    "lat": 30.3017,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.1
+   },
+   {
+    "lon": 76.3484,
+    "lat": 30.1873,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.9
+   },
+   {
+    "lon": 75.9013,
+    "lat": 30.1586,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.03
+   },
+   {
+    "lon": 76.3052,
+    "lat": 30.104,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.59
+   },
+   {
+    "lon": 76.4069,
+    "lat": 29.7082,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.57
+   },
+   {
+    "lon": 76.4063,
+    "lat": 29.9818,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.5
+   },
+   {
+    "lon": 76.5556,
+    "lat": 30.0898,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.43
+   },
+   {
+    "lon": 75.6941,
+    "lat": 29.8916,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.39
+   },
+   {
+    "lon": 75.9868,
+    "lat": 30.1888,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 2.66
+   },
+   {
+    "lon": 76.361,
+    "lat": 30.2254,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.56
+   },
+   {
+    "lon": 76.5071,
+    "lat": 30.1243,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.26
+   },
+   {
+    "lon": 76.3513,
+    "lat": 30.1981,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.5
+   },
+   {
+    "lon": 76.4992,
+    "lat": 30.3169,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.18
+   },
+   {
+    "lon": 76.3507,
+    "lat": 30.1188,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.51
+   },
+   {
+    "lon": 76.131,
+    "lat": 30.6702,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.12
+   },
+   {
+    "lon": 76.2669,
+    "lat": 30.3895,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 76.0427,
+    "lat": 30.1732,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.84
+   },
+   {
+    "lon": 75.9575,
+    "lat": 30.0078,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.95
+   },
+   {
+    "lon": 76.2224,
+    "lat": 30.3278,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.37
+   },
+   {
+    "lon": 76.1672,
+    "lat": 30.3522,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.17
+   },
+   {
+    "lon": 76.2154,
+    "lat": 30.254,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.12
+   },
+   {
+    "lon": 75.8022,
+    "lat": 30.3784,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.3
+   },
+   {
+    "lon": 76.2115,
+    "lat": 30.2563,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 2.57
+   },
+   {
+    "lon": 76.1606,
+    "lat": 29.7646,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.97
+   },
+   {
+    "lon": 76.2795,
+    "lat": 30.2451,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.11
+   },
+   {
+    "lon": 76.4202,
+    "lat": 30.2412,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.18
+   },
+   {
+    "lon": 76.4674,
+    "lat": 30.4715,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.25
+   },
+   {
+    "lon": 75.8838,
+    "lat": 30.4682,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.99
+   },
+   {
+    "lon": 76.12,
+    "lat": 30.4991,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.31
+   },
+   {
+    "lon": 76.3325,
+    "lat": 30.2417,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.18
+   },
+   {
+    "lon": 75.9979,
+    "lat": 30.1366,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.94
+   },
+   {
+    "lon": 76.2092,
+    "lat": 30.013,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.87
+   },
+   {
+    "lon": 75.821,
+    "lat": 30.061,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.3
+   },
+   {
+    "lon": 76.101,
+    "lat": 30.3405,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.28
+   },
+   {
+    "lon": 76.1234,
+    "lat": 30.2169,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.5
+   },
+   {
+    "lon": 76.302,
+    "lat": 29.9808,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.64
+   },
+   {
+    "lon": 75.5108,
+    "lat": 30.2575,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.22
+   },
+   {
+    "lon": 76.6432,
+    "lat": 30.4188,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 75.721,
+    "lat": 30.128,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.87
+   },
+   {
+    "lon": 75.9263,
+    "lat": 30.5,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.26
+   },
+   {
+    "lon": 75.9556,
+    "lat": 30.612,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 5.78
+   },
+   {
+    "lon": 75.7765,
+    "lat": 30.0812,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.62
+   },
+   {
+    "lon": 76.2114,
+    "lat": 30.3632,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.59
+   },
+   {
+    "lon": 75.8356,
+    "lat": 30.1281,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.34
+   },
+   {
+    "lon": 76.7278,
+    "lat": 30.1833,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.49
+   },
+   {
+    "lon": 75.6844,
+    "lat": 30.049,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.12
+   },
+   {
+    "lon": 76.5095,
+    "lat": 30.1669,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.58
+   },
+   {
+    "lon": 76.0711,
+    "lat": 30.2114,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.78
+   },
+   {
+    "lon": 76.157,
+    "lat": 30.4743,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.35
+   },
+   {
+    "lon": 76.4571,
+    "lat": 30.4172,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.25
+   },
+   {
+    "lon": 76.7657,
+    "lat": 30.2051,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 76.19,
+    "lat": 30.2614,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.15
+   },
+   {
+    "lon": 76.0443,
+    "lat": 29.8804,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.71
+   },
+   {
+    "lon": 76.1929,
+    "lat": 30.2067,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.03
+   },
+   {
+    "lon": 75.9606,
+    "lat": 30.4495,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.06
+   },
+   {
+    "lon": 76.1744,
+    "lat": 30.4872,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.15
+   },
+   {
+    "lon": 76.7142,
+    "lat": 30.067,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.37
+   },
+   {
+    "lon": 75.8813,
+    "lat": 30.1894,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.29
+   },
+   {
+    "lon": 76.6279,
+    "lat": 30.409,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.6
+   },
+   {
+    "lon": 76.8976,
+    "lat": 30.1044,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 11.78
+   },
+   {
+    "lon": 75.5797,
+    "lat": 30.0544,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 76.2355,
+    "lat": 29.9851,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.6
+   },
+   {
+    "lon": 75.7304,
+    "lat": 30.4947,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.24
+   },
+   {
+    "lon": 75.7762,
+    "lat": 30.5867,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.48
+   },
+   {
+    "lon": 76.1097,
+    "lat": 30.2261,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.1
+   },
+   {
+    "lon": 75.7782,
+    "lat": 30.2599,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.5
+   },
+   {
+    "lon": 76.3768,
+    "lat": 30.4311,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.23
+   },
+   {
+    "lon": 76.1379,
+    "lat": 30.133,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.15
+   },
+   {
+    "lon": 76.4308,
+    "lat": 30.014,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 76.6777,
+    "lat": 30.3529,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.21
+   },
+   {
+    "lon": 76.0381,
+    "lat": 29.9137,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.26
+   },
+   {
+    "lon": 76.462,
+    "lat": 30.2609,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 76.3972,
+    "lat": 30.282,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.38
+   },
+   {
+    "lon": 76.2455,
+    "lat": 30.1309,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.3
+   },
+   {
+    "lon": 76.7653,
+    "lat": 30.2405,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.75
+   },
+   {
+    "lon": 76.1639,
+    "lat": 30.2537,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.7
+   },
+   {
+    "lon": 76.3482,
+    "lat": 30.5514,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.92
+   },
+   {
+    "lon": 76.2694,
+    "lat": 30.4096,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.54
+   },
+   {
+    "lon": 75.8474,
+    "lat": 30.4552,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.72
+   },
+   {
+    "lon": 75.7806,
+    "lat": 29.9949,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5
+   },
+   {
+    "lon": 76.4238,
+    "lat": 30.1961,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.72
+   },
+   {
+    "lon": 75.7907,
+    "lat": 30.3329,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.2
+   },
+   {
+    "lon": 76.1036,
+    "lat": 30.6614,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.37
+   },
+   {
+    "lon": 76.312,
+    "lat": 30.3757,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.46
+   },
+   {
+    "lon": 76.8448,
+    "lat": 30.0161,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.6
+   },
+   {
+    "lon": 75.8911,
+    "lat": 30.1704,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.54
+   },
+   {
+    "lon": 76.6799,
+    "lat": 30.3918,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.94
+   },
+   {
+    "lon": 76.2086,
+    "lat": 30.263,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.65
+   },
+   {
+    "lon": 75.825,
+    "lat": 29.9783,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.89
+   },
+   {
+    "lon": 76.6319,
+    "lat": 29.9601,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.87
+   },
+   {
+    "lon": 76.1749,
+    "lat": 30.3254,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.76
+   },
+   {
+    "lon": 76.0234,
+    "lat": 30.2675,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.04
+   },
+   {
+    "lon": 76.3466,
+    "lat": 30.4075,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.3
+   },
+   {
+    "lon": 75.9884,
+    "lat": 30.1485,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.93
+   },
+   {
+    "lon": 76.2821,
+    "lat": 30.2488,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.52
+   },
+   {
+    "lon": 76.165,
+    "lat": 30.3806,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 10.04
+   },
+   {
+    "lon": 76.7408,
+    "lat": 29.9969,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 76.3194,
+    "lat": 29.8863,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.08
+   },
+   {
+    "lon": 76.3906,
+    "lat": 30.2473,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.74
+   },
+   {
+    "lon": 76.0008,
+    "lat": 30.2309,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.01
+   },
+   {
+    "lon": 75.8705,
+    "lat": 30.0605,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.4
+   },
+   {
+    "lon": 75.9022,
+    "lat": 30.1373,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.8
+   },
+   {
+    "lon": 75.5652,
+    "lat": 30.0506,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.01
+   },
+   {
+    "lon": 76.3403,
+    "lat": 30.434,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.78
+   },
+   {
+    "lon": 76.3919,
+    "lat": 30.3022,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.99
+   },
+   {
+    "lon": 76.0677,
+    "lat": 30.2649,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 10.52
+   },
+   {
+    "lon": 76.0022,
+    "lat": 30.3505,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.49
+   },
+   {
+    "lon": 76.2903,
+    "lat": 30.171,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.19
+   },
+   {
+    "lon": 76.3282,
+    "lat": 29.9494,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.76
+   },
+   {
+    "lon": 76.834,
+    "lat": 30.1135,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.49
+   },
+   {
+    "lon": 76.4723,
+    "lat": 29.9265,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.96
+   },
+   {
+    "lon": 76.3115,
+    "lat": 30.573,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.24
+   },
+   {
+    "lon": 76.3599,
+    "lat": 30.2958,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.5
+   },
+   {
+    "lon": 76.2751,
+    "lat": 30.294,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.77
+   },
+   {
+    "lon": 76.3129,
+    "lat": 30.1827,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.58
+   },
+   {
+    "lon": 76.2657,
+    "lat": 30.4131,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.23
+   },
+   {
+    "lon": 76.6648,
+    "lat": 29.6866,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 76.0357,
+    "lat": 30.1059,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.37
+   },
+   {
+    "lon": 75.9004,
+    "lat": 30.31,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.42
+   },
+   {
+    "lon": 75.8359,
+    "lat": 30.5464,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.03
+   },
+   {
+    "lon": 76.0349,
+    "lat": 30.1676,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.93
+   },
+   {
+    "lon": 76.3289,
+    "lat": 30.105,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.51
+   },
+   {
+    "lon": 75.9886,
+    "lat": 29.9815,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.24
+   },
+   {
+    "lon": 75.9653,
+    "lat": 30.063,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.02
+   },
+   {
+    "lon": 76.2023,
+    "lat": 30.0988,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.57
+   },
+   {
+    "lon": 76.6343,
+    "lat": 29.9775,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.1
+   },
+   {
+    "lon": 76.406,
+    "lat": 30.1835,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.5
+   },
+   {
+    "lon": 76.4437,
+    "lat": 30.1423,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.08
+   },
+   {
+    "lon": 76.1314,
+    "lat": 30.2625,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.35
+   },
+   {
+    "lon": 76.1123,
+    "lat": 29.9504,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.89
+   },
+   {
+    "lon": 76.3425,
+    "lat": 29.9371,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.15
+   },
+   {
+    "lon": 76.5364,
+    "lat": 29.8384,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.82
+   },
+   {
+    "lon": 75.8639,
+    "lat": 29.9906,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.43
+   },
+   {
+    "lon": 75.9915,
+    "lat": 30.3736,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.16
+   },
+   {
+    "lon": 76.2234,
+    "lat": 30.1011,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.89
+   },
+   {
+    "lon": 75.8031,
+    "lat": 30.3106,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.06
+   },
+   {
+    "lon": 75.9211,
+    "lat": 30.3135,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3
+   },
+   {
+    "lon": 76.3645,
+    "lat": 30.1239,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.4
+   },
+   {
+    "lon": 75.916,
+    "lat": 30.4521,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.67
+   },
+   {
+    "lon": 75.8046,
+    "lat": 29.7036,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.86
+   },
+   {
+    "lon": 76.8174,
+    "lat": 30.3034,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.37
+   },
+   {
+    "lon": 76.4977,
+    "lat": 30.423,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.27
+   },
+   {
+    "lon": 76.123,
+    "lat": 30.1391,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.02
+   },
+   {
+    "lon": 76.2444,
+    "lat": 30.1079,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.83
+   },
+   {
+    "lon": 76.5997,
+    "lat": 30.3114,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.75
+   },
+   {
+    "lon": 76.5391,
+    "lat": 30.0654,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.9
+   },
+   {
+    "lon": 75.7049,
+    "lat": 30.5113,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.38
+   },
+   {
+    "lon": 76.3346,
+    "lat": 30.1993,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.63
+   },
+   {
+    "lon": 76.7343,
+    "lat": 30.304,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.18
+   },
+   {
+    "lon": 76.6485,
+    "lat": 30.2936,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.15
+   },
+   {
+    "lon": 76.1244,
+    "lat": 30.1471,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.01
+   },
+   {
+    "lon": 76.0928,
+    "lat": 30.2814,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.01
+   },
+   {
+    "lon": 75.8554,
+    "lat": 30.2476,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 75.7208,
+    "lat": 29.9038,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 4.05
+   },
+   {
+    "lon": 76.7222,
+    "lat": 29.9188,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.55
+   },
+   {
+    "lon": 76.0675,
+    "lat": 30.3781,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.13
+   },
+   {
+    "lon": 75.6033,
+    "lat": 30.432,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.63
+   },
+   {
+    "lon": 75.961,
+    "lat": 30.0497,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.08
+   },
+   {
+    "lon": 76.6851,
+    "lat": 30.1495,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.84
+   },
+   {
+    "lon": 76.5263,
+    "lat": 30.2335,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.48
+   },
+   {
+    "lon": 75.5417,
+    "lat": 30.2097,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 12.12
+   },
+   {
+    "lon": 76.4093,
+    "lat": 30.4192,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.1
+   },
+   {
+    "lon": 76.4821,
+    "lat": 29.9792,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.89
+   },
+   {
+    "lon": 75.6681,
+    "lat": 30.2337,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.27
+   },
+   {
+    "lon": 76.2736,
+    "lat": 30.3225,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 2.5
+   },
+   {
+    "lon": 76.5483,
+    "lat": 30.2806,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.3
+   },
+   {
+    "lon": 76.0204,
+    "lat": 30.5093,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.04
+   },
+   {
+    "lon": 76.6817,
+    "lat": 30.2496,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.51
+   },
+   {
+    "lon": 76.0749,
+    "lat": 30.158,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.83
+   },
+   {
+    "lon": 76.2125,
+    "lat": 30.3414,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 76.3735,
+    "lat": 30.0779,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.91
+   },
+   {
+    "lon": 76.417,
+    "lat": 29.8839,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.66
+   },
+   {
+    "lon": 76.3777,
+    "lat": 29.8695,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.54
+   },
+   {
+    "lon": 75.9922,
+    "lat": 30.1502,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.2
+   },
+   {
+    "lon": 76.3594,
+    "lat": 30.3053,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.56
+   },
+   {
+    "lon": 75.9861,
+    "lat": 30.286,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.52
+   },
+   {
+    "lon": 76.3434,
+    "lat": 30.1986,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.55
+   },
+   {
+    "lon": 76.5001,
+    "lat": 29.844,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 76.1963,
+    "lat": 29.9521,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.89
+   },
+   {
+    "lon": 75.4319,
+    "lat": 30.2234,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.77
+   },
+   {
+    "lon": 76.5472,
+    "lat": 30.0722,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.99
+   },
+   {
+    "lon": 76.0495,
+    "lat": 30.404,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.9
+   },
+   {
+    "lon": 76.3632,
+    "lat": 30.425,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.25
+   },
+   {
+    "lon": 75.522,
+    "lat": 30.2594,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.96
+   },
+   {
+    "lon": 76.0966,
+    "lat": 30.1207,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.4
+   },
+   {
+    "lon": 76.1847,
+    "lat": 30.0808,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 76.3978,
+    "lat": 30.0275,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.59
+   },
+   {
+    "lon": 76.1863,
+    "lat": 30.6179,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.35
+   },
+   {
+    "lon": 75.9408,
+    "lat": 30.1375,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.26
+   },
+   {
+    "lon": 76.0858,
+    "lat": 30.0725,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 76.1006,
+    "lat": 30.026,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.09
+   },
+   {
+    "lon": 75.8567,
+    "lat": 30.4257,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.05
+   },
+   {
+    "lon": 76.1682,
+    "lat": 30.2964,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.62
+   },
+   {
+    "lon": 76.0327,
+    "lat": 30.553,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.38
+   },
+   {
+    "lon": 76.4858,
+    "lat": 30.0745,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.81
+   },
+   {
+    "lon": 75.733,
+    "lat": 30.5139,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.59
+   },
+   {
+    "lon": 75.1917,
+    "lat": 30.8645,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.17
+   },
+   {
+    "lon": 74.678,
+    "lat": 30.9205,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.58
+   },
+   {
+    "lon": 74.3474,
+    "lat": 30.728,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.19
+   },
+   {
+    "lon": 75.1459,
+    "lat": 30.7068,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.03
+   },
+   {
+    "lon": 75.0651,
+    "lat": 31.0323,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.82
+   },
+   {
+    "lon": 75.4248,
+    "lat": 30.8987,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.49
+   },
+   {
+    "lon": 74.6442,
+    "lat": 30.6476,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.2
+   },
+   {
+    "lon": 74.925,
+    "lat": 31.1046,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.27
+   },
+   {
+    "lon": 74.798,
+    "lat": 30.6157,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.32
+   },
+   {
+    "lon": 74.3607,
+    "lat": 30.6566,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.72
+   },
+   {
+    "lon": 74.8205,
+    "lat": 30.9692,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 10.62
+   },
+   {
+    "lon": 74.7703,
+    "lat": 31.0138,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.02
+   },
+   {
+    "lon": 75.3996,
+    "lat": 30.8795,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.43
+   },
+   {
+    "lon": 74.7729,
+    "lat": 31.0803,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.05
+   },
+   {
+    "lon": 75.09,
+    "lat": 30.7536,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 74.8506,
+    "lat": 30.9375,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.28
+   },
+   {
+    "lon": 75.2282,
+    "lat": 30.7108,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.21
+   },
+   {
+    "lon": 75.1534,
+    "lat": 30.9584,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.42
+   },
+   {
+    "lon": 75.2507,
+    "lat": 30.7455,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1
+   },
+   {
+    "lon": 74.7106,
+    "lat": 30.7339,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.51
+   },
+   {
+    "lon": 74.9806,
+    "lat": 30.9363,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.51
+   },
+   {
+    "lon": 75.1362,
+    "lat": 30.652,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.18
+   },
+   {
+    "lon": 74.8382,
+    "lat": 30.7925,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 75.1818,
+    "lat": 31.0963,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.85
+   },
+   {
+    "lon": 74.9372,
+    "lat": 31.0683,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.49
+   },
+   {
+    "lon": 75.0851,
+    "lat": 30.8842,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 7.28
+   },
+   {
+    "lon": 74.9008,
+    "lat": 31.0698,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.12
+   },
+   {
+    "lon": 74.5485,
+    "lat": 30.7345,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.93
+   },
+   {
+    "lon": 74.6655,
+    "lat": 31.0294,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.86
+   },
+   {
+    "lon": 74.7952,
+    "lat": 30.8275,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.93
+   },
+   {
+    "lon": 75.1135,
+    "lat": 30.8172,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.49
+   },
+   {
+    "lon": 74.5762,
+    "lat": 31.1117,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.18
+   },
+   {
+    "lon": 74.8328,
+    "lat": 30.7248,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.9
+   },
+   {
+    "lon": 74.3953,
+    "lat": 30.9598,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.22
+   },
+   {
+    "lon": 75.1636,
+    "lat": 30.9081,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.43
+   },
+   {
+    "lon": 74.7504,
+    "lat": 30.8112,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.77
+   },
+   {
+    "lon": 75.0037,
+    "lat": 30.8505,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.78
+   },
+   {
+    "lon": 74.92,
+    "lat": 31.1558,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.68
+   },
+   {
+    "lon": 74.8291,
+    "lat": 30.7857,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.08
+   },
+   {
+    "lon": 74.7849,
+    "lat": 30.7676,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 7.72
+   },
+   {
+    "lon": 74.9371,
+    "lat": 30.8553,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.72
+   },
+   {
+    "lon": 74.8895,
+    "lat": 30.7634,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.38
+   },
+   {
+    "lon": 74.6665,
+    "lat": 30.7288,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.38
+   },
+   {
+    "lon": 75.0327,
+    "lat": 31.1596,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.69
+   },
+   {
+    "lon": 74.6049,
+    "lat": 30.8748,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.62
+   },
+   {
+    "lon": 75.1769,
+    "lat": 30.5354,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.44
+   },
+   {
+    "lon": 74.9453,
+    "lat": 30.8708,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.65
+   },
+   {
+    "lon": 74.9196,
+    "lat": 31.0355,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.83
+   },
+   {
+    "lon": 74.8222,
+    "lat": 30.8269,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.82
+   },
+   {
+    "lon": 74.6235,
+    "lat": 30.7634,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.11
+   },
+   {
+    "lon": 74.7322,
+    "lat": 30.931,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.89
+   },
+   {
+    "lon": 75.0426,
+    "lat": 30.969,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.07
+   },
+   {
+    "lon": 75.5513,
+    "lat": 30.9633,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.21
+   },
+   {
+    "lon": 74.7364,
+    "lat": 30.8115,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.93
+   },
+   {
+    "lon": 74.8645,
+    "lat": 31.0716,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.68
+   },
+   {
+    "lon": 74.8191,
+    "lat": 31.1362,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.84
+   },
+   {
+    "lon": 74.9955,
+    "lat": 30.9547,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.3
+   },
+   {
+    "lon": 75.2055,
+    "lat": 30.9418,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.37
+   },
+   {
+    "lon": 75.2628,
+    "lat": 30.7885,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.33
+   },
+   {
+    "lon": 75.0447,
+    "lat": 30.5503,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.81
+   },
+   {
+    "lon": 74.9354,
+    "lat": 30.8023,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.03
+   },
+   {
+    "lon": 74.9506,
+    "lat": 30.6079,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.27
+   },
+   {
+    "lon": 74.71,
+    "lat": 30.8025,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.85
+   },
+   {
+    "lon": 74.7984,
+    "lat": 30.8,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5.1
+   },
+   {
+    "lon": 75.0665,
+    "lat": 30.9654,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.41
+   },
+   {
+    "lon": 74.9833,
+    "lat": 30.9596,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 75.1308,
+    "lat": 30.9843,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.26
+   },
+   {
+    "lon": 74.7454,
+    "lat": 30.725,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.21
+   },
+   {
+    "lon": 74.8502,
+    "lat": 30.6433,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.32
+   },
+   {
+    "lon": 74.5517,
+    "lat": 30.7829,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.73
+   },
+   {
+    "lon": 75.0055,
+    "lat": 30.8191,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.38
+   },
+   {
+    "lon": 74.7712,
+    "lat": 30.9549,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.45
+   },
+   {
+    "lon": 74.5054,
+    "lat": 31.143,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.69
+   },
+   {
+    "lon": 74.3533,
+    "lat": 31.0557,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.23
+   },
+   {
+    "lon": 74.6538,
+    "lat": 30.862,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.93
+   },
+   {
+    "lon": 74.9873,
+    "lat": 30.735,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.25
+   },
+   {
+    "lon": 74.526,
+    "lat": 31.0714,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.4
+   },
+   {
+    "lon": 74.718,
+    "lat": 30.985,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.87
+   },
+   {
+    "lon": 74.6419,
+    "lat": 31.1082,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.05
+   },
+   {
+    "lon": 74.679,
+    "lat": 30.737,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.78
+   },
+   {
+    "lon": 74.7438,
+    "lat": 30.9368,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.19
+   },
+   {
+    "lon": 74.9973,
+    "lat": 30.9522,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.83
+   },
+   {
+    "lon": 74.774,
+    "lat": 30.6128,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.15
+   },
+   {
+    "lon": 75.1326,
+    "lat": 30.8421,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 3.88
+   },
+   {
+    "lon": 75.1688,
+    "lat": 31.0005,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.22
+   },
+   {
+    "lon": 74.5325,
+    "lat": 30.8796,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 74.6738,
+    "lat": 30.7507,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.8
+   },
+   {
+    "lon": 74.9208,
+    "lat": 30.6844,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.4
+   },
+   {
+    "lon": 74.8157,
+    "lat": 31.0492,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.84
+   },
+   {
+    "lon": 74.9814,
+    "lat": 30.8269,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.24
+   },
+   {
+    "lon": 75.5227,
+    "lat": 31.0621,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.02
+   },
+   {
+    "lon": 74.9303,
+    "lat": 30.857,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.78
+   },
+   {
+    "lon": 74.9127,
+    "lat": 30.6709,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.02
+   },
+   {
+    "lon": 75.1481,
+    "lat": 31.0794,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.33
+   },
+   {
+    "lon": 74.9036,
+    "lat": 31.0674,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.11
+   },
+   {
+    "lon": 74.9042,
+    "lat": 30.9774,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 8.39
+   },
+   {
+    "lon": 75.2011,
+    "lat": 30.9258,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.61
+   },
+   {
+    "lon": 74.6179,
+    "lat": 30.707,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.09
+   },
+   {
+    "lon": 75.0054,
+    "lat": 30.858,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.73
+   },
+   {
+    "lon": 75.2163,
+    "lat": 30.7239,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.66
+   },
+   {
+    "lon": 75.3718,
+    "lat": 30.7889,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.78
+   },
+   {
+    "lon": 75.3574,
+    "lat": 30.9844,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.19
+   },
+   {
+    "lon": 74.8623,
+    "lat": 31.0082,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.93
+   },
+   {
+    "lon": 74.3992,
+    "lat": 30.7203,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.53
+   },
+   {
+    "lon": 75.2144,
+    "lat": 31.1149,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 4.88
+   },
+   {
+    "lon": 74.501,
+    "lat": 31.1159,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.9
+   },
+   {
+    "lon": 74.6348,
+    "lat": 30.8089,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.81
+   },
+   {
+    "lon": 75.0502,
+    "lat": 30.6345,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.16
+   },
+   {
+    "lon": 75.1004,
+    "lat": 30.9586,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.69
+   },
+   {
+    "lon": 74.7021,
+    "lat": 30.8155,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 10.28
+   },
+   {
+    "lon": 75.019,
+    "lat": 30.7226,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.49
+   },
+   {
+    "lon": 75.3802,
+    "lat": 30.8398,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.6
+   },
+   {
+    "lon": 75.0549,
+    "lat": 30.5304,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.43
+   },
+   {
+    "lon": 75.1655,
+    "lat": 31.0994,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.35
+   },
+   {
+    "lon": 74.4387,
+    "lat": 31.1227,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.47
+   },
+   {
+    "lon": 75.1811,
+    "lat": 31.0418,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.65
+   },
+   {
+    "lon": 74.9045,
+    "lat": 30.7893,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.2
+   },
+   {
+    "lon": 75.0003,
+    "lat": 31.0006,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.58
+   },
+   {
+    "lon": 74.5969,
+    "lat": 30.8865,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.31
+   },
+   {
+    "lon": 75.0159,
+    "lat": 30.9435,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.02
+   },
+   {
+    "lon": 74.8226,
+    "lat": 31.0256,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.93
+   },
+   {
+    "lon": 75.0993,
+    "lat": 31.0232,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.57
+   },
+   {
+    "lon": 74.873,
+    "lat": 31.1446,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.43
+   },
+   {
+    "lon": 74.5385,
+    "lat": 31.0046,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.76
+   },
+   {
+    "lon": 74.717,
+    "lat": 31.1767,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.05
+   },
+   {
+    "lon": 75.0751,
+    "lat": 31.0909,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.69
+   },
+   {
+    "lon": 74.9575,
+    "lat": 30.7703,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.66
+   },
+   {
+    "lon": 74.8913,
+    "lat": 30.8225,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.37
+   },
+   {
+    "lon": 74.4378,
+    "lat": 30.7426,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.98
+   },
+   {
+    "lon": 75.0484,
+    "lat": 31.1168,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 4.19
+   },
+   {
+    "lon": 74.6732,
+    "lat": 30.7161,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.94
+   },
+   {
+    "lon": 74.5544,
+    "lat": 31.2234,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 74.7486,
+    "lat": 30.7675,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.84
+   },
+   {
+    "lon": 75.1604,
+    "lat": 30.8478,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.55
+   },
+   {
+    "lon": 74.8423,
+    "lat": 31.2523,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.05
+   },
+   {
+    "lon": 75.0306,
+    "lat": 31.0358,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.47
+   },
+   {
+    "lon": 74.8611,
+    "lat": 30.7678,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 7.18
+   },
+   {
+    "lon": 74.3892,
+    "lat": 30.9937,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.7
+   },
+   {
+    "lon": 75.1588,
+    "lat": 31.1269,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.72
+   },
+   {
+    "lon": 74.6735,
+    "lat": 30.7245,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.74
+   },
+   {
+    "lon": 74.6967,
+    "lat": 30.8959,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.59
+   },
+   {
+    "lon": 74.598,
+    "lat": 30.8256,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 4.92
+   },
+   {
+    "lon": 74.6716,
+    "lat": 30.9018,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 3.18
+   },
+   {
+    "lon": 74.6692,
+    "lat": 31.2913,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.51
+   },
+   {
+    "lon": 75.0315,
+    "lat": 31.22,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.18
+   },
+   {
+    "lon": 75.1401,
+    "lat": 30.9419,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.14
+   },
+   {
+    "lon": 74.8076,
+    "lat": 31.1041,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.54
+   },
+   {
+    "lon": 74.7018,
+    "lat": 31.0792,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.39
+   },
+   {
+    "lon": 74.7832,
+    "lat": 31.1074,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.98
+   },
+   {
+    "lon": 75.0541,
+    "lat": 30.8735,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.99
+   },
+   {
+    "lon": 74.9757,
+    "lat": 31.1464,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.39
+   },
+   {
+    "lon": 75.0037,
+    "lat": 31.1321,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.18
+   },
+   {
+    "lon": 75.023,
+    "lat": 30.6724,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 10.22
+   },
+   {
+    "lon": 75.1879,
+    "lat": 30.7118,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.79
+   },
+   {
+    "lon": 74.9674,
+    "lat": 30.9775,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.99
+   },
+   {
+    "lon": 75.0475,
+    "lat": 31.1535,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.08
+   },
+   {
+    "lon": 74.7091,
+    "lat": 30.738,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.02
+   },
+   {
+    "lon": 75.3944,
+    "lat": 31.0361,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 3.54
+   },
+   {
+    "lon": 74.4417,
+    "lat": 30.5201,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.37
+   },
+   {
+    "lon": 74.8523,
+    "lat": 30.7997,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.87
+   },
+   {
+    "lon": 74.8559,
+    "lat": 31.0714,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.73
+   },
+   {
+    "lon": 75.0811,
+    "lat": 30.9618,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.74
+   },
+   {
+    "lon": 74.5911,
+    "lat": 31.0309,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.48
+   },
+   {
+    "lon": 75.2246,
+    "lat": 30.82,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.72
+   },
+   {
+    "lon": 74.9525,
+    "lat": 30.8493,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.54
+   },
+   {
+    "lon": 75.1492,
+    "lat": 31.0206,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.37
+   },
+   {
+    "lon": 75.0082,
+    "lat": 31.1864,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 12.1
+   },
+   {
+    "lon": 74.843,
+    "lat": 30.7075,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.16
+   },
+   {
+    "lon": 74.771,
+    "lat": 31.0703,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 7.4
+   },
+   {
+    "lon": 74.8039,
+    "lat": 31.0585,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.5
+   },
+   {
+    "lon": 74.7488,
+    "lat": 31.2397,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7
+   },
+   {
+    "lon": 75.3321,
+    "lat": 30.8275,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.45
+   },
+   {
+    "lon": 74.9096,
+    "lat": 30.9853,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 74.5851,
+    "lat": 30.7396,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 8.34
+   },
+   {
+    "lon": 74.953,
+    "lat": 30.6828,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.63
+   },
+   {
+    "lon": 74.7108,
+    "lat": 31.1808,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 74.4924,
+    "lat": 30.7322,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.58
+   },
+   {
+    "lon": 74.8558,
+    "lat": 30.8059,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.37
+   },
+   {
+    "lon": 74.7212,
+    "lat": 30.5738,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.66
+   },
+   {
+    "lon": 74.3974,
+    "lat": 30.8829,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.53
+   },
+   {
+    "lon": 75.0082,
+    "lat": 31.083,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5.09
+   },
+   {
+    "lon": 75.3948,
+    "lat": 30.7121,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.72
+   },
+   {
+    "lon": 74.7415,
+    "lat": 30.9507,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.47
+   },
+   {
+    "lon": 74.8924,
+    "lat": 31.0758,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.93
+   },
+   {
+    "lon": 74.9001,
+    "lat": 30.8373,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.23
+   },
+   {
+    "lon": 74.931,
+    "lat": 30.9345,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.25
+   },
+   {
+    "lon": 74.7093,
+    "lat": 30.8331,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.19
+   },
+   {
+    "lon": 74.7393,
+    "lat": 31.2722,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.52
+   },
+   {
+    "lon": 74.848,
+    "lat": 30.9448,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.71
+   },
+   {
+    "lon": 75.0723,
+    "lat": 30.8942,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.64
+   },
+   {
+    "lon": 75.3161,
+    "lat": 31.0838,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.49
+   },
+   {
+    "lon": 74.657,
+    "lat": 30.9324,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.66
+   },
+   {
+    "lon": 74.8971,
+    "lat": 30.7683,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.62
+   },
+   {
+    "lon": 74.8351,
+    "lat": 31.092,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.31
+   },
+   {
+    "lon": 74.4499,
+    "lat": 30.8076,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 3.88
+   },
+   {
+    "lon": 74.66,
+    "lat": 30.7467,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.94
+   },
+   {
+    "lon": 75.4127,
+    "lat": 31.076,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.32
+   },
+   {
+    "lon": 75.1148,
+    "lat": 30.8308,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.62
+   },
+   {
+    "lon": 75.4583,
+    "lat": 30.9918,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 5.01
+   },
+   {
+    "lon": 75.0256,
+    "lat": 31.0207,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.34
+   },
+   {
+    "lon": 74.6823,
+    "lat": 30.9257,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.03
+   },
+   {
+    "lon": 74.8321,
+    "lat": 30.9453,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.58
+   },
+   {
+    "lon": 75.3144,
+    "lat": 31.0501,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.72
+   },
+   {
+    "lon": 75.3911,
+    "lat": 30.9618,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.19
+   },
+   {
+    "lon": 75.2176,
+    "lat": 30.9347,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5.05
+   },
+   {
+    "lon": 74.9905,
+    "lat": 30.9426,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.16
+   },
+   {
+    "lon": 74.9801,
+    "lat": 30.8598,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 74.9663,
+    "lat": 30.6367,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.73
+   },
+   {
+    "lon": 75.1606,
+    "lat": 30.7609,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.03
+   },
+   {
+    "lon": 75.3832,
+    "lat": 30.8823,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.26
+   },
+   {
+    "lon": 74.5641,
+    "lat": 30.8687,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.66
+   },
+   {
+    "lon": 74.8223,
+    "lat": 30.9663,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.6
+   },
+   {
+    "lon": 75.1266,
+    "lat": 31.0473,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.78
+   },
+   {
+    "lon": 74.5995,
+    "lat": 30.8044,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.19
+   },
+   {
+    "lon": 74.9952,
+    "lat": 31.1198,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.68
+   },
+   {
+    "lon": 74.6651,
+    "lat": 31.0678,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.25
+   },
+   {
+    "lon": 74.87,
+    "lat": 30.9332,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.03
+   },
+   {
+    "lon": 74.2712,
+    "lat": 30.7059,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.84
+   },
+   {
+    "lon": 75.1539,
+    "lat": 30.6724,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.09
+   },
+   {
+    "lon": 74.7878,
+    "lat": 30.8408,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 2.93
+   },
+   {
+    "lon": 75.2681,
+    "lat": 30.8595,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.79
+   },
+   {
+    "lon": 74.8742,
+    "lat": 30.5494,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.05
+   },
+   {
+    "lon": 74.6322,
+    "lat": 30.7857,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 74.9853,
+    "lat": 30.9277,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 74.5453,
+    "lat": 30.9108,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 10.73
+   },
+   {
+    "lon": 74.6798,
+    "lat": 30.673,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 75.0098,
+    "lat": 30.9899,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.54
+   },
+   {
+    "lon": 75.2452,
+    "lat": 30.9428,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 75.0832,
+    "lat": 30.5126,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.69
+   },
+   {
+    "lon": 75.2237,
+    "lat": 30.8466,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.74
+   },
+   {
+    "lon": 74.8603,
+    "lat": 30.969,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.13
+   },
+   {
+    "lon": 74.9085,
+    "lat": 31.0863,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.33
+   },
+   {
+    "lon": 74.9882,
+    "lat": 30.8794,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.72
+   },
+   {
+    "lon": 74.5799,
+    "lat": 30.8751,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.3
+   },
+   {
+    "lon": 74.5579,
+    "lat": 30.8592,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.27
+   },
+   {
+    "lon": 74.6731,
+    "lat": 31.0594,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.47
+   },
+   {
+    "lon": 74.9509,
+    "lat": 30.8178,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.45
+   },
+   {
+    "lon": 75.2852,
+    "lat": 30.9723,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.48
+   },
+   {
+    "lon": 74.751,
+    "lat": 30.7846,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 74.8591,
+    "lat": 31.0253,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.91
+   },
+   {
+    "lon": 75.038,
+    "lat": 30.9371,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.17
+   },
+   {
+    "lon": 75.0369,
+    "lat": 30.777,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.21
+   },
+   {
+    "lon": 74.6332,
+    "lat": 30.7336,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.89
+   },
+   {
+    "lon": 75.036,
+    "lat": 30.8415,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.12
+   },
+   {
+    "lon": 75.2569,
+    "lat": 30.833,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.87
+   },
+   {
+    "lon": 75.2163,
+    "lat": 31.068,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.82
+   },
+   {
+    "lon": 74.868,
+    "lat": 30.7795,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 1.99
+   },
+   {
+    "lon": 74.7818,
+    "lat": 30.8433,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.84
+   },
+   {
+    "lon": 75.0806,
+    "lat": 30.5792,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 5.94
+   },
+   {
+    "lon": 75.2021,
+    "lat": 30.8467,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.46
+   },
+   {
+    "lon": 74.6728,
+    "lat": 31.1029,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.45
+   },
+   {
+    "lon": 74.5114,
+    "lat": 30.8897,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.16
+   },
+   {
+    "lon": 74.9082,
+    "lat": 31.0985,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.95
+   },
+   {
+    "lon": 75.0769,
+    "lat": 30.7984,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.39
+   },
+   {
+    "lon": 74.9343,
+    "lat": 30.9806,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.6
+   },
+   {
+    "lon": 75.1509,
+    "lat": 31.0846,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.75
+   },
+   {
+    "lon": 75.178,
+    "lat": 30.674,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 5.32
+   },
+   {
+    "lon": 74.9368,
+    "lat": 30.5273,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.91
+   },
+   {
+    "lon": 74.6318,
+    "lat": 30.7609,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.33
+   },
+   {
+    "lon": 74.9883,
+    "lat": 31.0334,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.83
+   },
+   {
+    "lon": 75.1787,
+    "lat": 31.2047,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.98
+   },
+   {
+    "lon": 74.7794,
+    "lat": 31.1541,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.09
+   },
+   {
+    "lon": 74.7964,
+    "lat": 30.855,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.74
+   },
+   {
+    "lon": 75.1172,
+    "lat": 30.8138,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.36
+   },
+   {
+    "lon": 75.0878,
+    "lat": 30.767,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.57
+   },
+   {
+    "lon": 74.6278,
+    "lat": 31.1134,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.11
+   },
+   {
+    "lon": 75.3333,
+    "lat": 31.2206,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.23
+   },
+   {
+    "lon": 75.0126,
+    "lat": 30.6248,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.62
+   },
+   {
+    "lon": 74.5294,
+    "lat": 30.9422,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.96
+   },
+   {
+    "lon": 75.3877,
+    "lat": 30.9194,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.44
+   },
+   {
+    "lon": 76.9548,
+    "lat": 29.2607,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.94
+   },
+   {
+    "lon": 76.669,
+    "lat": 29.191,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.62
+   },
+   {
+    "lon": 76.6622,
+    "lat": 29.9981,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.38
+   },
+   {
+    "lon": 76.6425,
+    "lat": 29.772,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.47
+   },
+   {
+    "lon": 76.6279,
+    "lat": 29.5927,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.36
+   },
+   {
+    "lon": 76.1924,
+    "lat": 29.9339,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 9.42
+   },
+   {
+    "lon": 76.9243,
+    "lat": 29.5081,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.87
+   },
+   {
+    "lon": 76.7537,
+    "lat": 29.6971,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.53
+   },
+   {
+    "lon": 76.0013,
+    "lat": 29.683,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.71
+   },
+   {
+    "lon": 76.6533,
+    "lat": 29.9052,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.3
+   },
+   {
+    "lon": 76.8924,
+    "lat": 29.4627,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.43
+   },
+   {
+    "lon": 75.9794,
+    "lat": 29.8961,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.73
+   },
+   {
+    "lon": 77.2632,
+    "lat": 29.6366,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.09
+   },
+   {
+    "lon": 76.7563,
+    "lat": 29.6738,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5.3
+   },
+   {
+    "lon": 76.8451,
+    "lat": 29.7886,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.58
+   },
+   {
+    "lon": 77.0435,
+    "lat": 29.7722,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.91
+   },
+   {
+    "lon": 76.7485,
+    "lat": 29.6219,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.31
+   },
+   {
+    "lon": 76.3017,
+    "lat": 29.6916,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.88
+   },
+   {
+    "lon": 76.8647,
+    "lat": 29.6286,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.61
+   },
+   {
+    "lon": 76.6701,
+    "lat": 29.563,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.9204,
+    "lat": 29.7215,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.49
+   },
+   {
+    "lon": 76.4186,
+    "lat": 29.6208,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.99
+   },
+   {
+    "lon": 76.0702,
+    "lat": 29.4105,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.43
+   },
+   {
+    "lon": 76.4951,
+    "lat": 29.4049,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.35
+   },
+   {
+    "lon": 76.7954,
+    "lat": 29.686,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.14
+   },
+   {
+    "lon": 76.0861,
+    "lat": 29.451,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12
+   },
+   {
+    "lon": 76.6629,
+    "lat": 29.5429,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.44
+   },
+   {
+    "lon": 77.0167,
+    "lat": 29.7013,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.61
+   },
+   {
+    "lon": 77.1059,
+    "lat": 29.5473,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 77.3928,
+    "lat": 29.6342,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.63
+   },
+   {
+    "lon": 77.0329,
+    "lat": 29.6325,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.26
+   },
+   {
+    "lon": 76.8898,
+    "lat": 29.2434,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.62
+   },
+   {
+    "lon": 77.011,
+    "lat": 29.4802,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.48
+   },
+   {
+    "lon": 76.4309,
+    "lat": 29.4762,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.52
+   },
+   {
+    "lon": 76.577,
+    "lat": 29.7988,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 76.4908,
+    "lat": 29.5437,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.07
+   },
+   {
+    "lon": 76.7545,
+    "lat": 29.5354,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.83
+   },
+   {
+    "lon": 76.5627,
+    "lat": 29.5694,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.14
+   },
+   {
+    "lon": 76.5193,
+    "lat": 29.7466,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.91
+   },
+   {
+    "lon": 76.3265,
+    "lat": 29.2954,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.47
+   },
+   {
+    "lon": 76.9563,
+    "lat": 29.2109,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.26
+   },
+   {
+    "lon": 76.4457,
+    "lat": 29.4874,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 76.7993,
+    "lat": 29.2471,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.05
+   },
+   {
+    "lon": 76.6384,
+    "lat": 29.7485,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.68
+   },
+   {
+    "lon": 76.2431,
+    "lat": 29.6059,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.9
+   },
+   {
+    "lon": 76.3959,
+    "lat": 29.547,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.05
+   },
+   {
+    "lon": 76.7966,
+    "lat": 29.8757,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.65
+   },
+   {
+    "lon": 76.6091,
+    "lat": 29.4487,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.9
+   },
+   {
+    "lon": 76.1984,
+    "lat": 29.5907,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.04
+   },
+   {
+    "lon": 76.6779,
+    "lat": 29.3052,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.18
+   },
+   {
+    "lon": 76.4689,
+    "lat": 29.6988,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 76.9842,
+    "lat": 29.7601,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.44
+   },
+   {
+    "lon": 76.3341,
+    "lat": 29.8341,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.32
+   },
+   {
+    "lon": 75.9629,
+    "lat": 29.7602,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.01
+   },
+   {
+    "lon": 76.7334,
+    "lat": 29.7046,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 76.5768,
+    "lat": 29.6877,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.02
+   },
+   {
+    "lon": 76.4383,
+    "lat": 29.6355,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.27
+   },
+   {
+    "lon": 76.8462,
+    "lat": 29.7266,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.59
+   },
+   {
+    "lon": 76.568,
+    "lat": 29.4703,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.13
+   },
+   {
+    "lon": 76.3702,
+    "lat": 29.621,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 2.19
+   },
+   {
+    "lon": 76.6932,
+    "lat": 29.8156,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 76.5139,
+    "lat": 29.6412,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.8
+   },
+   {
+    "lon": 76.7098,
+    "lat": 29.4617,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.17
+   },
+   {
+    "lon": 76.9926,
+    "lat": 29.8404,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 12.06
+   },
+   {
+    "lon": 76.5938,
+    "lat": 29.6064,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.05
+   },
+   {
+    "lon": 76.7314,
+    "lat": 29.7039,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.46
+   },
+   {
+    "lon": 76.6388,
+    "lat": 29.4555,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.98
+   },
+   {
+    "lon": 77.089,
+    "lat": 29.5266,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.31
+   },
+   {
+    "lon": 76.293,
+    "lat": 29.3317,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.88
+   },
+   {
+    "lon": 76.5679,
+    "lat": 29.6013,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.18
+   },
+   {
+    "lon": 76.8965,
+    "lat": 29.653,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.01
+   },
+   {
+    "lon": 76.5857,
+    "lat": 29.6544,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.51
+   },
+   {
+    "lon": 76.6259,
+    "lat": 29.6024,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.98
+   },
+   {
+    "lon": 76.3224,
+    "lat": 29.504,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.51
+   },
+   {
+    "lon": 76.5223,
+    "lat": 29.5796,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.25
+   },
+   {
+    "lon": 77.0171,
+    "lat": 29.7084,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.05
+   },
+   {
+    "lon": 77.2054,
+    "lat": 29.8138,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.28
+   },
+   {
+    "lon": 76.6911,
+    "lat": 29.4312,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.48
+   },
+   {
+    "lon": 76.6643,
+    "lat": 29.8879,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.87
+   },
+   {
+    "lon": 76.8615,
+    "lat": 29.922,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.74
+   },
+   {
+    "lon": 76.1399,
+    "lat": 29.377,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.42
+   },
+   {
+    "lon": 76.8012,
+    "lat": 29.3094,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.14
+   },
+   {
+    "lon": 76.9934,
+    "lat": 29.6883,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.72
+   },
+   {
+    "lon": 76.5262,
+    "lat": 29.7067,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.56
+   },
+   {
+    "lon": 76.8413,
+    "lat": 29.5374,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.12
+   },
+   {
+    "lon": 76.1748,
+    "lat": 29.8721,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.28
+   },
+   {
+    "lon": 76.1772,
+    "lat": 29.7676,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.14
+   },
+   {
+    "lon": 76.3635,
+    "lat": 29.3543,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.87
+   },
+   {
+    "lon": 75.9975,
+    "lat": 29.2824,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.92
+   },
+   {
+    "lon": 76.9243,
+    "lat": 29.8734,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.76
+   },
+   {
+    "lon": 76.362,
+    "lat": 29.3828,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.49
+   },
+   {
+    "lon": 76.4224,
+    "lat": 29.6769,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.52
+   },
+   {
+    "lon": 76.3709,
+    "lat": 29.7008,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 76.2317,
+    "lat": 29.2439,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.87
+   },
+   {
+    "lon": 76.3018,
+    "lat": 29.7748,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.81
+   },
+   {
+    "lon": 76.4119,
+    "lat": 29.7958,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.7244,
+    "lat": 29.6694,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.89
+   },
+   {
+    "lon": 76.4487,
+    "lat": 29.6716,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.27
+   },
+   {
+    "lon": 76.9019,
+    "lat": 29.4851,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.95
+   },
+   {
+    "lon": 76.8527,
+    "lat": 29.6328,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.13
+   },
+   {
+    "lon": 76.6124,
+    "lat": 29.5077,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.03
+   },
+   {
+    "lon": 76.7174,
+    "lat": 29.431,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.37
+   },
+   {
+    "lon": 76.6965,
+    "lat": 29.8838,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.81
+   },
+   {
+    "lon": 76.9903,
+    "lat": 29.5946,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.74
+   },
+   {
+    "lon": 77.0635,
+    "lat": 29.4533,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 2.39
+   },
+   {
+    "lon": 76.0858,
+    "lat": 29.6754,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.81
+   },
+   {
+    "lon": 76.0724,
+    "lat": 29.4389,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.32
+   },
+   {
+    "lon": 76.7987,
+    "lat": 29.7895,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.19
+   },
+   {
+    "lon": 76.7825,
+    "lat": 29.6589,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.48
+   },
+   {
+    "lon": 76.4904,
+    "lat": 29.5422,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 76.2356,
+    "lat": 29.3025,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.64
+   },
+   {
+    "lon": 76.1348,
+    "lat": 29.5169,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.99
+   },
+   {
+    "lon": 76.5337,
+    "lat": 29.7978,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.5
+   },
+   {
+    "lon": 75.9326,
+    "lat": 29.6553,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.93
+   },
+   {
+    "lon": 76.7311,
+    "lat": 29.5443,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.78
+   },
+   {
+    "lon": 76.9911,
+    "lat": 29.3842,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.29
+   },
+   {
+    "lon": 76.3656,
+    "lat": 29.4735,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.49
+   },
+   {
+    "lon": 76.8492,
+    "lat": 29.5072,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.61
+   },
+   {
+    "lon": 76.4373,
+    "lat": 29.6002,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 9.14
+   },
+   {
+    "lon": 76.6141,
+    "lat": 29.1436,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.2
+   },
+   {
+    "lon": 76.7641,
+    "lat": 29.8287,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.41
+   },
+   {
+    "lon": 76.5675,
+    "lat": 29.5764,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 3.4
+   },
+   {
+    "lon": 76.5368,
+    "lat": 29.5634,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.61
+   },
+   {
+    "lon": 76.9722,
+    "lat": 29.6818,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 76.6277,
+    "lat": 29.5712,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.11
+   },
+   {
+    "lon": 76.8339,
+    "lat": 29.5545,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.08
+   },
+   {
+    "lon": 76.9537,
+    "lat": 29.8402,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.13
+   },
+   {
+    "lon": 76.6023,
+    "lat": 29.6617,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.25
+   },
+   {
+    "lon": 76.3403,
+    "lat": 29.5884,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 76.6864,
+    "lat": 29.7646,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.08
+   },
+   {
+    "lon": 76.3784,
+    "lat": 29.4758,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.13
+   },
+   {
+    "lon": 76.4069,
+    "lat": 29.7139,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.97
+   },
+   {
+    "lon": 76.9389,
+    "lat": 29.6127,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 76.6218,
+    "lat": 29.6188,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.7
+   },
+   {
+    "lon": 76.9375,
+    "lat": 29.5899,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.67
+   },
+   {
+    "lon": 76.8975,
+    "lat": 29.6005,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.89
+   },
+   {
+    "lon": 76.6044,
+    "lat": 29.6574,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.91
+   },
+   {
+    "lon": 76.5575,
+    "lat": 29.1269,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.01
+   },
+   {
+    "lon": 76.4835,
+    "lat": 29.253,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.42
+   },
+   {
+    "lon": 76.5138,
+    "lat": 29.675,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.38
+   },
+   {
+    "lon": 76.8987,
+    "lat": 29.7619,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.04
+   },
+   {
+    "lon": 76.2631,
+    "lat": 29.2042,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.92
+   },
+   {
+    "lon": 76.4407,
+    "lat": 29.847,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.8113,
+    "lat": 29.8721,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.23
+   },
+   {
+    "lon": 77.0541,
+    "lat": 29.2647,
+    "sensor": "MODIS",
+    "cls": "industrial",
+    "frp": 4.17
+   },
+   {
+    "lon": 76.4733,
+    "lat": 29.6904,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.62
+   },
+   {
+    "lon": 76.9061,
+    "lat": 29.4596,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.3
+   },
+   {
+    "lon": 76.8456,
+    "lat": 29.7515,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.26
+   },
+   {
+    "lon": 76.3148,
+    "lat": 29.8249,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.83
+   },
+   {
+    "lon": 76.5944,
+    "lat": 29.8664,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.88
+   },
+   {
+    "lon": 76.4382,
+    "lat": 29.505,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 2.25
+   },
+   {
+    "lon": 76.358,
+    "lat": 29.8381,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.94
+   },
+   {
+    "lon": 77.175,
+    "lat": 29.757,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.12
+   },
+   {
+    "lon": 76.6293,
+    "lat": 29.5052,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.57
+   },
+   {
+    "lon": 76.8438,
+    "lat": 29.6777,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.19
+   },
+   {
+    "lon": 76.6329,
+    "lat": 29.5624,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.76
+   },
+   {
+    "lon": 76.8273,
+    "lat": 29.6541,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.11
+   },
+   {
+    "lon": 76.8352,
+    "lat": 29.6086,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.79
+   },
+   {
+    "lon": 76.7282,
+    "lat": 29.6817,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.56
+   },
+   {
+    "lon": 76.2373,
+    "lat": 29.6837,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.61
+   },
+   {
+    "lon": 76.4469,
+    "lat": 29.8504,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.76
+   },
+   {
+    "lon": 76.5249,
+    "lat": 29.9308,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.13
+   },
+   {
+    "lon": 76.6071,
+    "lat": 29.6274,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.12
+   },
+   {
+    "lon": 76.7661,
+    "lat": 29.5346,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.21
+   },
+   {
+    "lon": 75.9815,
+    "lat": 29.6405,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.65
+   },
+   {
+    "lon": 76.3845,
+    "lat": 29.3786,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.1
+   },
+   {
+    "lon": 76.7278,
+    "lat": 29.6641,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.78
+   },
+   {
+    "lon": 76.7428,
+    "lat": 29.2561,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.55
+   },
+   {
+    "lon": 76.2732,
+    "lat": 29.6703,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.8
+   },
+   {
+    "lon": 76.6383,
+    "lat": 29.641,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.03
+   },
+   {
+    "lon": 76.968,
+    "lat": 29.2568,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.04
+   },
+   {
+    "lon": 77.0731,
+    "lat": 29.9256,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.12
+   },
+   {
+    "lon": 76.8808,
+    "lat": 29.9977,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.97
+   },
+   {
+    "lon": 77.1161,
+    "lat": 29.4009,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.09
+   },
+   {
+    "lon": 76.1588,
+    "lat": 29.7463,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.6
+   },
+   {
+    "lon": 76.9077,
+    "lat": 29.7528,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.87
+   },
+   {
+    "lon": 76.7187,
+    "lat": 30.0539,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.94
+   },
+   {
+    "lon": 77.3127,
+    "lat": 29.2608,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.97
+   },
+   {
+    "lon": 77.1274,
+    "lat": 30.121,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 76.5846,
+    "lat": 29.7747,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 76.3386,
+    "lat": 29.7493,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.36
+   },
+   {
+    "lon": 76.8154,
+    "lat": 29.5003,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.66
+   },
+   {
+    "lon": 76.3347,
+    "lat": 29.6865,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.4
+   },
+   {
+    "lon": 76.88,
+    "lat": 29.812,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.55
+   },
+   {
+    "lon": 76.4468,
+    "lat": 30.0241,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.5
+   },
+   {
+    "lon": 76.7972,
+    "lat": 29.1049,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.34
+   },
+   {
+    "lon": 76.8352,
+    "lat": 29.2526,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.9
+   },
+   {
+    "lon": 76.9036,
+    "lat": 29.4765,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.51
+   },
+   {
+    "lon": 76.8475,
+    "lat": 29.5201,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.37
+   },
+   {
+    "lon": 76.5644,
+    "lat": 29.3711,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.66
+   },
+   {
+    "lon": 76.7236,
+    "lat": 29.6119,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.43
+   },
+   {
+    "lon": 75.9694,
+    "lat": 29.911,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.16
+   },
+   {
+    "lon": 76.3336,
+    "lat": 29.7279,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.9
+   },
+   {
+    "lon": 77.3322,
+    "lat": 29.5681,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.41
+   },
+   {
+    "lon": 76.4918,
+    "lat": 29.3141,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.83
+   },
+   {
+    "lon": 76.1812,
+    "lat": 29.4231,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.27
+   },
+   {
+    "lon": 76.7936,
+    "lat": 29.6412,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 4.18
+   },
+   {
+    "lon": 76.0739,
+    "lat": 29.6494,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.25
+   },
+   {
+    "lon": 76.6045,
+    "lat": 29.6578,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.17
+   },
+   {
+    "lon": 76.3972,
+    "lat": 29.6808,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.23
+   },
+   {
+    "lon": 76.7343,
+    "lat": 29.5141,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.18
+   },
+   {
+    "lon": 76.4294,
+    "lat": 29.5581,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.69
+   },
+   {
+    "lon": 76.348,
+    "lat": 29.4346,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.63
+   },
+   {
+    "lon": 76.8104,
+    "lat": 29.5263,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.32
+   },
+   {
+    "lon": 76.6176,
+    "lat": 29.8292,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.64
+   },
+   {
+    "lon": 76.3001,
+    "lat": 29.7125,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.91
+   },
+   {
+    "lon": 76.463,
+    "lat": 29.5383,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.65
+   },
+   {
+    "lon": 76.6881,
+    "lat": 29.8485,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.46
+   },
+   {
+    "lon": 76.7077,
+    "lat": 29.561,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.96
+   },
+   {
+    "lon": 76.9793,
+    "lat": 29.7994,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.88
+   },
+   {
+    "lon": 76.4844,
+    "lat": 29.4836,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.46
+   },
+   {
+    "lon": 77.1521,
+    "lat": 29.6186,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.54
+   },
+   {
+    "lon": 76.2136,
+    "lat": 29.5546,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.07
+   },
+   {
+    "lon": 77.0334,
+    "lat": 29.5447,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.19
+   },
+   {
+    "lon": 76.6897,
+    "lat": 29.2982,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.7
+   },
+   {
+    "lon": 76.4209,
+    "lat": 29.3494,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.36
+   },
+   {
+    "lon": 76.6627,
+    "lat": 29.0794,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.25
+   },
+   {
+    "lon": 76.4646,
+    "lat": 29.5466,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.01
+   },
+   {
+    "lon": 76.7385,
+    "lat": 29.4651,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.96
+   },
+   {
+    "lon": 77.1698,
+    "lat": 29.1814,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.23
+   },
+   {
+    "lon": 77.0815,
+    "lat": 29.692,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.25
+   },
+   {
+    "lon": 76.5603,
+    "lat": 29.4544,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.58
+   },
+   {
+    "lon": 77.1494,
+    "lat": 29.1674,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.12
+   },
+   {
+    "lon": 76.6484,
+    "lat": 29.5739,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.12
+   },
+   {
+    "lon": 76.7184,
+    "lat": 29.5727,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 2.15
+   },
+   {
+    "lon": 76.3513,
+    "lat": 29.9604,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.26
+   },
+   {
+    "lon": 76.9645,
+    "lat": 29.5666,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.68
+   },
+   {
+    "lon": 76.2783,
+    "lat": 29.5458,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.93
+   },
+   {
+    "lon": 76.5713,
+    "lat": 29.6612,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.29
+   },
+   {
+    "lon": 76.6485,
+    "lat": 29.6949,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.23
+   },
+   {
+    "lon": 76.4989,
+    "lat": 29.2959,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.38
+   },
+   {
+    "lon": 76.8185,
+    "lat": 29.6432,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 76.8149,
+    "lat": 29.5964,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.35
+   },
+   {
+    "lon": 76.5547,
+    "lat": 29.6132,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.19
+   },
+   {
+    "lon": 76.4144,
+    "lat": 29.4638,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.25
+   },
+   {
+    "lon": 76.3838,
+    "lat": 29.9468,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.7
+   },
+   {
+    "lon": 76.9628,
+    "lat": 29.4343,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.92
+   },
+   {
+    "lon": 76.1832,
+    "lat": 29.605,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.8
+   },
+   {
+    "lon": 76.6805,
+    "lat": 29.7068,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.42
+   },
+   {
+    "lon": 76.4413,
+    "lat": 29.6335,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.28
+   },
+   {
+    "lon": 76.2847,
+    "lat": 29.6253,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.95
+   },
+   {
+    "lon": 76.7835,
+    "lat": 29.7688,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.48
+   },
+   {
+    "lon": 76.787,
+    "lat": 29.4515,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.01
+   },
+   {
+    "lon": 75.9768,
+    "lat": 29.7342,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.08
+   },
+   {
+    "lon": 76.9321,
+    "lat": 29.4262,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.85
+   },
+   {
+    "lon": 76.212,
+    "lat": 29.7303,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.88
+   },
+   {
+    "lon": 76.6164,
+    "lat": 29.3831,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.23
+   },
+   {
+    "lon": 76.7326,
+    "lat": 29.5381,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.92
+   },
+   {
+    "lon": 76.9004,
+    "lat": 29.4149,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.82
+   },
+   {
+    "lon": 76.6398,
+    "lat": 29.5037,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.11
+   },
+   {
+    "lon": 76.795,
+    "lat": 29.3725,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.37
+   },
+   {
+    "lon": 76.4808,
+    "lat": 29.8332,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 76.9234,
+    "lat": 29.5837,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.86
+   },
+   {
+    "lon": 76.6155,
+    "lat": 29.2694,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.97
+   },
+   {
+    "lon": 76.7887,
+    "lat": 29.3787,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.35
+   },
+   {
+    "lon": 76.6832,
+    "lat": 29.5221,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.41
+   },
+   {
+    "lon": 76.3875,
+    "lat": 29.8812,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.65
+   },
+   {
+    "lon": 76.762,
+    "lat": 29.5659,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.61
+   },
+   {
+    "lon": 76.6595,
+    "lat": 29.3471,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.89
+   },
+   {
+    "lon": 76.1425,
+    "lat": 29.6611,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.45
+   },
+   {
+    "lon": 76.4085,
+    "lat": 29.5706,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.58
+   },
+   {
+    "lon": 76.6328,
+    "lat": 29.6865,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.45
+   },
+   {
+    "lon": 76.8479,
+    "lat": 29.6202,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.97
+   },
+   {
+    "lon": 76.0977,
+    "lat": 29.6638,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.08
+   },
+   {
+    "lon": 76.261,
+    "lat": 29.6737,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.56
+   },
+   {
+    "lon": 76.1087,
+    "lat": 29.5754,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.49
+   },
+   {
+    "lon": 76.7965,
+    "lat": 29.6821,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.12
+   },
+   {
+    "lon": 76.4661,
+    "lat": 29.5138,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.9
+   },
+   {
+    "lon": 76.8007,
+    "lat": 29.4695,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.63
+   },
+   {
+    "lon": 76.5617,
+    "lat": 29.2178,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.88
+   },
+   {
+    "lon": 75.2677,
+    "lat": 30.353,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 75.0213,
+    "lat": 30.3297,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.84
+   },
+   {
+    "lon": 75.3422,
+    "lat": 30.1151,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.55
+   },
+   {
+    "lon": 74.9202,
+    "lat": 30.0168,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.01
+   },
+   {
+    "lon": 75.3379,
+    "lat": 30.2544,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.67
+   },
+   {
+    "lon": 75.5838,
+    "lat": 30.1275,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.55
+   },
+   {
+    "lon": 75.6433,
+    "lat": 30.1594,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.03
+   },
+   {
+    "lon": 75.1767,
+    "lat": 30.3511,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.81
+   },
+   {
+    "lon": 75.1518,
+    "lat": 30.2625,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.67
+   },
+   {
+    "lon": 75.0034,
+    "lat": 30.1226,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 2.01
+   },
+   {
+    "lon": 75.5391,
+    "lat": 30.0141,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.68
+   },
+   {
+    "lon": 75.1557,
+    "lat": 30.2335,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.57
+   },
+   {
+    "lon": 74.8225,
+    "lat": 30.0088,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.56
+   },
+   {
+    "lon": 75.3049,
+    "lat": 30.1425,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.24
+   },
+   {
+    "lon": 74.9331,
+    "lat": 30.2054,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.15
+   },
+   {
+    "lon": 75.307,
+    "lat": 30.1778,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.53
+   },
+   {
+    "lon": 75.0147,
+    "lat": 30.217,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.39
+   },
+   {
+    "lon": 75.3112,
+    "lat": 30.1324,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.13
+   },
+   {
+    "lon": 74.9892,
+    "lat": 30.2718,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.65
+   },
+   {
+    "lon": 75.405,
+    "lat": 30.4768,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.54
+   },
+   {
+    "lon": 75.5834,
+    "lat": 29.9966,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.43
+   },
+   {
+    "lon": 75.349,
+    "lat": 30.3416,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.94
+   },
+   {
+    "lon": 75.2231,
+    "lat": 30.2331,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.02
+   },
+   {
+    "lon": 74.6949,
+    "lat": 30.5307,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.36
+   },
+   {
+    "lon": 75.4903,
+    "lat": 30.1641,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.83
+   },
+   {
+    "lon": 75.0501,
+    "lat": 30.3594,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.33
+   },
+   {
+    "lon": 75.0741,
+    "lat": 30.3062,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.78
+   },
+   {
+    "lon": 75.312,
+    "lat": 30.2975,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.4
+   },
+   {
+    "lon": 74.8003,
+    "lat": 30.0034,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 10.75
+   },
+   {
+    "lon": 75.4504,
+    "lat": 30.2235,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.31
+   },
+   {
+    "lon": 74.8696,
+    "lat": 30.085,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.55
+   },
+   {
+    "lon": 75.2134,
+    "lat": 29.9284,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.47
+   },
+   {
+    "lon": 75.6323,
+    "lat": 30.6113,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.3
+   },
+   {
+    "lon": 74.8026,
+    "lat": 30.1873,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.94
+   },
+   {
+    "lon": 75.3529,
+    "lat": 29.9886,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 1.94
+   },
+   {
+    "lon": 75.4775,
+    "lat": 30.2079,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.37
+   },
+   {
+    "lon": 75.4141,
+    "lat": 30.2438,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.63
+   },
+   {
+    "lon": 75.2395,
+    "lat": 30.2015,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.39
+   },
+   {
+    "lon": 75.3239,
+    "lat": 30.1421,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.87
+   },
+   {
+    "lon": 75.1119,
+    "lat": 30.2885,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1
+   },
+   {
+    "lon": 74.9851,
+    "lat": 29.8616,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 3.94
+   },
+   {
+    "lon": 75.0054,
+    "lat": 30.365,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.58
+   },
+   {
+    "lon": 75.0368,
+    "lat": 30.0622,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.55
+   },
+   {
+    "lon": 75.4147,
+    "lat": 30.289,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.23
+   },
+   {
+    "lon": 75.3803,
+    "lat": 30.5016,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 6.34
+   },
+   {
+    "lon": 75.3339,
+    "lat": 29.7527,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.2
+   },
+   {
+    "lon": 75.0158,
+    "lat": 29.8398,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.15
+   },
+   {
+    "lon": 75.093,
+    "lat": 30.2693,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.53
+   },
+   {
+    "lon": 75.5119,
+    "lat": 30.3834,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.53
+   },
+   {
+    "lon": 74.949,
+    "lat": 30.4469,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 75.6274,
+    "lat": 30.2539,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.66
+   },
+   {
+    "lon": 75.2427,
+    "lat": 30.1069,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.53
+   },
+   {
+    "lon": 74.9547,
+    "lat": 30.2847,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.03
+   },
+   {
+    "lon": 75.1751,
+    "lat": 29.8419,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.35
+   },
+   {
+    "lon": 75.007,
+    "lat": 29.7449,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.23
+   },
+   {
+    "lon": 75.4789,
+    "lat": 30.5451,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.08
+   },
+   {
+    "lon": 75.1331,
+    "lat": 30.213,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.71
+   },
+   {
+    "lon": 75.0836,
+    "lat": 30.4229,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 10.73
+   },
+   {
+    "lon": 75.1523,
+    "lat": 30.4387,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.31
+   },
+   {
+    "lon": 75.5367,
+    "lat": 29.9472,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.34
+   },
+   {
+    "lon": 75.1524,
+    "lat": 30.2298,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.38
+   },
+   {
+    "lon": 75.6814,
+    "lat": 30.2811,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 75.0608,
+    "lat": 30.2425,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.78
+   },
+   {
+    "lon": 75.2033,
+    "lat": 30.5642,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.66
+   },
+   {
+    "lon": 75.0501,
+    "lat": 30.0619,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.45
+   },
+   {
+    "lon": 75.6399,
+    "lat": 30.0506,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.58
+   },
+   {
+    "lon": 75.5787,
+    "lat": 30.3794,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.67
+   },
+   {
+    "lon": 74.9181,
+    "lat": 29.9373,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.93
+   },
+   {
+    "lon": 75.7097,
+    "lat": 30.378,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.49
+   },
+   {
+    "lon": 75.2077,
+    "lat": 30.2646,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.24
+   },
+   {
+    "lon": 75.071,
+    "lat": 30.7222,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.4
+   },
+   {
+    "lon": 75.5544,
+    "lat": 30.0757,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.35
+   },
+   {
+    "lon": 75.3553,
+    "lat": 30.5736,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 12.18
+   },
+   {
+    "lon": 75.3744,
+    "lat": 30.1467,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.23
+   },
+   {
+    "lon": 75.0179,
+    "lat": 29.9856,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.28
+   },
+   {
+    "lon": 75.3822,
+    "lat": 30.4721,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.2
+   },
+   {
+    "lon": 74.9717,
+    "lat": 30.1887,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.54
+   },
+   {
+    "lon": 75.2637,
+    "lat": 29.984,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.26
+   },
+   {
+    "lon": 74.9159,
+    "lat": 30.1305,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.7
+   },
+   {
+    "lon": 75.1529,
+    "lat": 30.1885,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.05
+   },
+   {
+    "lon": 74.8603,
+    "lat": 30.1526,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.54
+   },
+   {
+    "lon": 74.8352,
+    "lat": 30.3127,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 6.72
+   },
+   {
+    "lon": 75.2539,
+    "lat": 30.3577,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.37
+   },
+   {
+    "lon": 75.0036,
+    "lat": 30.1985,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.28
+   },
+   {
+    "lon": 75.1077,
+    "lat": 30.2358,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.61
+   },
+   {
+    "lon": 75.1222,
+    "lat": 30.3726,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4
+   },
+   {
+    "lon": 75.4438,
+    "lat": 30.0317,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.9
+   },
+   {
+    "lon": 74.9577,
+    "lat": 29.992,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.01
+   },
+   {
+    "lon": 75.4277,
+    "lat": 29.9107,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.62
+   },
+   {
+    "lon": 75.1311,
+    "lat": 30.4467,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 75.3678,
+    "lat": 30.5634,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.69
+   },
+   {
+    "lon": 74.661,
+    "lat": 30.2704,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.17
+   },
+   {
+    "lon": 75.4607,
+    "lat": 29.9786,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.58
+   },
+   {
+    "lon": 75.5792,
+    "lat": 30.4867,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.94
+   },
+   {
+    "lon": 75.2612,
+    "lat": 30.1133,
+    "sensor": "MODIS",
+    "cls": "unknown",
+    "frp": 1.02
+   },
+   {
+    "lon": 75.711,
+    "lat": 29.8825,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.37
+   },
+   {
+    "lon": 75.2697,
+    "lat": 30.1968,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.33
+   },
+   {
+    "lon": 75.7109,
+    "lat": 29.9509,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.21
+   },
+   {
+    "lon": 75.2167,
+    "lat": 30.2587,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.23
+   },
+   {
+    "lon": 75.049,
+    "lat": 30.463,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.94
+   },
+   {
+    "lon": 75.225,
+    "lat": 30.1128,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.32
+   },
+   {
+    "lon": 75.1255,
+    "lat": 30.0476,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.47
+   },
+   {
+    "lon": 74.813,
+    "lat": 30.0113,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 75.035,
+    "lat": 30.5434,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.21
+   },
+   {
+    "lon": 75.0297,
+    "lat": 30.0172,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.8
+   },
+   {
+    "lon": 75.3563,
+    "lat": 29.9455,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 11.8
+   },
+   {
+    "lon": 75.0591,
+    "lat": 30.6874,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.24
+   },
+   {
+    "lon": 75.1624,
+    "lat": 30.4135,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.64
+   },
+   {
+    "lon": 75.1605,
+    "lat": 30.3111,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.01
+   },
+   {
+    "lon": 74.9081,
+    "lat": 30.1549,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.97
+   },
+   {
+    "lon": 75.4923,
+    "lat": 30.0253,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.2
+   },
+   {
+    "lon": 75.2073,
+    "lat": 30.2178,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 4.87
+   },
+   {
+    "lon": 74.8079,
+    "lat": 29.9751,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.65
+   },
+   {
+    "lon": 75.243,
+    "lat": 30.1609,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.45
+   },
+   {
+    "lon": 74.6249,
+    "lat": 29.8652,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.85
+   },
+   {
+    "lon": 74.8384,
+    "lat": 30.3695,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.05
+   },
+   {
+    "lon": 75.3486,
+    "lat": 30.4501,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.54
+   },
+   {
+    "lon": 75.439,
+    "lat": 30.2936,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.54
+   },
+   {
+    "lon": 75.3479,
+    "lat": 29.8871,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.77
+   },
+   {
+    "lon": 75.1941,
+    "lat": 30.4554,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.25
+   },
+   {
+    "lon": 75.6719,
+    "lat": 30.2545,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.8
+   },
+   {
+    "lon": 75.0024,
+    "lat": 30.007,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.18
+   },
+   {
+    "lon": 75.361,
+    "lat": 30.1333,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.42
+   },
+   {
+    "lon": 75.1176,
+    "lat": 30.2516,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 75.1271,
+    "lat": 30.2888,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3.46
+   },
+   {
+    "lon": 75.3852,
+    "lat": 30.1148,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.4
+   },
+   {
+    "lon": 75.6938,
+    "lat": 29.9756,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.1
+   },
+   {
+    "lon": 75.0014,
+    "lat": 29.7761,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.27
+   },
+   {
+    "lon": 74.9769,
+    "lat": 30.3284,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.82
+   },
+   {
+    "lon": 75.1356,
+    "lat": 30.4903,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.62
+   },
+   {
+    "lon": 74.8925,
+    "lat": 30.2441,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.03
+   },
+   {
+    "lon": 74.8879,
+    "lat": 30.0723,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.66
+   },
+   {
+    "lon": 75.2477,
+    "lat": 30.4957,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.31
+   },
+   {
+    "lon": 75.3102,
+    "lat": 30.0526,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.57
+   },
+   {
+    "lon": 74.9844,
+    "lat": 29.9057,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.7
+   },
+   {
+    "lon": 75.338,
+    "lat": 30.2285,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.03
+   },
+   {
+    "lon": 75.3615,
+    "lat": 30.2314,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.04
+   },
+   {
+    "lon": 75.4216,
+    "lat": 30.2856,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.4
+   },
+   {
+    "lon": 75.0655,
+    "lat": 30.352,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.83
+   },
+   {
+    "lon": 75.6268,
+    "lat": 30.4508,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.23
+   },
+   {
+    "lon": 75.0749,
+    "lat": 29.9593,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.05
+   },
+   {
+    "lon": 75.4742,
+    "lat": 30.0079,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.55
+   },
+   {
+    "lon": 74.9711,
+    "lat": 29.8395,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.08
+   },
+   {
+    "lon": 75.0089,
+    "lat": 30.0597,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.93
+   },
+   {
+    "lon": 75.1219,
+    "lat": 30.1381,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.4
+   },
+   {
+    "lon": 75.0198,
+    "lat": 30.2126,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.16
+   },
+   {
+    "lon": 74.8659,
+    "lat": 30.5268,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.65
+   },
+   {
+    "lon": 74.6713,
+    "lat": 30.378,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.33
+   },
+   {
+    "lon": 74.8352,
+    "lat": 30.2946,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.78
+   },
+   {
+    "lon": 75.0368,
+    "lat": 30.4964,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.88
+   },
+   {
+    "lon": 74.9645,
+    "lat": 30.0513,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.51
+   },
+   {
+    "lon": 75.3651,
+    "lat": 30.3798,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.15
+   },
+   {
+    "lon": 75.394,
+    "lat": 30.1308,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.21
+   },
+   {
+    "lon": 75.3125,
+    "lat": 30.0948,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.77
+   },
+   {
+    "lon": 75.4687,
+    "lat": 30.2907,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.86
+   },
+   {
+    "lon": 75.5838,
+    "lat": 30.0682,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 74.7213,
+    "lat": 30.2994,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.13
+   },
+   {
+    "lon": 75.3839,
+    "lat": 30.045,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.2
+   },
+   {
+    "lon": 75.1808,
+    "lat": 30.2514,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.1
+   },
+   {
+    "lon": 75.0299,
+    "lat": 30.4519,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.76
+   },
+   {
+    "lon": 74.9301,
+    "lat": 30.3424,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.86
+   },
+   {
+    "lon": 75.4662,
+    "lat": 30.0926,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.94
+   },
+   {
+    "lon": 75.1317,
+    "lat": 29.9295,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.29
+   },
+   {
+    "lon": 75.4875,
+    "lat": 30.4872,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.83
+   },
+   {
+    "lon": 75.0907,
+    "lat": 30.3841,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.74
+   },
+   {
+    "lon": 75.1735,
+    "lat": 30.2625,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.66
+   },
+   {
+    "lon": 74.932,
+    "lat": 30.2855,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.66
+   },
+   {
+    "lon": 75.0927,
+    "lat": 30.4571,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.02
+   },
+   {
+    "lon": 75.469,
+    "lat": 30.2749,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 75.2121,
+    "lat": 30.1123,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.38
+   },
+   {
+    "lon": 75.4332,
+    "lat": 29.9795,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.6
+   },
+   {
+    "lon": 74.8695,
+    "lat": 30.3536,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.81
+   },
+   {
+    "lon": 75.2575,
+    "lat": 30.1776,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 3
+   },
+   {
+    "lon": 75.6003,
+    "lat": 30.1863,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.42
+   },
+   {
+    "lon": 75.1605,
+    "lat": 30.2085,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.68
+   },
+   {
+    "lon": 75.2723,
+    "lat": 30.1339,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.65
+   },
+   {
+    "lon": 75.1996,
+    "lat": 30.0916,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.28
+   },
+   {
+    "lon": 75.3451,
+    "lat": 30.0898,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1
+   },
+   {
+    "lon": 75.3522,
+    "lat": 30.0896,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.99
+   },
+   {
+    "lon": 74.8538,
+    "lat": 30.6173,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.12
+   },
+   {
+    "lon": 75.3781,
+    "lat": 30.1075,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.35
+   },
+   {
+    "lon": 75.3796,
+    "lat": 30.3025,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.71
+   },
+   {
+    "lon": 75.3169,
+    "lat": 30.1346,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.64
+   },
+   {
+    "lon": 75.0487,
+    "lat": 30.0937,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.62
+   },
+   {
+    "lon": 75.3189,
+    "lat": 30.2858,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.16
+   },
+   {
+    "lon": 74.9418,
+    "lat": 29.9485,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.09
+   },
+   {
+    "lon": 75.1942,
+    "lat": 29.6574,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.01
+   },
+   {
+    "lon": 75.4422,
+    "lat": 30.0109,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.91
+   },
+   {
+    "lon": 75.4309,
+    "lat": 30.1556,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.78
+   },
+   {
+    "lon": 74.9488,
+    "lat": 30.243,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.04
+   },
+   {
+    "lon": 75.0814,
+    "lat": 30.6605,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.3
+   },
+   {
+    "lon": 74.7637,
+    "lat": 30.61,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.93
+   },
+   {
+    "lon": 75.683,
+    "lat": 30.1232,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.53
+   },
+   {
+    "lon": 74.7964,
+    "lat": 30.4338,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.87
+   },
+   {
+    "lon": 75.3591,
+    "lat": 30.2414,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.34
+   },
+   {
+    "lon": 75.2244,
+    "lat": 30.4775,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 10.31
+   },
+   {
+    "lon": 75.2893,
+    "lat": 30.1886,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 1.66
+   },
+   {
+    "lon": 75.3856,
+    "lat": 30.2646,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 5.76
+   },
+   {
+    "lon": 74.9891,
+    "lat": 30.265,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.82
+   },
+   {
+    "lon": 75.6164,
+    "lat": 30.1484,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.03
+   },
+   {
+    "lon": 75.0098,
+    "lat": 30.3617,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.2
+   },
+   {
+    "lon": 74.7673,
+    "lat": 30.0862,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.96
+   },
+   {
+    "lon": 75.0382,
+    "lat": 30.4219,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.65
+   },
+   {
+    "lon": 75.0754,
+    "lat": 29.8904,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 5.04
+   },
+   {
+    "lon": 74.9651,
+    "lat": 30.2438,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.51
+   },
+   {
+    "lon": 75.18,
+    "lat": 30,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.32
+   },
+   {
+    "lon": 74.8363,
+    "lat": 29.9485,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.59
+   },
+   {
+    "lon": 75.5838,
+    "lat": 30.036,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.27
+   },
+   {
+    "lon": 75.3868,
+    "lat": 30.0808,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.03
+   },
+   {
+    "lon": 75.3662,
+    "lat": 30.1121,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.48
+   },
+   {
+    "lon": 75.1747,
+    "lat": 30.0376,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.02
+   },
+   {
+    "lon": 75.5019,
+    "lat": 30.3084,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.51
+   },
+   {
+    "lon": 75.6643,
+    "lat": 29.9632,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.67
+   },
+   {
+    "lon": 75.1459,
+    "lat": 30.2892,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.69
+   },
+   {
+    "lon": 75.5459,
+    "lat": 30.5772,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.08
+   },
+   {
+    "lon": 74.8162,
+    "lat": 30.3082,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 6.82
+   },
+   {
+    "lon": 75.1116,
+    "lat": 30.2365,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.39
+   },
+   {
+    "lon": 75.0084,
+    "lat": 30.0191,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.54
+   },
+   {
+    "lon": 74.9647,
+    "lat": 30.2468,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 11.1
+   },
+   {
+    "lon": 74.9227,
+    "lat": 30.1509,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.42
+   },
+   {
+    "lon": 75.6685,
+    "lat": 29.7267,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.79
+   },
+   {
+    "lon": 75.2677,
+    "lat": 30.336,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.19
+   },
+   {
+    "lon": 75.0276,
+    "lat": 30.3583,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.17
+   },
+   {
+    "lon": 74.9828,
+    "lat": 30.4379,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.97
+   },
+   {
+    "lon": 75.1611,
+    "lat": 30.1715,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.14
+   },
+   {
+    "lon": 75.0502,
+    "lat": 29.8504,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.66
+   },
+   {
+    "lon": 75.0604,
+    "lat": 30.3204,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.27
+   },
+   {
+    "lon": 75.6177,
+    "lat": 29.9762,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.39
+   },
+   {
+    "lon": 74.794,
+    "lat": 30.4699,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.47
+   },
+   {
+    "lon": 75.0229,
+    "lat": 29.9175,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.07
+   },
+   {
+    "lon": 75.4386,
+    "lat": 30.3413,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 12.11
+   },
+   {
+    "lon": 74.8888,
+    "lat": 30.05,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.45
+   },
+   {
+    "lon": 75.0861,
+    "lat": 30.3292,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 12.07
+   },
+   {
+    "lon": 75.3404,
+    "lat": 30.0353,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.02
+   },
+   {
+    "lon": 75.241,
+    "lat": 30.2652,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.36
+   },
+   {
+    "lon": 74.9923,
+    "lat": 30.2582,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 3.39
+   },
+   {
+    "lon": 75.1244,
+    "lat": 30.2162,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.01
+   },
+   {
+    "lon": 75.5752,
+    "lat": 29.9947,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 7.16
+   },
+   {
+    "lon": 75.5432,
+    "lat": 30.059,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 2.44
+   },
+   {
+    "lon": 75.261,
+    "lat": 29.9045,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.07
+   },
+   {
+    "lon": 74.9331,
+    "lat": 30.1921,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.16
+   },
+   {
+    "lon": 74.8572,
+    "lat": 30.2234,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 1.24
+   },
+   {
+    "lon": 74.9964,
+    "lat": 30.3082,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.58
+   },
+   {
+    "lon": 75.0113,
+    "lat": 30.0148,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.73
+   },
+   {
+    "lon": 75.0868,
+    "lat": 30.1448,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.69
+   },
+   {
+    "lon": 75.2133,
+    "lat": 30.3422,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.1
+   },
+   {
+    "lon": 75.0026,
+    "lat": 29.908,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.27
+   },
+   {
+    "lon": 75.1182,
+    "lat": 29.982,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.5
+   },
+   {
+    "lon": 75.2503,
+    "lat": 30.386,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.67
+   },
+   {
+    "lon": 75.0006,
+    "lat": 30.0669,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 5.56
+   },
+   {
+    "lon": 74.8086,
+    "lat": 30.0161,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.06
+   },
+   {
+    "lon": 75.2795,
+    "lat": 29.9811,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 2.19
+   },
+   {
+    "lon": 75.2705,
+    "lat": 30.1844,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.38
+   },
+   {
+    "lon": 75.5962,
+    "lat": 30.2315,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 10.62
+   },
+   {
+    "lon": 75.4582,
+    "lat": 30.1628,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.1
+   },
+   {
+    "lon": 74.864,
+    "lat": 30.0076,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 8.96
+   },
+   {
+    "lon": 75.3231,
+    "lat": 30.039,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.8
+   },
+   {
+    "lon": 75.4128,
+    "lat": 29.7996,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 6.46
+   },
+   {
+    "lon": 75.1347,
+    "lat": 30.2189,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 2.54
+   },
+   {
+    "lon": 75.185,
+    "lat": 30.528,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.76
+   },
+   {
+    "lon": 75.1069,
+    "lat": 30.249,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 1.28
+   },
+   {
+    "lon": 75.4792,
+    "lat": 30.1374,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.15
+   },
+   {
+    "lon": 75.4247,
+    "lat": 30.301,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 11.36
+   },
+   {
+    "lon": 74.8465,
+    "lat": 30.6858,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 9.47
+   },
+   {
+    "lon": 75.0797,
+    "lat": 29.9465,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 4.38
+   },
+   {
+    "lon": 74.9945,
+    "lat": 30.4019,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 8.88
+   },
+   {
+    "lon": 74.7285,
+    "lat": 30.5121,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 7.3
+   },
+   {
+    "lon": 75.309,
+    "lat": 30.1577,
+    "sensor": "VIIRS",
+    "cls": "unknown",
+    "frp": 6.28
+   },
+   {
+    "lon": 75.314,
+    "lat": 29.9397,
+    "sensor": "MODIS",
+    "cls": "crop",
+    "frp": 9.35
+   },
+   {
+    "lon": 75.3521,
+    "lat": 30.4016,
+    "sensor": "VIIRS",
+    "cls": "crop",
+    "frp": 4.94
+   },
+   {
+    "lon": 76.85,
+    "lat": 30.95,
+    "sensor": "VIIRS",
+    "cls": "industrial",
+    "frp": 30
+   }
+  ],
+  "k_by_month": {
+   "title": "Calibration ratio k by month · overlap 2012–2025",
+   "values": [
+    2.1,
+    2.2,
+    2.3,
+    2.4,
+    2.6,
+    2.3,
+    2,
+    2,
+    2.2,
+    2.5,
+    2.5,
+    2.3
+   ],
+   "labels": [
+    "J",
+    "F",
+    "M",
+    "A",
+    "M",
+    "J",
+    "J",
+    "A",
+    "S",
+    "O",
+    "N",
+    "D"
+   ]
+  },
+  "detection": {
+   "title": "Detection probability · Aqua vs VIIRS matched pairs",
+   "note": "FRP50 ≈ 9 MW (synthetic test)",
+   "values": [
+    0.0017,
+    0.0024,
+    0.0034,
+    0.0047,
+    0.0066,
+    0.0093,
+    0.013,
+    0.0181,
+    0.0252,
+    0.035,
+    0.0484,
+    0.0665,
+    0.0909,
+    0.1229,
+    0.1642,
+    0.216,
+    0.2787,
+    0.3513,
+    0.4316,
+    0.5157,
+    0.5989,
+    0.6767,
+    0.7459,
+    0.8045,
+    0.8523,
+    0.89,
+    0.919,
+    0.9408,
+    0.9571,
+    0.969,
+    0.9777,
+    0.984,
+    0.9885,
+    0.9918,
+    0.9941,
+    0.9958,
+    0.997,
+    0.9979,
+    0.9985,
+    0.9989
+   ],
+   "x_labels": [
+    "0.5",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "1.7",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "5.8",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "20.0",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "68.2",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "frp50_index": 19
+  },
+  "raw_vs_harmonised": {
+   "title": "Raw vs harmonised · Punjab Nov totals",
+   "raw": [
+    100,
+    104,
+    108,
+    103,
+    97,
+    95,
+    99,
+    104,
+    107,
+    267.8,
+    254.8,
+    249.6,
+    262.6,
+    275.6,
+    280.8,
+    270.4,
+    257.4,
+    252.2,
+    260,
+    273,
+    278.2,
+    267.8,
+    257.4
+   ],
+   "harmonised": [
+    100,
+    104,
+    108,
+    103,
+    97,
+    95,
+    99,
+    104,
+    107,
+    103,
+    98,
+    96,
+    101,
+    106,
+    108,
+    104,
+    99,
+    97,
+    100,
+    105,
+    107,
+    103,
+    99
+   ],
+   "x_labels": [
+    "2003",
+    "",
+    "",
+    "",
+    "2007",
+    "",
+    "",
+    "",
+    "2011",
+    "",
+    "",
+    "",
+    "2015",
+    "",
+    "",
+    "",
+    "2019",
+    "",
+    "",
+    "",
+    "2023",
+    "",
+    ""
+   ],
+   "seam_index": 9,
+   "seam_label": "2012 seam"
+  },
+  "model": {
+   "family": "GLM · NegBin",
+   "rows": [
+    {
+     "label": "k day = e^β₁",
+     "value": "2.64 [2.50–2.80]"
+    },
+    {
+     "label": "k night = e^(β₁+β₃)",
+     "value": "— needs archive run"
+    },
+    {
+     "label": "Overdispersion (Pearson χ²/df)",
+     "value": "1.9 → use NegBin"
+    },
+    {
+     "label": "AIC ratio vs power law",
+     "value": "−165.3 vs −198.0"
+    }
+   ],
+   "note": "All numbers on this panel come from synthetic tests in accuracy_tools.py"
+  }
+ },
+ "meta": {
+  "data_source": "fixture: docs/design/pages/sensorlab.html demo values",
+  "version": "fixture-m1",
+  "generated_at": "2026-10-21T00:00:00Z",
+  "units": null,
+  "demo": true,
+  "fallback_used": false
+ }
+}

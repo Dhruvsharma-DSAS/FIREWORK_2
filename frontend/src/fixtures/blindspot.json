@@ -1,0 +1,111 @@
+{
+ "data": {
+  "clock": {
+   "region": "Punjab",
+   "source": "iFOREST 2025",
+   "burn_window": [
+    15,
+    19.5
+   ],
+   "midday": [
+    11,
+    15
+   ],
+   "passes": [
+    10.5,
+    13.5
+   ],
+   "headline": ">90%",
+   "line1": "of large fires after 15:00 (2024–25)",
+   "line2": "was 3% in 2021",
+   "pass_label": "● satellite passes 10:30 · 13:30",
+   "burn_label": "■ burning window now (schematic)"
+  },
+  "counts": {
+   "values": [
+    31447,
+    20000,
+    11633,
+    8812
+   ],
+   "labels": [
+    "Punjab 2022",
+    "Punjab 2025",
+    "Haryana 2019",
+    "Haryana 2025"
+   ],
+   "colors": [
+    "#FF6A3D",
+    "#FF6A3D",
+    "#49C7F5",
+    "#49C7F5"
+   ],
+   "tiles": [
+    {
+     "label": "Official fire counts since 2021",
+     "value": "−90%+",
+     "color": "var(--rose)",
+     "note": ""
+    },
+    {
+     "label": "Punjab burnt area 2022 → 2025",
+     "value": "−36%",
+     "color": "var(--flame)",
+     "note": "31,447 → ~20,000 km²"
+    }
+   ]
+  },
+  "ratio": {
+   "values": [
+    1,
+    1.1,
+    0.9,
+    1,
+    1.05,
+    1.3,
+    1.8,
+    2.4,
+    2.6
+   ],
+   "years": [
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "baseline_index": 4,
+   "note": "flag when B > 2 × pre-2021 median"
+  },
+  "hides": [
+   {
+    "title": "Overpass time",
+    "text": "Polar satellites pass ~10:30 and ~13:30 local. Burning after 15:00 is not seen."
+   },
+   {
+    "title": "Clouds & fog",
+    "text": "FireMask class 4 = cloud. Rate = fire / clear removes this bias."
+   },
+   {
+    "title": "Small / cool fires",
+    "text": "Below the detection curve (FRP50). VIIRS sees more than MODIS."
+   },
+   {
+    "title": "Night & geometry",
+    "text": "Different night sensitivity; large pixels at swath edge."
+   }
+  ]
+ },
+ "meta": {
+  "data_source": "fixture: docs/design/pages/blindspot.html reported values",
+  "version": "fixture-m1",
+  "generated_at": "2026-10-21T00:00:00Z",
+  "units": null,
+  "demo": true,
+  "fallback_used": false
+ }
+}
