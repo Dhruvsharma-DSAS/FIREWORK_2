@@ -1,5 +1,7 @@
+import { fixture } from "./request.js"
+
 export function getHome() {
-  return import("../fixtures/home.json").then(function (m) {
-    return m.default
+  return fixture("Fetching hero data…", function () {
+    return import("../fixtures/home.json")
   })
 }

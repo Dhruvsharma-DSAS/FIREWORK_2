@@ -3,6 +3,53 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .nav a:hover, .pill:hover, .btn:hover { transition: transform 120ms ease; }
 .btn:hover, .pill:hover { transform: translateY(-1px); }
 .seg span, .toggle { cursor: pointer; }
+a:focus, button:focus, [tabindex]:focus, .nav a:focus { outline: none; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; border-radius: 6px; }
+.nav a:focus-visible { outline: 2px solid var(--ember); outline-offset: 4px; border-radius: 6px; }
+
+.app.fluid { width: 100vw; height: 100vh; min-width: 1280px; min-height: 620px; }
+.app.fluid.wide-nav { min-width: 1440px; }
+.brand div, .nav a, .chip { white-space: nowrap; }
+@media (max-width: 1599px) {
+  .app.fluid .topbar { gap: 20px; }
+  .app.fluid .nav { gap: 16px; }
+}
+
+.ldr { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.ldr-stage { position: relative; width: 112px; height: 112px; transform-style: preserve-3d; }
+.ldr-globe { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; background: radial-gradient(circle at 36% 30%, #1A2B4D 0%, #0D1B36 55%, #050A16 100%); border: 1px solid var(--line-strong); box-shadow: 0 0 22px rgba(73, 199, 245, 0.16); display: grid; place-items: center; }
+.ldr-ring { position: absolute; inset: 6px; border-radius: 50%; border: 1px solid rgba(73, 199, 245, 0.55); transform-style: preserve-3d; }
+.ldr-ring.a { transform: rotateZ(25deg) rotateX(70deg); }
+.ldr-ring.b { transform: rotateZ(-35deg) rotateX(70deg); }
+.ldr-orbit { position: absolute; inset: -1px; border-radius: 50%; transform-style: preserve-3d; animation: ldr-spin 2.4s linear infinite; }
+.ldr-ring.b .ldr-orbit { animation-duration: 3.6s; animation-direction: reverse; }
+.ldr-sat { position: absolute; left: 50%; top: -4px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 10px rgba(255, 106, 61, 0.85); transform: rotateX(-70deg); }
+.ldr-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ember); opacity: 0; }
+.ldr-title { font-size: 10.5px; letter-spacing: 0.22em; }
+.ldr-task { font-size: 11px; min-height: 14px; }
+.ldr.small { gap: 8px; }
+.ldr.small .ldr-stage { width: 64px; height: 64px; }
+.ldr.small .ldr-globe { width: 24px; height: 24px; margin: -12px 0 0 -12px; }
+.ldr.small .ldr-ring { inset: 4px; }
+.ldr.small .ldr-sat { width: 6px; height: 6px; margin-left: -3px; top: -3px; }
+.ldr.small .ldr-task { font-size: 10.5px; }
+@keyframes ldr-spin { from { transform: rotateZ(0deg); } to { transform: rotateZ(360deg); } }
+@keyframes ldr-pulse { 0%, 100% { opacity: 0.25; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.25); } }
+
+.ldr-layer { display: grid; place-items: center; z-index: 50; opacity: 1; transition: opacity 240ms ease; animation: ldr-in 160ms ease; }
+.ldr-layer.out { opacity: 0; pointer-events: none; }
+.ldr-layer.boot { position: fixed; inset: 0; z-index: 100; background: radial-gradient(900px 600px at 50% 45%, #0F1A33 0%, var(--space) 70%); }
+.ldr-layer.page { position: fixed; left: 0; right: 0; top: 64px; bottom: 0; background: rgba(6, 10, 19, 0.72); backdrop-filter: blur(6px); }
+.ldr-layer.inline { position: absolute; inset: 0; z-index: 5; border-radius: inherit; background: rgba(13, 20, 38, 0.82); backdrop-filter: blur(4px); }
+@keyframes ldr-in { from { opacity: 0; } to { opacity: 1; } }
+
+.map-attrib { position: absolute; font-size: 10px; color: var(--faint); opacity: 0.8; letter-spacing: 0.02em; pointer-events: none; z-index: 2; }
+.maplibregl-canvas:focus { outline: none; }
+.maplibregl-canvas:focus-visible { outline: 2px solid var(--ember); outline-offset: -2px; }
+
 @media (prefers-reduced-motion: reduce) {
   .btn:hover, .pill:hover { transform: none; }
+  .ldr-orbit { animation: none; }
+  .ldr-dot { opacity: 1; animation: ldr-pulse 1.4s ease-in-out infinite; }
+  .ldr-layer { animation: none; }
 }

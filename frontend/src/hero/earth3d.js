@@ -1,6 +1,17 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 
+const EARTH_R = 10;
+const ORBIT_R = 12.5;
+const ORBIT_INC = 108;
+const ORBIT_RAAN = 240;
+const ORBIT_PERIOD_S = 36;
+const START_ANGLE = 212;
+const SPIN_DEG_S = 1;
+const CLOUD_EXTRA_DEG_S = 0.35;
+const DESIGN_H = 1000;
+const EARTH_SCREEN = [540, 930];
+
 function loadTex(url) {
   return new Promise((res) => new THREE.TextureLoader().load(url, (t) => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; res(t); }));
 }
@@ -41,8 +52,9 @@ function foilTexture() {
   for (let i = 0; i < 900; i++) {
     const x = Math.random() * 512, y = Math.random() * 512, r = 6 + Math.random() * 40;
     const gr = g.createRadialGradient(x, y, 0, x, y, r);
-    const l = Math.random();
-    gr.addColorStop(0, l > 0.5 ? "rgba(255,226,140,0.35)" : "rgba(90,55,10,0.35)");
+    let inner = "rgba(90,55,10,0.35)";
+    if (Math.random() > 0.5) { inner = "rgba(255,226,140,0.35)"; }
+    gr.addColorStop(0, inner);
     gr.addColorStop(1, "rgba(0,0,0,0)");
     g.fillStyle = gr; g.fillRect(x - r, y - r, 2 * r, 2 * r);
   }
@@ -51,14 +63,15 @@ function foilTexture() {
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
 }
 
-export function buildSatellite(opts) {
+function buildSatellite() {
   const sat = new THREE.Group();
   const foil = new THREE.MeshStandardMaterial({ map: foilTexture(), metalness: 0.9, roughness: 0.32 });
   const white = new THREE.MeshStandardMaterial({ color: 0xd9dde6, metalness: 0.3, roughness: 0.45 });
   const dark = new THREE.MeshStandardMaterial({ color: 0x2a2f3a, metalness: 0.6, roughness: 0.4 });
   const steel = new THREE.MeshStandardMaterial({ color: 0x9aa3b2, metalness: 0.95, roughness: 0.25 });
-  const panelMat = new THREE.MeshStandardMaterial({ map: panelTexture(), metalness: 0.55, roughness: 0.28, side: THREE.DoubleSide });
-  const backMat = new THREE.MeshStandardMaterial({ color: 0xc9ccd3, metalness: 0.4, roughness: 0.6 });
+  const cells = panelTexture();
+  const panelMat = new THREE.MeshStandardMaterial({ map: cells, metalness: 0.55, roughness: 0.28 });
+  const backMat = new THREE.MeshStandardMaterial({ map: cells, color: 0xdfe6f6, metalness: 0.35, roughness: 0.4, emissive: 0x0b1430, emissiveIntensity: 0.6 });
 
   const bus = new THREE.Mesh(new THREE.BoxGeometry(1.4, 1.1, 2.2), foil); sat.add(bus);
   const bus2 = new THREE.Mesh(new THREE.BoxGeometry(1.1, 0.8, 1.2), foil); bus2.position.set(0, 0.95, 0.3); sat.add(bus2);
@@ -68,8 +81,8 @@ export function buildSatellite(opts) {
   const lens = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.26, 0.25, 32), dark); lens.position.set(0, -1.15, 0.4); sat.add(lens);
   const rad = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.9, 1.6), white); rad.position.set(-0.75, 0, -0.1); sat.add(rad);
   for (let i = 0; i < 6; i++) { const f = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.85, 0.04), dark); f.position.set(-0.79, 0, -0.8 + i * 0.28); sat.add(f); }
-  const dish = new THREE.Mesh(new THREE.SphereGeometry(0.55, 40, 16, 0, Math.PI * 2, 0, Math.PI / 3.2), white);
-  dish.material = white.clone(); dish.material.side = THREE.DoubleSide;
+  const dishMat = white.clone(); dishMat.side = THREE.DoubleSide;
+  const dish = new THREE.Mesh(new THREE.SphereGeometry(0.55, 40, 16, 0, Math.PI * 2, 0, Math.PI / 3.2), dishMat);
   dish.rotation.x = Math.PI; dish.position.set(0.2, 1.35, -0.6); sat.add(dish);
   const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.7, 12), steel); mast.position.set(0.2, 0.95, -0.6); sat.add(mast);
   const ant = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 1.6, 8), steel); ant.position.set(0.5, 0.2, 1.6); ant.rotation.x = Math.PI / 2.4; sat.add(ant);
@@ -79,8 +92,8 @@ export function buildSatellite(opts) {
     const boom = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.2, 12), steel);
     boom.rotation.z = Math.PI / 2; boom.position.x = sign * 1.3; w.add(boom);
     for (let k = 0; k < 4; k++) {
-      const pw = 1.9, ph = 3.8, gap = 0.08;
-      const x = sign * (2.0 + pw / 2 + k * (pw + gap));
+      const pw = 1.9, ph = 3.8;
+      const x = sign * (2.0 + pw / 2 + k * (pw + 0.08));
       const p = new THREE.Mesh(new THREE.PlaneGeometry(pw, ph), panelMat);
       p.rotation.x = -Math.PI / 2; p.position.set(x, 0, 0); w.add(p);
       const b = new THREE.Mesh(new THREE.PlaneGeometry(pw, ph), backMat);
@@ -93,8 +106,8 @@ export function buildSatellite(opts) {
     return w;
   }
   const wl = wing(-1), wr = wing(1);
-  wl.rotation.x = opts && opts.tilt ? opts.tilt : 0.25; wr.rotation.x = wl.rotation.x;
   sat.add(wl); sat.add(wr);
+  sat.userData.wings = [wl, wr];
   return sat;
 }
 
@@ -102,14 +115,14 @@ const earthVS = `
 varying vec2 vUv; varying vec3 vN; varying vec3 vW;
 void main(){ vUv=uv; vN=normalize(mat3(modelMatrix)*normal); vec4 w=modelMatrix*vec4(position,1.); vW=w.xyz; gl_Position=projectionMatrix*viewMatrix*w; }`;
 const earthFS = `
-uniform sampler2D day; uniform sampler2D night; uniform sampler2D clouds; uniform sampler2D water; uniform vec3 sun; uniform float nightBoost; uniform float dayGain; uniform vec3 camPos;
+uniform sampler2D day; uniform sampler2D night; uniform sampler2D clouds; uniform sampler2D water; uniform vec3 sun; uniform float nightBoost; uniform float dayGain; uniform vec3 camPos; uniform float cloudShift;
 varying vec2 vUv; varying vec3 vN; varying vec3 vW;
 void main(){
   vec3 n=normalize(vN); float d=dot(n,normalize(sun));
   float k=smoothstep(-0.18,0.22,d);
   vec3 dc=texture2D(day,vUv).rgb*dayGain;
   vec3 nc=texture2D(night,vUv).rgb; float lt=texture2D(night,vUv).r; nc=vec3(1.0,0.62,0.28)*lt*nightBoost*0.5+vec3(1.0,0.88,0.65)*pow(lt,2.)*nightBoost*0.8;
-  float cl=texture2D(clouds,vUv).r;
+  float cl=texture2D(clouds,vec2(fract(vUv.x-cloudShift),vUv.y)).r;
   vec3 v=normalize(camPos-vW);
   float wm=texture2D(water,vUv).r;
   vec3 h=normalize(normalize(sun)+v); float spec=pow(max(dot(n,h),0.),60.)*wm*0.9*k;
@@ -127,91 +140,174 @@ uniform vec3 sun; uniform vec3 camPos; uniform float uPow; varying vec3 vN; vary
 void main(){ vec3 n=normalize(vN); vec3 v=normalize(camPos-vW); float r=1.-abs(dot(n,v)); float a=pow(r,uPow); float s=smoothstep(-0.45,0.5,dot(n,normalize(sun)));
  vec3 c=mix(vec3(0.12,0.25,0.65),vec3(0.45,0.72,1.0),s); gl_FragColor=vec4(c*a*(0.25+1.3*s),a*(0.35+0.9*s)); }`;
 
-export async function scene(canvas, o) {
-  const W = o.w, H = o.h;
+function fireSprite() {
+  const spr = document.createElement("canvas"); spr.width = spr.height = 64; const sg = spr.getContext("2d");
+  const rg = sg.createRadialGradient(32, 32, 0, 32, 32, 32); rg.addColorStop(0, "rgba(255,255,255,1)"); rg.addColorStop(0.25, "rgba(255,255,255,0.8)"); rg.addColorStop(1, "rgba(255,255,255,0)");
+  sg.fillStyle = rg; sg.fillRect(0, 0, 64, 64);
+  return new THREE.CanvasTexture(spr);
+}
+
+function orbitBasis() {
+  const ax = new THREE.Vector3(1, 0, 0);
+  const ay = new THREE.Vector3(0, 1, 0);
+  const inc = ORBIT_INC * Math.PI / 180;
+  const raan = ORBIT_RAAN * Math.PI / 180;
+  const u = new THREE.Vector3(1, 0, 0).applyAxisAngle(ax, inc).applyAxisAngle(ay, raan);
+  const v = new THREE.Vector3(0, 0, 1).applyAxisAngle(ax, inc).applyAxisAngle(ay, raan);
+  return { u, v };
+}
+
+export async function createHero(canvas, o) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
-  renderer.setPixelRatio(o.dpr || 2); renderer.setSize(W, H, false);
-  renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = o.exposure || 1.1;
+  renderer.setPixelRatio(o.dpr);
+  renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
   const sc = new THREE.Scene();
   const pm = new THREE.PMREMGenerator(renderer); const envTex = pm.fromScene(new RoomEnvironment(), 0.04).texture;
-  const cam = new THREE.PerspectiveCamera(o.fov || 30, W / H, 0.1, 2000);
+  const cam = new THREE.PerspectiveCamera(40, 16 / 10, 0.1, 2000);
+  const eye = llToVec(12, 77, 23);
+  cam.position.copy(eye); cam.lookAt(0, 0, 0); cam.updateMatrixWorld(true);
+
   const [day, night, clouds, water] = await Promise.all(["/hero/tex/earth-blue-marble.jpg", "/hero/tex/lights.png", "/hero/tex/clouds_a.jpg", "/hero/tex/earth-water.png"].map(loadTex));
-  const sun = new THREE.Vector3(...(o.sun || [-1, 0.3, 0.4])).normalize();
-  const earth = new THREE.Mesh(new THREE.SphereGeometry(10, 192, 128), new THREE.ShaderMaterial({
-    uniforms: { day: { value: day }, night: { value: night }, clouds: { value: clouds }, water: { value: water }, sun: { value: sun }, nightBoost: { value: o.nightBoost || 2.4 }, dayGain: { value: o.dayGain || 1.0 }, camPos: { value: new THREE.Vector3() } },
-    vertexShader: earthVS, fragmentShader: earthFS }));
-  sc.add(earth);
-  const atmo = new THREE.Mesh(new THREE.SphereGeometry(10.35, 128, 96), new THREE.ShaderMaterial({
-    uniforms: { sun: { value: sun }, camPos: { value: new THREE.Vector3() }, uPow: { value: 2.2 } }, vertexShader: earthVS, fragmentShader: atmoFS,
-    transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false }));
-  sc.add(atmo);
-  const atmo2 = new THREE.Mesh(new THREE.SphereGeometry(10.06, 128, 96), new THREE.ShaderMaterial({
-    uniforms: { sun: { value: sun }, camPos: { value: new THREE.Vector3() }, uPow: { value: 7.0 } }, vertexShader: earthVS, fragmentShader: atmoFS,
-    transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
-  sc.add(atmo2);
+  clouds.wrapS = THREE.RepeatWrapping;
+  const sun = new THREE.Vector3(0.62, 0.30, -1).applyQuaternion(cam.quaternion).normalize();
+
+  const globe = new THREE.Group(); sc.add(globe);
+  const earthMat = new THREE.ShaderMaterial({
+    uniforms: { day: { value: day }, night: { value: night }, clouds: { value: clouds }, water: { value: water }, sun: { value: sun }, nightBoost: { value: 3.2 }, dayGain: { value: 1.0 }, camPos: { value: eye.clone() }, cloudShift: { value: 0 } },
+    vertexShader: earthVS, fragmentShader: earthFS });
+  globe.add(new THREE.Mesh(new THREE.SphereGeometry(EARTH_R, 192, 128), earthMat));
+  sc.add(new THREE.Mesh(new THREE.SphereGeometry(10.35, 128, 96), new THREE.ShaderMaterial({
+    uniforms: { sun: { value: sun }, camPos: { value: eye.clone() }, uPow: { value: 2.2 } }, vertexShader: earthVS, fragmentShader: atmoFS,
+    transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false })));
+  sc.add(new THREE.Mesh(new THREE.SphereGeometry(10.06, 128, 96), new THREE.ShaderMaterial({
+    uniforms: { sun: { value: sun }, camPos: { value: eye.clone() }, uPow: { value: 7.0 } }, vertexShader: earthVS, fragmentShader: atmoFS,
+    transparent: true, blending: THREE.AdditiveBlending, depthWrite: false })));
 
   const stars = new THREE.BufferGeometry(); const sp = [];
   for (let i = 0; i < 4000; i++) { const v = new THREE.Vector3().randomDirection().multiplyScalar(600 + Math.random() * 300); sp.push(v.x, v.y, v.z); }
   stars.setAttribute("position", new THREE.Float32BufferAttribute(sp, 3));
   sc.add(new THREE.Points(stars, new THREE.PointsMaterial({ color: 0xaab8d8, size: 0.9, sizeAttenuation: false, transparent: true, opacity: 0.7 })));
 
-  if (o.fires) {
+  if (o.fires && o.fires.length) {
     const g = new THREE.BufferGeometry(); const p = []; const c = [];
     const col = new THREE.Color();
     for (const f of o.fires) { const v = llToVec(f[0], f[1], 10.03); p.push(v.x, v.y, v.z); col.set(f[2] || "#ff6a3d"); c.push(col.r, col.g, col.b); }
     g.setAttribute("position", new THREE.Float32BufferAttribute(p, 3)); g.setAttribute("color", new THREE.Float32BufferAttribute(c, 3));
-    const spr = document.createElement("canvas"); spr.width = spr.height = 64; const sg = spr.getContext("2d");
-    const rg = sg.createRadialGradient(32, 32, 0, 32, 32, 32); rg.addColorStop(0, "rgba(255,255,255,1)"); rg.addColorStop(0.25, "rgba(255,255,255,0.8)"); rg.addColorStop(1, "rgba(255,255,255,0)");
-    sg.fillStyle = rg; sg.fillRect(0, 0, 64, 64);
-    sc.add(new THREE.Points(g, new THREE.PointsMaterial({ size: o.fireSize || 0.16, map: new THREE.CanvasTexture(spr), vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false })));
+    globe.add(new THREE.Points(g, new THREE.PointsMaterial({ size: 0.12, map: fireSprite(), vertexColors: true, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false })));
   }
-  if (o.orbits) {
-    for (const ob of o.orbits) {
-      const pts = []; const inc = ob.inc * Math.PI / 180; const r = 10 + ob.alt;
-      for (let i = 0; i <= 360; i++) { const a = i * Math.PI / 180; pts.push(new THREE.Vector3(r * Math.cos(a), 0, r * Math.sin(a)).applyAxisAngle(new THREE.Vector3(1, 0, 0), inc).applyAxisAngle(new THREE.Vector3(0, 1, 0), (ob.raan || 0) * Math.PI / 180)); }
-      const l = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineDashedMaterial({ color: ob.color, dashSize: 0.3, gapSize: 0.18, transparent: true, opacity: ob.opacity || 0.6 }));
-      l.computeLineDistances(); sc.add(l);
-    }
+
+  const basis = orbitBasis();
+  const ring = [];
+  for (let i = 0; i <= 360; i++) {
+    const a = i * Math.PI / 180;
+    ring.push(basis.u.clone().multiplyScalar(ORBIT_R * Math.cos(a)).add(basis.v.clone().multiplyScalar(ORBIT_R * Math.sin(a))));
   }
+  const orbitLine = new THREE.Line(new THREE.BufferGeometry().setFromPoints(ring), new THREE.LineDashedMaterial({ color: 0xc8d7ff, dashSize: 0.06, gapSize: 0.22, transparent: true, opacity: 0.32 }));
+  orbitLine.computeLineDistances(); sc.add(orbitLine);
+
   sc.add(new THREE.AmbientLight(0x223355, 0.35));
   const dl = new THREE.DirectionalLight(0xfff4e0, 3.2); dl.position.copy(sun).multiplyScalar(100); sc.add(dl);
-  const fill = new THREE.DirectionalLight(0xffe2b0, o.fill || 1.6); fill.position.copy(cam.position).add(new THREE.Vector3(0, 10, 0)); sc.add(fill); fill.userData.cam = true;
+  const fill = new THREE.DirectionalLight(0xffe2b0, 2.3); fill.position.copy(eye).multiplyScalar(3).add(new THREE.Vector3(0, 20, 0)); sc.add(fill);
   const rim = new THREE.DirectionalLight(0x4a7dff, 0.8); rim.position.set(0, -50, -30); sc.add(rim);
-  if (o.sat) {
-    const sat = buildSatellite(o.sat); sat.scale.setScalar(o.sat.scale || 0.18);
-    sat.position.set(...o.sat.pos); sat.rotation.set(...o.sat.rot); sc.add(sat);
-    if (o.sat.swath) {
-      const s = o.sat.swath; const m = new THREE.Mesh(new THREE.ConeGeometry(s.r, s.h, 48, 1, true), new THREE.MeshBasicMaterial({ color: 0xffb547, transparent: true, opacity: 0.07, side: THREE.DoubleSide, depthWrite: false, blending: THREE.AdditiveBlending }));
-      m.position.set(...s.pos); m.lookAt(new THREE.Vector3(...o.sat.pos)); m.rotateX(-Math.PI / 2); sc.add(m);
+
+  const sat = buildSatellite(); sat.scale.setScalar(0.27);
+  sat.traverse((m) => { if (m.material) { m.material.envMap = envTex; m.material.envMapIntensity = 0.8; m.material.needsUpdate = true; } });
+  sc.add(sat);
+
+  const camRight = new THREE.Vector3(1, 0, 0).applyQuaternion(cam.quaternion);
+  const yAxis = new THREE.Vector3(0, 1, 0);
+  const qYaw = new THREE.Quaternion();
+  const qPitch = new THREE.Quaternion();
+  const tmp = { up: new THREE.Vector3(), x: new THREE.Vector3(), z: new THREE.Vector3(), m: new THREE.Matrix4(), q: new THREE.Quaternion(), s: new THREE.Vector3() };
+  const auto = SPIN_DEG_S * Math.PI / 180;
+  const st = { angle: START_ANGLE * Math.PI / 180, yaw: 0, pitch: 0, vYaw: auto, dragging: false, cloud: 0, autoOn: true };
+
+  function placeSatellite() {
+    const p = basis.u.clone().multiplyScalar(ORBIT_R * Math.cos(st.angle)).add(basis.v.clone().multiplyScalar(ORBIT_R * Math.sin(st.angle)));
+    sat.position.copy(p);
+    tmp.up.copy(p).normalize();
+    tmp.x.crossVectors(tmp.up, sun);
+    if (tmp.x.lengthSq() < 1e-6) { tmp.x.set(1, 0, 0); }
+    tmp.x.normalize();
+    tmp.z.crossVectors(tmp.x, tmp.up).normalize();
+    tmp.m.makeBasis(tmp.x, tmp.up, tmp.z);
+    sat.quaternion.setFromRotationMatrix(tmp.m);
+    tmp.q.copy(sat.quaternion).invert();
+    tmp.s.copy(sun).applyQuaternion(tmp.q);
+    const tilt = Math.atan2(tmp.s.z, tmp.s.y);
+    sat.userData.wings.forEach((w) => { w.rotation.x = tilt; });
+    const along = p.dot(sun);
+    const off = Math.sqrt(Math.max(0, p.lengthSq() - along * along));
+    let lit = 1;
+    if (along < 0) { lit = THREE.MathUtils.smoothstep(off, EARTH_R * 0.92, EARTH_R * 1.06); }
+    dl.intensity = 0.8 + 2.4 * lit;
+  }
+
+  function applyGlobe() {
+    qYaw.setFromAxisAngle(yAxis, st.yaw);
+    qPitch.setFromAxisAngle(camRight, st.pitch);
+    globe.quaternion.copy(qPitch).multiply(qYaw);
+    earthMat.uniforms.cloudShift.value = st.cloud;
+  }
+
+  function setSize(w, h) {
+    renderer.setSize(w, h, false);
+    cam.aspect = w / h;
+    const k = h / DESIGN_H;
+    cam.setViewOffset(w, h, EARTH_SCREEN[0] * k - w / 2, h / 2 - EARTH_SCREEN[1] * k, w, h);
+    cam.updateProjectionMatrix();
+  }
+
+  function frame(dt) {
+    const step = Math.min(dt, 0.1);
+    if (st.autoOn) {
+      st.angle += step * 2 * Math.PI / ORBIT_PERIOD_S;
+      st.cloud += step * CLOUD_EXTRA_DEG_S / 360;
     }
-  }
-  const look = new THREE.Vector3(...(o.look || [0, 0, 0]));
-  const eye = o.camLL ? llToVec(o.camLL[0], o.camLL[1], o.camDist || 34) : new THREE.Vector3(...o.cam);
-  cam.position.copy(eye); cam.lookAt(look);
-  if (o.roll) cam.rotateZ(o.roll);
-  if (o.shift) cam.setViewOffset(W, H, o.shift[0], o.shift[1], W, H);
-  cam.updateMatrixWorld(true);
-  if (o.sunCam) { sun.copy(new THREE.Vector3(...o.sunCam).applyQuaternion(cam.quaternion).normalize()); dl.position.copy(sun).multiplyScalar(100); }
-  const sp2 = sun.clone().multiplyScalar(500).project(cam); window.SUN_SCREEN = [(sp2.x + 1) / 2 * W, (1 - sp2.y) / 2 * H];
-  const ec = new THREE.Vector3(0,0,0).project(cam); window.EARTH_SCREEN = [(ec.x + 1) / 2 * W, (1 - ec.y) / 2 * H];
-  sc.traverse((n) => { if (n.userData && n.userData.cam) { n.position.copy(eye).multiplyScalar(3).add(new THREE.Vector3(0, 20, 0)); } });
-  const sats = [];
-  if (o.satCam) {
-    for (const sd of o.satCam) {
-      const sat = buildSatellite(sd); sat.scale.setScalar(sd.scale || 1);
-      sat.position.copy(cam.localToWorld(new THREE.Vector3(...sd.at)));
-      sat.traverse((m) => { if (m.material) { m.material.envMap = envTex; m.material.envMapIntensity = sd.env || 0.6; m.material.needsUpdate = true; } });
-      sat.quaternion.copy(cam.quaternion).multiply(new THREE.Quaternion().setFromEuler(new THREE.Euler(...sd.rot)));
-      sc.add(sat); sats.push({ sat, sd });
+    if (!st.dragging) {
+      let target = 0;
+      if (st.autoOn) { target = auto; }
+      st.vYaw += (target - st.vYaw) * (1 - Math.exp(-step / 0.55));
+      st.yaw += st.vYaw * step;
+      if (st.autoOn) { st.pitch += (0 - st.pitch) * (1 - Math.exp(-step / 0.6)); }
     }
+    applyGlobe();
+    placeSatellite();
+    renderer.render(sc, cam);
   }
-  earth.material.uniforms.camPos.value.copy(eye); atmo.material.uniforms.camPos.value.copy(eye); atmo2.material.uniforms.camPos.value.copy(eye);
-  earth.rotation.y = o.spin || 0;
-  renderer.render(sc, cam);
-  function place(i, at, rot) {
-    const S = sats[i]; S.sat.position.copy(cam.localToWorld(new THREE.Vector3(...at)));
-    S.sat.quaternion.copy(cam.quaternion).multiply(new THREE.Quaternion().setFromEuler(new THREE.Euler(...rot)));
+
+  function drag(dx, dy, dt) {
+    const dyaw = dx * 0.0045;
+    st.yaw += dyaw;
+    st.pitch = THREE.MathUtils.clamp(st.pitch + dy * 0.0035, -0.45, 0.45);
+    if (dt > 0) { st.vYaw = st.vYaw * 0.4 + (dyaw / dt) * 0.6; }
   }
-  return { llToVec, renderer, sc, cam, sats, place, render: () => renderer.render(sc, cam) };
+
+  function startDrag() {
+    st.dragging = true;
+    st.vYaw = 0;
+  }
+
+  function endDrag(stillMs) {
+    st.dragging = false;
+    if (stillMs > 90) { st.vYaw = 0; }
+  }
+
+  function setAuto(on) {
+    st.autoOn = on;
+    if (!on) { st.vYaw = 0; }
+  }
+
+  function satelliteScreen(w, h) {
+    const v = sat.position.clone().project(cam);
+    return [(v.x + 1) / 2 * w, (1 - v.y) / 2 * h];
+  }
+
+  function dispose() {
+    renderer.dispose();
+  }
+
+  return { renderer, frame, setSize, drag, startDrag, endDrag, setAuto, satelliteScreen, dispose, state: st };
 }
+
 export { llToVec };

@@ -1,5 +1,7 @@
+import { fixture } from "./request.js"
+
 export function getShell() {
-  return import("../fixtures/shell.json").then(function (m) {
-    return m.default
+  return fixture("Fetching status…", function () {
+    return import("../fixtures/shell.json")
   })
 }

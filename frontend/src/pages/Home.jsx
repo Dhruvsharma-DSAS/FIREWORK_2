@@ -9,6 +9,10 @@ import { getHome } from "../api/home.js"
 import { getWorld } from "../api/geo.js"
 import "../styles/home.css"
 
+function viewport() {
+  return { w: Math.max(window.innerWidth, 1280), h: Math.max(window.innerHeight, 620) }
+}
+
 function MiniMap(props) {
   const proj = d3.geoMercator().center([76, 29.5]).scale(1300).translate([65, 65])
   const path = d3.geoPath(proj)
@@ -38,12 +42,26 @@ function Home() {
   const [shell, setShell] = useState(null)
   const [page, setPage] = useState(null)
   const [world, setWorld] = useState(null)
+  const [size, setSize] = useState(viewport())
 
   useEffect(function () {
     getShell().then(setShell)
     getHome().then(setPage)
     getWorld().then(setWorld)
   }, [])
+
+  useEffect(function () {
+    function onResize() {
+      setSize(viewport())
+    }
+    window.addEventListener("resize", onResize)
+    return function () {
+      window.removeEventListener("resize", onResize)
+    }
+  }, [])
+
+  const k = size.h / 1000
+  const ui = Math.max(0.62, Math.min(1.15, Math.min(size.h / 1000, size.w / 1440)))
 
   let chips = []
   if (shell) {
@@ -54,7 +72,7 @@ function Home() {
   let fires = []
   if (page) {
     fires = page.data.fires
-    hero = <EarthHero fires={fires} />
+    hero = <EarthHero fires={fires} width={size.w} height={size.h} />
   }
 
   let content = null
@@ -62,7 +80,7 @@ function Home() {
     const d = page.data
     content = (
       <div>
-        <div className="glass tel" style={{ position: "absolute", left: 1352, top: 360, width: 200, padding: "14px 16px" }}>
+        <div className="glass tel" style={{ position: "absolute", right: 48 * k, top: 360 * k, width: 200, padding: "14px 16px", transform: "scale(" + ui + ")", transformOrigin: "top right" }}>
           <div className="caps" style={{ fontSize: 10, color: "var(--mint)" }}>● {d.satellite.name}</div>
           {d.satellite.rows.map(function (r, i) {
             let style = undefined
@@ -72,7 +90,7 @@ function Home() {
             return <div key={r.label} className="kv" style={style}><span className="dim">{r.label}</span><b>{r.value}</b></div>
           })}
         </div>
-        <div style={{ position: "absolute", left: 72, bottom: 56, display: "flex", gap: 14 }}>
+        <div style={{ position: "absolute", left: 72, bottom: 56 * ui, display: "flex", gap: 14, transform: "scale(" + ui + ")", transformOrigin: "bottom left" }}>
           <div className="glass" style={{ width: 190, height: 150, padding: 16, position: "relative", overflow: "hidden" }}>
             <div className="caps dim" style={{ fontSize: 10 }}>Record</div>
             <div style={{ fontFamily: "Inter", fontSize: 44, fontWeight: 300, letterSpacing: "-.03em", marginTop: 18 }}>{d.record_start}→</div>
@@ -87,8 +105,8 @@ function Home() {
             </svg>
           </div>
         </div>
-        <div style={{ position: "absolute", left: 1000, bottom: 64 }}>
-          <svg width="170" height="170">
+        <div style={{ position: "absolute", right: 430 * ui, bottom: 64 * ui, transform: "scale(" + ui + ")", transformOrigin: "bottom right" }}>
+          <svg width="170" height="170" style={{ display: "block" }}>
             <circle cx="85" cy="85" r="78" fill="none" stroke="rgba(150,180,255,.25)" strokeDasharray="1 5" />
             <circle cx="85" cy="85" r="60" fill="none" stroke="rgba(150,180,255,.12)" />
             <circle cx="85" cy="7" r="3" fill="var(--flame)" />
@@ -99,7 +117,7 @@ function Home() {
             <text x="85" y="129" textAnchor="middle" fill="#9AA6BD" fontFamily="SG" fontSize="7" letterSpacing="1.2">{d.sensors_live_note}</text>
           </svg>
         </div>
-        <div className="glass" style={{ position: "absolute", right: 48, bottom: 56, width: 340, padding: 14, display: "flex", gap: 12 }}>
+        <div className="glass" style={{ position: "absolute", right: 48 * ui, bottom: 56 * ui, width: 340, padding: 14, display: "flex", gap: 12, transform: "scale(" + ui + ")", transformOrigin: "bottom right" }}>
           <div style={{ flex: 1 }}>
             <div className="caps" style={{ fontSize: 10, color: "var(--ember)" }}>Hot-spot cluster flagged</div>
             <div style={{ fontSize: 11.5, lineHeight: 1.75, marginTop: 8 }}>
@@ -115,13 +133,13 @@ function Home() {
   }
 
   return (
-    <div className="app" style={{ background: "#03060d" }}>
+    <div className="app fluid" style={{ background: "#03060d" }}>
       {hero}
-      <div className="vline" style={{ left: 540 }}></div>
-      <div className="vline" style={{ left: 1060 }}></div>
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(3,6,13,.88) 0%,rgba(3,6,13,.55) 30%,rgba(3,6,13,0) 52%)" }}></div>
+      <div className="vline" style={{ left: 540 * ui, pointerEvents: "none" }}></div>
+      <div className="vline" style={{ left: size.w - 540 * ui, pointerEvents: "none" }}></div>
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(3,6,13,.88) 0%,rgba(3,6,13,.55) 30%,rgba(3,6,13,0) 52%)", pointerEvents: "none" }}></div>
       <Topbar variant="home" active="Home" chips={chips} />
-      <div style={{ position: "absolute", left: 72, top: 168, width: 640 }}>
+      <div style={{ position: "absolute", left: 72, top: 168 * ui, width: 640, transform: "scale(" + ui + ")", transformOrigin: "top left" }}>
         <div className="caps" style={{ color: "var(--flame)" }}>NASA Space Apps 2026 · MODIS ⇄ VIIRS hot-spot harmonization</div>
         <h1 className="hero-h" style={{ marginTop: 26 }}>Operational<br />fire memory<br /><em>for planet Earth.</em></h1>
         <p style={{ fontSize: 18, lineHeight: 1.62, color: "#B9C3D6", marginTop: 28, width: 470, letterSpacing: ".01em" }}>Turning 25 years of satellite hot-spots into one calibrated record — with the source, the uncertainty and the blind spots shown for every number.</p>
@@ -130,13 +148,8 @@ function Home() {
           <Link className="pill" to="/studio" style={{ borderColor: "rgba(255,181,71,.5)", color: "var(--flame)" }}>UPLOAD YOUR DATA <i style={{ background: "var(--flame)" }}>↑</i></Link>
         </div>
       </div>
-      <svg style={{ position: "absolute", left: 0, top: 0, pointerEvents: "none" }} width="1600" height="1000">
-        <path d="M560 470 Q 1000 60 1560 150" fill="none" stroke="rgba(200,215,255,.28)" strokeDasharray="2 7" />
-        <path id="hero-lead" d="M1352 430 L1320 430 L1288 472" fill="none" stroke="rgba(200,215,255,.5)" />
-        <circle id="hero-leaddot" cx="1288" cy="472" r="3.5" fill="#fff" />
-      </svg>
       {content}
-      <div style={{ position: "absolute", left: 72, bottom: 18, fontSize: 10.5 }} className="faint mono">Earth textures: NASA Blue/Black Marble (public domain) · satellite: generic 3-D model · fire points: demo pattern</div>
+      <div style={{ position: "absolute", left: 72, bottom: 18 * ui, fontSize: 10.5 * ui, pointerEvents: "none" }} className="faint mono">Earth textures: NASA Blue/Black Marble (public domain) · satellite: generic 3-D model · fire points: demo pattern</div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const NAV = [
   { label: "Calendar", to: "/calendar/punjab" },
   { label: "Sensor Lab", to: "/sensors" },
   { label: "Data Studio", to: "/studio" },
-  { label: "Formulas", to: "/formulas/F09" },
+  { label: "Formulas", to: "/formulas/F08" },
   { label: "Validation", to: "/validation" },
   { label: "Sources", to: "/sources" },
   { label: "Blind Spot", to: "/blind-spot" },

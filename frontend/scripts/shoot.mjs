@@ -9,8 +9,14 @@ const base = process.env.BASE_URL || "http://localhost:5173"
 
 const PAGES = {
   hero_photo: { url: "/", w: 1600, h: 1000, wait: 6000 },
-  explorer: { url: "/explore", w: 1600, h: 1000, wait: 2500 },
-  calendar: { url: "/calendar/punjab", w: 1600, h: 1000, wait: 1500 }
+  explorer: { url: "/explore", w: 1600, h: 1000, wait: 4000 },
+  calendar: { url: "/calendar/punjab", w: 1600, h: 1000, wait: 1500 },
+  sensorlab: { url: "/sensors", w: 1600, h: 1000, wait: 1500 },
+  studio: { url: "/studio", w: 1600, h: 1000, wait: 1500 },
+  formulas: { url: "/formulas/F08", w: 1600, h: 1000, wait: 1500 },
+  validation: { url: "/validation", w: 1600, h: 1000, wait: 1500 },
+  source: { url: "/sources", w: 1600, h: 1000, wait: 1500 },
+  blindspot: { url: "/blind-spot", w: 1600, h: 1000, wait: 1500 }
 }
 
 async function main() {
@@ -28,6 +34,7 @@ async function main() {
     page.on("console", function (m) { if (m.type() === "error") { console.log("CONSOLE", name, m.text()) } })
     await page.goto(base + p.url, { waitUntil: "networkidle" })
     await page.evaluate("document.fonts.ready")
+    await page.waitForFunction("document.querySelector('.ldr-layer') === null", null, { timeout: 30000 })
     await page.waitForTimeout(p.wait)
     if (makePoster && name === "hero_photo") {
       const data = await page.evaluate("document.getElementById('hero-canvas').toDataURL('image/jpeg', 0.86)")

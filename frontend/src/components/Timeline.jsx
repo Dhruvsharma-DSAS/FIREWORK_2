@@ -26,7 +26,7 @@ function Timeline(props) {
           <span className="mono faint" style={{ fontSize: 11 }}>seam: {t.seam_year}</span>
         </div>
       </div>
-      <svg width="1520" height="34" style={{ marginTop: 6 }}>
+      <svg width="100%" height="34" viewBox="0 0 1520 34" preserveAspectRatio="none" style={{ marginTop: 6, display: "block" }}>
         {t.values.map(function (v, i) {
           let color = "#8FB8FF"
           if (t.start_year + i / 12 >= t.seam_year) {
